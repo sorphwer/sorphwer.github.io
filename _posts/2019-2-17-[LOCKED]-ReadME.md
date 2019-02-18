@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "[LOCKED]ReadME"
+title: "ReadME"
 subtitle: 'Announcement'
 author: "Riino"
 header-style: text
+sticky : true
 tags:
   - Announcement
 ---
@@ -16,4 +17,10 @@ This site is created and maintained by riino personally , the original template 
 
 ## What will lie here?
 
-I will create a blog for every objects in my next term , including System Operation , Computer Network , JAVA  and so on. Meanwhile , this page will be updated soon.
+- **Course Note :**I will create a blog for every objects in my next term , including System Operation , Computer Network , JAVA  and so on. Meanwhile , this page will be updated soon.
+
+- **Tech Blogs:** Some blogs about coding in special situation in one of my projects like website , coding , etc.
+
+  And I'll bring some old ones , for example :* dealing with json in C++*
+
+- **Other article in *Transaction Logs* ** will be here , too.
