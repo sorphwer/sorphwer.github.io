@@ -1,9 +1,9 @@
 ---
-layout: keynote
+layout: default
 titile : test
 menu: main
 permalink : /test/
 ---
 
-## Test Texts.
+## Under Construction.
 
