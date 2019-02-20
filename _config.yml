@@ -77,8 +77,8 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "I am Riino Lin<br>A student in CQU ."
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "I am Riino Lin<br>Designer/Minecraft Builder/Student in SE(CS) ."
+sidebar-avatar: /img/avatarAnime.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
