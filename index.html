@@ -4,6 +4,8 @@ post sticky : true
 description: "Only Spring and Autumn Lie Here "
 ---
 {% for post in site.posts %}{% if post.sticky %}
+<iframe src="//player.bilibili.com/player.html?aid=44279518&cid=77539148&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=44279518&cid=77539148&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -29,7 +31,6 @@ description: "Only Spring and Autumn Lie Here "
 </div>
 <hr>
 {% endif %}{% endfor %}
-
 {% for post in paginator.posts %}{% unless post.sticky %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
