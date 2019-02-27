@@ -180,7 +180,22 @@ body, html {
 	background: url("../images/logo-react.png") 50% 50% no-repeat;
 	background-size: 22px;
 }
-
+.i-minecraft:before{
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/MineCraft.ico") 50% 50% no-repeat;
+	background-size: 30px;
+}
+.i-c4d:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/c4dicon.jpg") 50% 50% no-repeat;
+	background-size: 25px;
+}
 /******* Hux Branch *****/
 
 /* navbar - dark mode */
