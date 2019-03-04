@@ -973,7 +973,7 @@ samp {
 }
 .intro-header {
   background: no-repeat center center;
-  background-color: #cccccc;
+  background-color: #b6b6b6;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1017,7 +1017,7 @@ samp {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 85px 0 55px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -1092,7 +1092,7 @@ samp {
   font-size: 16px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
@@ -1109,7 +1109,7 @@ samp {
   position: absolute;
   bottom: 6px;
   right: 9px;
-  color: white;
+  color: rgb(255, 255, 255);
   opacity: 0.3;
   font-size: 10px;
   z-index: 1;

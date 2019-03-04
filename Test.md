@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: keynote
 titile : test
 menu: main
 permalink : /test/

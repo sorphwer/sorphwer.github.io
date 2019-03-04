@@ -49,12 +49,19 @@ layout: default
             ">
                 <!-- Featured Tags -->
                 {% include featured-tags.html %}
+        
 
                 <!-- Short About -->
                 {% include short-about.html %}
-
+                <!--Netease Muisc-->
+                {% if page.music-id %}
+                    {% include cloud-music.html %}
+                {% endif %} 
+                
                 <!-- Friends Blog -->
                 {% include friends.html %}
+                <!--Searcg-->
+                
     		</div>
         {% endif %}
 	</div>
