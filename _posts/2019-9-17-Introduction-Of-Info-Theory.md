@@ -29,7 +29,7 @@ e.g. it in **M**： Answer is 1.
 
 e.g. it in **P** and **M** : Answer is 3.
 
-Now we can call the bold alternatives as “Information”, for it lead us from uncertainty to certainty. 
+Now we can call the bold **Alternatives** as “Information”, for it lead us from uncertainty to certainty **Outcome**
 
 ## 2.Deterministic Info.
 
@@ -50,3 +50,47 @@ H_0({\{a_1,a_2,\cdots\}})=log_2K=log(\mathbb{Z})
 $$
 
 $H_0$ means 0-error , $\mathbb{Z}$ means 0-zero all necessary info set (Deterministic info.)
+
+
+
+### Pigeon hole principle **(explain why we are still uncertain with certain information)
+
+if $\mathbb{X}鴿子$>$\mathbb{Y}籠子$ , there’s no one-t-one mapping from $\mathbb{X} $ to $\mathbb{Y}$
+
+X: Alternatives
+
+Y: Names
+
+One-to-one: $encoder: v(x)->\forall a_1 != a_2 , v(a_1)!=v(a_2)$   $ \exists decoder:\mu(x)  -> \mu(v(a))=a$
+
+###  Sort size-n array of distinct elements
+
+n! Alternatives needs T(log(n!)) to create each Names .
+
+### *Can we do better than $H_0$?
+
+NO. one-to-one can not be built, we can’t hold 0-error.(Pigeon hole principle)
+
+YES, if some error?
+
+e.g.  Here are 10 balls , 1 of them is heavier. If we use a balance to measure , can we measure 2 times to get 0-error outcome? No
+
+However, if we just throw the first ball, we can archive that. and we have 1/10 possibility to fail. 
+
+Now clear **P**:
+
+ 
+$$
+U\subseteq \mathbb{X},P_r(U)=\sum_{a_k\in U}P(a_k)
+$$
+U: event
+
+as for $H_\sigma(\mathbb{X}=log|U|: U\subseteq\mathbb{X},P_r(U)>=1-\sigma$ (think about throwing not one balls but more(creating more U))
+
+so:
+$$
+H_\sigma(\mathbb{X})=log(min(|U|:U\subseteq\mathbb{X},P_r(U)>=1-\sigma))
+$$
+We call it as **Probabilistic info.**
+
+back to e.g. : $H_{1/10}<=log9$
