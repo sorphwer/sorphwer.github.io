@@ -89,8 +89,17 @@ as for $H_\sigma(\mathbb{X}=log|U|: U\subseteq\mathbb{X},P_r(U)>=1-\sigma$ (thin
 
 so:
 $$
-H_\sigma(\mathbb{X})=log(min(|U|:U\subseteq\mathbb{X},P_r(U)>=1-\sigma))
+H_\delta(\mathbb{X})=log(min(|U|:U\subseteq\mathbb{X},P_r(U)>=1-\delta))
 $$
 We call it as **Probabilistic info.**
 
-back to e.g. : $H_{1/10}<=log9$
+back to e.g. : $H_{1/10}<=log9$  :We can use a few Names to get Outcome we want.
+
+$\mathbb{X}$: ensemble $P(a_k)>0$ for all $a_k$
+
+*When we throw everything , we get $H_1$ = meaningless
+
+Thus , define $\delta<1$ , $0<=H_\delta<=H_0, |U|>=1$
+
+
+
