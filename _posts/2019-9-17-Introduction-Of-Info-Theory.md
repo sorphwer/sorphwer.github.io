@@ -1,4 +1,3 @@
----
 layout: post
 title: "Learning I.T.T "
 author: "Riino"
@@ -7,8 +6,8 @@ header-mask: 0.3
 mathjax: true
 sticky: false
 tags:
+
   - information theory
----
 
 [TOC]
 # I.T.T
@@ -303,7 +302,7 @@ $$
 
 
 
-## 4.Physical Coding
+## 4.Physical Coding（block Coding)
 
 現在我們知道
 $$
@@ -314,6 +313,20 @@ $$
 log|2^{H_\delta}+1|\approx H_\delta\approx NH
 $$
 説明N次實驗需要NH來存，則每一次的典型情況都需要H個bits來記錄。我們就可以知道Bit rate差不多是H。這叫block coding：一次decode N次實驗的情況。Block的長度就是H。也就是$H_\delta/N$
+
+
+
+
+
+Block coding 核心：(化成等长的块)
+$$
+H_\delta(X^n)\approx_{block} NH(X)
+$$
+Symbol Coding 核心: 按照概率化成不等长的块（比如haffman）
+$$
+H(X)
+$$
+
 
 ## 5.Source Coding(Symbol Coding)
 
@@ -415,7 +428,7 @@ n_{ave}=\sum p_kn_K<\sum p_k(log(1/p_k)+1)=H(\mathbb{X})+1
 $$
 用block coding思路: 對於$\mathbb{X^n}$: avg. length per symbol 要花費 $H(\mathbb{X})+1/n$ 
 
-## 8.‘Quantization’ Coding
+### Haffman Coding
 
 一個性質： $n_{ave}$
 
@@ -445,19 +458,207 @@ haffman所做的：
 
    
 
+## 8.‘Quantization’ Coding
+
+*What if “many” of all are slightly wrongly coded?
+
+for an example of X={1,2,3,...,100} (which needs log100), and we encode(概算) it into Y={5,10,15,...,95} -> H0=log19
+
+that $Y\sube X$， how to measure the **distortion**: d(x,y) between X and Y ?
+
+We set this measuring procedure as **quantization**.(reminds of JPEG??)
+
+There’s two attribute of quantization , rate: |Y| and distortion :d(x,y)=（x-y)^2
+
+e.g.  X={1,2,3,4,5,6} , Y={1,3,5} 
+
+其中一種可能編碼，這種編碼抛棄2，3，6.如果X中出現2,3,6則會在編碼中損失。
+$$
+\begin{array}{lc}
+\mbox{}&
+\begin{array}{cc}1& 3 &5\end{array}\\
+\begin{array}{c}1\\2\\3\\4\\5\\6\end{array}&
+\left[\begin{array}{cc}
+1&\\
+&1\\
+&1\\
+&&1\\
+&&1\\
+&&1\\
+\end{array}\right]
+\end{array}
+-deterministic -quantization
+$$
+在Y中： 1出現概率p1，3出現p2+p3，5出現p4+p5+p6,pi是X中的各個概率
+$$
+\hat d=p_2+p_3+p_6
+$$
+另一種從X到Y的編碼，這次是概率隨機分配。(這種叫**scalar quantization**)
+
+
+$$
+\begin{array}{lc}
+\mbox{}&
+\begin{array}{cc}1&2& 3&4 &5&6\end{array}\\
+\begin{array}{c}1\\3\\5\end{array}&
+\left[\begin{array}{cc}
+1&1/2&&&&&\\
+&1/2&1/2\\
+&&&1/2&1/2&1/2
+
+\end{array}\right]
+
+\end{array}
+randomized-quantization
+這圖需要修復
+$$
+這裏1出現概率p1+1/2p2,3出現1/2p2+p3+1/2p4 , 5出現1/2p4+p5+p6
+
+$$
+\hat d=\sum p(x)p(y|x) d(x,y)
+$$
+目標就是找到一個$Y_q$：
+$$
+rate:min ->r_q=H(Y_q)
+$$
+有：
+$$
+\hat d_q=\sum _{x,y}p(x)q(y|x)d(x,y)\le instance
+$$
+e.g.2
+
+如果X={0,1}=Y
+
+其中編碼時候1有$\delta$ 概率變成0，那
+$$
+r_\delta=H((1+\delta)/2)
+$$
+
+$$
+\hat d_\delta =1/2*\delta
+$$
+
+説明 randomized quantization 裏 $\hat d$ 和rate 正相關。當\delta =0.88的時候, hat d=1/2\delta=0.44. r=1/3
 
 
 
+在考慮1有$\delta_1$概率變成0，那麽
+$$
+\hat d=1/2(\delta+\delta_1)
+$$
 
+$$
+r=H((1+\delta-\delta_1)/2)
+$$
 
+利用**block（vector）quantization**可以在差不多的rate下面得到低的distortion：
 
+X^3 ->{000,111}
 
+可以讓$x\in X^3$,1多的=111，0多的=000，會得到更好distortion。這裏avg rate=1/3, avg distortion =6/8/3=1/4
 
+***vector distortion** 
+$$
+d(\underline x,\underline y)=1/N\sum_{n=1}^N d(x_n,y_n),x,y\in X^N
+$$
 
+那麽透過vector distortion能做到多好？
 
+對於一個X={0,1},Px={1,0},編碼到Y，0有1/2概率編碼成1，1/2變成0，而1不出現。那：
 
+typical y $\in Y^n$ , 是half 0, half 1， 而typical x是all 0 
 
+這樣以來 對於給定的x ，其transition uncertainty：
+$$
+\sum_x q(y|x)log(1/p(y|x)):transition Unvertainty
+$$
+下面定義Conditional entropy:
+$$
+\sum_xp(x)\sum_x q(y|x)log(1/p(y|x))=H(\mathbb{Y|\mathbb{X}})(conditinal Entropy)
+$$
+真正的uncertainty 是 H(Y)-H(Y|X).
 
+另外知道 joint ensemble entropy：
+$$
+H(X,Y)=\sum_{x,y}p(x,y)log(1/p(x,y))
+$$
+->
+$$
+H(X)=\sum_x\sum_yp(x,y)log(1/p(x))
+$$
 
+$$
+H(Y)=\sum_x\sum_yp(x,y)log(1/p(y))
+$$
 
+$$
+H(Y|X)=\sum_{x,y}p(x,y)log(1/p(y|x))
+$$
 
+->
+$$
+=\sum_{x,y}p(x,y)log(p(y)/p(x,y))=H(X,Y)-H(Y)
+$$
+相似地：
+$$
+H(Y|X)=H(X,Y)-H(X)
+$$
+hint: H(Y|X)=H(Y) given X.
+
+現在再考慮H(Y)-H(Y|X）=
+$$
+\sum_{x,y}p(x,y)log(p(y|x)/p(y))=\sum p(x,y)log(p(x,y)/p(y)p(x))=I(X;Y)
+$$
+上式記作：  Mutual Information ,注意中間式子裏x，y的對稱性。
+
+n.d.  如果x,y是獨立事件，p(x,y)=p(x)p(y),那麽log裏的東西是1，log1=0，I（X;Y)=0.即X,Y之間無mutual Info.
+
+![IMG_5173](assets/IMG_5173.JPG)
+
+↑ The whole graph represents H(X,Y)
+
+我們同樣也可以得出:
+$$
+0\le I(X,Y)=H(Y)-H(Y|X)\le H(Y)
+$$
+繼續看：
+$$
+\sum p(x,y)log(p(x,y)/p(y)p(x))=I(X;Y)
+$$
+上下翻轉log内容：
+$$
+-I\le1/ln^2\sum p(x,y)[p(x)p(y)/p(x,y)-1](不等式x\ge1-lnx)
+$$
+又
+$$
+\sum p(x,y)[p(x)p(y)/p(x,y)-1]=1-1=0
+$$
+->
+$$
+I(X;Y)\ge0
+$$
+*typical x in X^n : $p(x)\approx2^{-NH(X)}$
+
+*typical y in Y^n : $p(y)\approx2^{-NH(Y)}$
+
+->typical (x,y) in (X*Y)^n: $p(\underline x,\underline y)\approx 2^{-NH(X,Y)}$
+
+如果上面三個條件都滿足，可以說是jointly typical (x,y) in X,Y.
+
+->
+$$
+p(x)p(y)/p(\underline x,\underline y)=2^{-N(H(X)+H(Y)-H(X,Y))}=2^{-NI(X;Y)} (KindOfUncertaintyBetweenXandY)
+$$
+->
+$$
+\sum_ilog (p(x_i)p(y_i)/p(x_i,y_i))->I(X;Y)
+$$
+總結，對於從X到Y的encoding，考慮誕生的(x,y)，從數量來説(x,y)的縂概率要是$2^{N(H(X)+H(Y))}$，這相當於把typical x和typical y組合起來。
+
+但是實際上Y的情況和X据有關連，一個typical x出現對一個特定y的出現有影響。因此typical （x,y)是$2^(NH(X,Y))$
+
+請注意H(X)*H(Y)$\ge$H(X,Y),當X,Y獨立的時候等式成立。而它們的比，也就是X,Y的聯係度：
+$$
+2^{NH(X,Y)}/2^{N(H(X)+H(Y))}=1/2^{NI(X;Y)}
+$$
+所以説I表現了X,Y的一種相關程度，也就是我們能“掌握”X,Y相關度，也就是編碼時的certainty衡量所需要的信息量。
