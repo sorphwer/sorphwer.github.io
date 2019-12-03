@@ -468,7 +468,7 @@ that $Y\sube X$， how to measure the **distortion**: d(x,y) between X and Y ?
 
 We set this measuring procedure as **quantization**.(reminds of JPEG??)
 
-There’s two attribute of quantization , rate: |Y| and distortion :d(x,y)=（x-y)^2
+There’s two attribute of quantization , rate: |Y| and distortion :**d(x,y)=（x-y)^2**
 
 e.g.  X={1,2,3,4,5,6} , Y={1,3,5} 
 
@@ -487,7 +487,7 @@ $$
 &&1\\
 \end{array}\right]
 \end{array}
--deterministic -quantization
+~~deterministic ~~~quantization
 $$
 在Y中： 1出現概率p1，3出現p2+p3，5出現p4+p5+p6,pi是X中的各個概率
 $$
@@ -662,3 +662,275 @@ $$
 2^{NH(X,Y)}/2^{N(H(X)+H(Y))}=1/2^{NI(X;Y)}
 $$
 所以説I表現了X,Y的一種相關程度，也就是我們能“掌握”X,Y相關度，也就是編碼時的certainty衡量所需要的信息量。
+
+
+
+## 9. Rate-distortion tradeoff for Vector Quantization Scheme
+
+*per symbol quantization scheme q(y|x):
+
+for a distortion d(x,y):
+$$
+\hat d_q=\sum_xp(x)\sum_yq(y|x)d(x,y)
+$$
+the formula above defines average distortion of x->y
+
+Now consider an ensemble X-q>Y, q(y)=$\sum_x q(y|x)p(x)$
+
+也就是X，quantify到Y，其中的概率。根據之前的理論:
+$$
+I_g(X;Y)=\sum_x\sum_y q(y|x)log\frac{p(x)q(y|x)}{p(x)q(y)}
+$$
+其中一個結論是，當要做X->Y,如果用scale quantization, 根據最前面的理論要花費H（Y），但是現在可以從所有quantization裏找到一個，使得$I_q(X;Y)$是最小的，那麽就有$\hat d_q\le D$,就可以用$I_q$的bit來做，這裏就變成了vector quantization，這個時候$I_q$就變成了rate，記R(D).
+
+這個小q是個scale quantization 
+
+<img src="assets/FFAFC3FE43E3711ED0E51D0089D6AD4A.png" alt="FFAFC3FE43E3711ED0E51D0089D6AD4A" style="zoom: 33%;" />
+
+該圖叫 rate-distortion curve， 描述 VQ Scheme
+
+上圖的紅綫表示各種q，綠色表示最小的q，形狀反映了d越大 rate越小，他們是此消彼長的。
+
+Rate的完全定義是：
+$$
+R(D)=min_{VQ} \frac{logX}{N} :s.t. d_{VQ}\le D
+$$
+就是對於D， D是一個我們接受的可以will show的程度，能做到的最小rate。我們找到最小的$I$， 使得distortion都比D要小。
+
+*rate-distortion theorem:
+
+given $X,p,Y,d(x,y),D$:
+
+if $R_I(D)=R$ (意思是這個R是在某個scale quantization下拿到的I產生的):
+$$
+R_I(D)=min_{q:\bar d_q\le D} I(X;Y)=R
+$$
+then exists VQ scheme with $M\le2^{(R+e)N}$ codewords, and $\hat d_{VQ}\le D+e$ (這裏e是爲了證明需要)(N足夠大)
+
+**這個M就是對應的Codewords:|C|= $|\mu(X^n)|$ 的數量**
+
+->
+$$
+R_{VQ}=\frac{(R+e)N}{N}
+$$
+(上面的VQ scheme 需要有on length-N vector for N large enough ,也就是把N的 向量x變成向量y，兩個向量分別屬於X,Y
+
+這裏判定依然用$d(\mathbb{x},y)=\frac{1}{N}\sum_n d(x_n,y_n)$)
+
+(在上面的d_VQ,就是我們證明中假定$\hat d_{VQ}=R_{(V)}$)
+
+->
+
+thus:
+
+$R_{(V)}(D+e)\le R_{(I)}(D)+e$
+
+接下來仔細研究vector quantization，即從x變成y的情況， 一般總有一個最佳匹配使我們有最棒的D-R曲綫。這個的策略會是“Min distance”,
+
+那麽我們應該關注X中的x的typical的情況，我們知道它的概率是$2^{-2NH(X)}$
+
+總結：
+
+1. 選擇的映射應該有最小的distortion. $v(x)=min_{c_m} d(x,C_m)$
+2. 對於編碼,要把typical的x做好only care about typical .
+
+目標就是
+$$
+d(x,v(x)) (typical )\le D+\frac{1}{2}e (forEveryTypical (x)
+$$
+這裏的1/2改成任何小於1的分數都可以。
+
+Lin的思路是抓typical 的x放給typical的y，typical的x有$2^{NH(X)}$個。
+
+如果只抓typical，那麽最後會得到
+$$
+\hat d(typical x,typicaly)\le D+ke,0<k<1
+$$
+
+但是問題是，typical有2^{NH(X)}個，但是我們上面說了這個d下只能有M個codewords.
+
+**方法一** ： Typical First
+
+我們需要從X和Y共同的關係出發，定義T(x,y):
+$$
+T_{(x,y)}=\{(x,y):p(x,y)\approx2^{-NH(X,Y)}\}
+$$
+這裏Y是一個我們可以從中選出codewords的集合，x，y均是向量（因爲在討論VQ），并非Y就是編碼好的codewords assemble
+
+把上面的式子變化一下，依然要求滿足$\bar d\le D+e$，我們要求（x,y):
+$$
+|\frac{1}{N}log\frac{1}{p(x,y)}-H(X,Y)|\le e
+$$
+
+$$
+|\frac{1}{N}log\frac{1}{p(x)}-H(X)|\le e
+$$
+
+$$
+|\frac{1}{N}log\frac{1}{p(y)}-H(Y)|\le e
+$$
+
+上式的形式都是*Sample‘s entropy -Exception<= e*:
+$$
+|\frac{1}{codelength} H(sample)-Entropy|=|CodeRate-Entropy|\le e
+$$
+以上的條件滿足的( x,y)（均為向量）就成爲了 **jointly typical** : 
+$$
+\frac{1}{N}log\frac{p(x,y)}{p(x)p(y)}-I(X;Y)\le 3e
+$$
+記：
+$$
+i(x,y)=\frac{1}{N}log\frac{p(x,y)}{p(x)p(y)}
+$$
+jointly typical 在數學上説明它和I(X;Y)不會差太大
+
+(x,y)要成爲jointly typical,既要滿足x是typical，y是typical，還要滿足x，y這對組合的出現也是typical的。
+
+它的關係度是低於等於I(X;Y)
+
+如果(x,y)還能滿足：
+$$
+|\frac{1}{N}\sum d(x_n,y_n)-\bar d_q|\le e
+$$
+則它還是distortion typical
+
+由此定義出T：
+$$
+T:\{(x,y)|i(x,y)-I(X;Y)\le e,d(x,y)-\bar d_q\le e\}
+$$
+
+
+**方法二** From Codebook
+
+想找幾個在Y^n中的c，它們是distortion typical y. 它們滿足distortion typical. 上面已經說了這樣的c一共有M個
+
+然後再從X^n中挑選x去匹配。
+
+
+
+問題是如何找到這個$\mathbb{C}$,即codebook？  各個c應當盡可能分散，避免損失。
+
+*a “randomized algorithm” for “constracting” $\mathbb{C}$
+
+$\mathbb{C} ->（p(y)^M$ for one typical $x_1$:
+
+**如果M次都沒有匹配到($pay>\bar d_q+e$)，這個概率是$(1-P_{T(x_1)}(y))^M,P_{T(x_1)}(y)=\sum_{y\in T(x_1)}p(y)$**
+
+補充：這個意思是對於一組特定的codebook，讓x1找不到裏面有合適的c的概率。
+
+要讓這個概率足夠小，1-XX的XX部分足夠大：
+
+因爲：
+$$
+\frac{1}{N}log\frac{p(x,y)}{p(x)p(y)}-I(X;Y)\le e
+$$
+
+$$
+\frac{p(x,y)}{p(x)}=p(y|x)
+$$
+
+所以:
+$$
+\sum_{y\in T(x_1)}p(y)\ge \sum_{y\in T(x_1)}p(y|x)\times 2^{-(I+e)N}
+$$
+這裏
+$$
+\sum_{y\in T(x_1)}p(y|x) \approx 1 ~~~（tricky)
+$$
+對於 $(1-P_{T(x_1)}(y))^M$
+$$
+=e^{Mln(1-P_{T(x_1)}(y))}\le e^{M(1-P_{T(x_1)}(y)-1)}=e^{-2^{(R+e)N}2^{P_{T(x_1)}(y)}}=e^{-2^{eN}}
+$$
+thus:
+$$
+(1-P_{T(x_1)}(y))^M+atypical \le d_大\le e
+$$
+
+## 10.Stage sumury
+
+*How many bits to **represent** $\mathbb{X}$ error-free?  $H_o(X)$
+
+[compression]*How many bits to **represent** X^n with error $\delta$ (fixed-length)? $NH(X)$
+
+[compression]*How many bits to **represent** X with error $\delta$ (var-length)? $H(X) $ on avg.
+
+[+quantization]*How many bits to **represen**t X^n with fixed-length codewords with $\le D$  distortion? $NR_I(D)=N\times min_qI(X_q;Y_q)$
+
+## 11. From represent to transmit
+
+*How many bits to transmit X^n with $\le \epsilon$ error (**Through “Known” noise p (y|x)**)?
+
+> Shannon’s Second Theory
+
+在這個問題，可以推測出結果的上限是一個 $<\approx N*C$ 的形式,$C=max_qI(X;Y)$
+
+
+
+### *transmit model :  X->Y
+
+X={1,2,3,...,K} , Y={1,2,3,...,J}（may be different symbol system)
+
+對於noise(error) : p(y|x），很容易理解它形成一個probability transmit matrix,這裏記作 **Channel**
+
+計算error的方法：  考慮$X-\nu>Y-\mu>\hat X$, error= $E_{p(y|x)}[[x\ne \mu(y)]]$
+
+
+
+worst-case : error=$max_x E_{p(y|x)}[[x\ne\mu(y)]]$
+
+説明x不能全部選來自X的，應該是 $\underline x\in codeblocks \subset \mathbb{X}^n$, thus:
+
+“safe” transmission:
+
+transmit only $\{x_1,x_2,...,x_M\}$  such that $P_E^{\underline x_m} \le \epsilon $ （使用channel的次數是M）
+
+上面的意思是說，如果我們傳送all x in X, channel的使用率過大。 我們可以在error<e的情況下只傳送M個$\bar x$過去。（注意，我們送的是X^n的一部分，所以這裏是$\bar x$,也就是我們的codeword）
+
+Q: What is maximum $\frac{log M}{N}$ ? （這裏分式相當於channel的使用率）
+
+A: $\approx$ max. mutual information $I(\bar X_q;\bar Y_q)$= C
+
+這個C就是一開始我們預測的C,  Channel Capacity.
+
+
+
+> 傳送的X是n個unit， 取M個Codewords去transmit。C=$\frac{logM}{N}$ , $\mu$ 是deterministic。
+
+Codewords肯定是會分散在X^n裏。
+
+### final statement:
+
+given 0<R<C and $\epsilon >0$
+
+that exists a protocol  that archieves rate logM/N >= R
+
+and error max_m $P_E^{\underline c_m} \le \epsilon $
+
+ 
+
+### *Transmit Steps
+
+1. assume q(x) that achieves $\C$, construct p(x,y)
+
+2. construct $\C$ by sampling from $p(\bar x)$ for M times
+
+3. $\mu(y)=\underline c$ iff $(\underline c, \underline y)$ singly jointly typical
+
+   $\nu(\underline x)=\underline c$ iff  $d(\underline x,\underline c)$ smallest.
+
+   
+
+> underline x 和 x bar 疑似是一樣的
+
+### 白話
+
+我們在這一章做的是，對於一個沒有概率問題需要考慮的X^n,要通過channel來transmit成Y^n.
+
+那麽三個步驟是：
+
+1. 我們沒必要把每個element in X^n,都丟給channel。我們需要挑選一部分比較不容易出問題的element，也就是構建q(x)，這部分我們挑出來的就稱作codebook，他們構成一個建立在channel 上抽象的p(x,y)（這個實際上不存在）
+2. 那麽緊接著1，這部分x要怎麽找出來呢？ 我們丟x進channel，然後看出來的哪些y再對應回來的x的情況，找到每個q(x)(q(x)的意思就是取一部分x in X)，找其中表現最好的，也就是再對應回來的x和原來的x的joint Information
+3. 完成1和2后，我們就可以推導出我們要的encoder和decoder的性質，也就是我們找到的codewords和y是joint typical，而且我們的x和c的distortion是最小的。這樣就封閉了我們的理論。
+
+
+
