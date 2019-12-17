@@ -1,4 +1,4 @@
-layout: post
+ layout: post
 title: "Learning I.T.T "
 author: "Riino"
 header-img: "img/lunur.jpg"
@@ -562,7 +562,7 @@ $$
 d(\underline x,\underline y)=1/N\sum_{n=1}^N d(x_n,y_n),x,y\in X^N
 $$
 
-那麽透過vector distortion能做到多好？
+**那麽透過vector distortion能做到多好？**
 
 對於一個X={0,1},Px={1,0},編碼到Y，0有1/2概率編碼成1，1/2變成0，而1不出現。那：
 
@@ -856,7 +856,7 @@ $$
 
 [+quantization]*How many bits to **represen**t X^n with fixed-length codewords with $\le D$  distortion? $NR_I(D)=N\times min_qI(X_q;Y_q)$
 
-## 11. From represent to transmit
+## 11. From represent to transmit(Channel Coding)
 
 *How many bits to transmit X^n with $\le \epsilon$ error (**Through “Known” noise p (y|x)**)?
 
@@ -929,8 +929,132 @@ and error max_m $P_E^{\underline c_m} \le \epsilon $
 那麽三個步驟是：
 
 1. 我們沒必要把每個element in X^n,都丟給channel。我們需要挑選一部分比較不容易出問題的element，也就是構建q(x)，這部分我們挑出來的就稱作codebook，他們構成一個建立在channel 上抽象的p(x,y)（這個實際上不存在）
+
 2. 那麽緊接著1，這部分x要怎麽找出來呢？ 我們丟x進channel，然後看出來的哪些y再對應回來的x的情況，找到每個q(x)(q(x)的意思就是取一部分x in X)，找其中表現最好的，也就是再對應回來的x和原來的x的joint Information
+
 3. 完成1和2后，我們就可以推導出我們要的encoder和decoder的性質，也就是我們找到的codewords和y是joint typical，而且我們的x和c的distortion是最小的。這樣就封閉了我們的理論。
 
+4. 注意整個有M個元素的的Codebook，傳N長度的信息（channel使用了N次），碼率是$\frac{logM}{N}$ 
 
+   在這個概念上注意最大的capacity是$C=maxI(X_q;Yq)$ .
+
+最終，目標是對於直接傳輸的R，我們有： for any R<C,$C>rate\ge R$。 當M=1，相當於codebook裏只有一個選擇，那每次都只能傳它，rate相當於是0（無變化）.
+
+在物理上，Codebooks做的事情是把比較容易受noise而混淆的info拉開成不易被noise干擾而混淆的C進行傳送，進而增大distortion.
+
+5. 邊緣情況： 1. 不太typical：會存在有拿到的y無法decode。(如果M很大，這個可能性很小)
+
+    	2. Typical ： M不是很大也OK
+
+## 12. Info in “program”（Compression)
+
+Back to last chapter. Let’s talk:
+
+*How many bits to represent X={s1,s2,...sk} where $s_m\in \{0,1\} $ 
+
+如果要存儲一個zip檔案：
+$$
+Symbol~table+Huffman~info+encoded~bits\approx NH(X)
+$$
+
+
+*compression of binary string losslessly:
+$$
+S->\nu(S)->\mu(v(S))=S
+$$
+
+$$
+\in\{0,1\}(infinite)~~\in\{0,1\}(infinite)~~\in\{0,1\}
+$$
+
+
+
+目的是|v(s)|<|s|
+
+但是概念上，|v(s)|<|S|這件事是不能做到。用我們一開始的知識，S的H0是N，v（s）的H0是log(2^n-1),所以不能完成一對一lossless，（鴿籠原理也可以説明這個）
+
+但是有些“easy”情況： 比方説 S= 0000...0, or S=01010101....01.,這些相對完全random的”hard“情況，是有規律的，我們稱： **Programming easiness**
+
+
+
+### *Kolmogorov(-Chatin)Complexity
+
+> with respect to an universal computing model U
+
+$$
+K_u(S)=min\{|P|:U(P)=S\}
+$$
+
+注意:这里的K值（柯氏复杂度）是基于U的。所以记K_U， U不一样，K也不同。这里的P是program，可以是一些不同的Turing machine之类。
+
+Explain:
+
+S is a binary string $\in \{0,1\}$, let U run a function with input of P, and check if we can get such S as a output. Here, the symbol "=" , means halts and outputs.(S’s length is limited). And an extra **requirement** is we want the simplest program P.
+
+*One of computing model is the **Turing machine**(Does not mean U can be M, but P can be M). Turing machine already defined "computable function”, which is a transition from INPUT to OUTPUT , with 3 possible procedure: Move forward, Move back, Write(in the time of tape) , which is a mechanical computing process that can **halt**.
+
+Thus :  f is a computable function , if there exists Turing Machine M such that M(x)=f(x) **for all x.**
+
+As for **Universal Computing Model U**, for different machine, we can let  M be like different **programs** for **U**:
+$$
+U(P_f,x)=f(x)
+$$
+ U is like a program simulator. P_f is "M” in U. (这些话的意思是unify各种M到U上，以及讨论用code可以把data压到多短)
+
+warning↑这部分牵扯到automata and stack machine的内容。
+
+“$K_U$is almost "model-independent” : define $c_2$:
+$$
+K_{U1}(S)\le K_{U2}(S)+c_2
+$$
+Define : $P_2$ : program of $U_2$ on $U_1$
+
+$P_S$: program that achieve $K_{U_2}$ on $U_2$
+
+then:
+$$
+U_1(P_2P_s)=U_2(P_s)=S
+$$
+And within this equation:
+$$
+P_2->|P_2|,P_s->K_{U_2}(S)
+$$
+**上面的意思是， 本来S是U2通过运行Ps产生的，现在用U1模拟运行U2，且我们要付出额外代价，也可产生S。**
+
+结论：存在C2大于等于0：
+$$
+-c_1+K_{U_2}(S)\le K_{U_1}(S)\le K_{U_2}+c_2
+$$
+  and
+$$
+K(S)\le|S|+C (“input"+"copy")
+$$
+
+$$
+\exist S, such~ that ~~K(S)\ge |S|
+$$
+
+
+
+Back to the model:
+$$
+S-\nu>P-\mu>S
+$$
+
+
+if $\nu$ computable -> K(s) computable
+
+-> short program for string with large K(s)
+
+
+
+If K(S) computable -> exist M for computing K(S).
+
+假设有一个Program M，它从短到长遍历全部可能的二进制序列。它输入一个复杂度L，当它生成到的序列K复杂度大于L时立马停止，那它就能生成K复杂度大于L的最短序列。
+
+那么它的输出S的K复杂度就是L，是很大。但是它本身很小，这个program的cost可能是C+|M|+LogL(本身环境消耗+算法消耗+迭代L),这就产生了悖论：我们可以用K复杂度小于L的M来弄出K复杂度是L的S————结论就是一开始K(S)就不可计算。Not computable.
+
+**在数学上，K（S） computable的M是没有的。**
+
+##  13.Algorithmic Entropy
 
