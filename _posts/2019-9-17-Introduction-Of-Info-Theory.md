@@ -1054,7 +1054,185 @@ If K(S) computable -> exist M for computing K(S).
 
 那么它的输出S的K复杂度就是L，是很大。但是它本身很小，这个program的cost可能是C+|M|+LogL(本身环境消耗+算法消耗+迭代L),这就产生了悖论：我们可以用K复杂度小于L的M来弄出K复杂度是L的S————结论就是一开始K(S)就不可计算。Not computable.
 
-**在数学上，K（S） computable的M是没有的。**
+**在数学上，能讓K（S） computable的M是没有的。**
+
+
+
+*Considering some **P** that achieves K(S) that takes a very very long time?
+
+
 
 ##  13.Algorithmic Entropy
 
+
+
+## 14.Kolmogorov Complexity of Ensembles
+
+for a ensemble X:
+$$
+X=\{s_1,s_2...,s_k\}
+$$
+
+$$
+H(X)=\sum_{k=1}^k p_k log\frac{1}{p_k} \tag{1}
+$$
+
+Now we can define the formula of  **K(X)** similarly:
+$$
+K(X)=\sum_{k=1}^kp_k\times K(S_k) \tag{2}
+$$
+
+
+*這裏（1）是統計上的靜態結果。（2）表示了一種在Compute過程中not computable 的複雜度的關係。*
+
+**A special case:**
+
+assume for :
+$$
+X=B^N=\{s_1,s_2...s_{2^N}\}
+$$
+and there is a $s_b$ , and $K(S_b)\ge N$, (這個s很難很難被P壓縮(寫出比N短的code））and all p_i =0 , except for $p_{s_b}=1$
+
+thus:
+$$
+H(X)=0,K(X)\ge N
+$$
+This case is the "worst“ case,right?
+
+**Regular case:**
+
+回到定義所有長度N的s的B，定義B的分佈:{$\theta,1-\theta$}->{1,0}
+
+那麽 $p(s)=\theta^n (1-\theta)^{N-n}$
+
+->
+$$
+H(X)=N\mathcal{H}(\theta)
+$$
+
+$$
+\mathcal{H}(\theta)=\theta log \frac{1}{\theta}+(1-\theta)log\frac{1}{1-\theta}
+$$
+
+Actually:
+$$
+K(X)\approx_{by~short-programming} H(X)\approx_{by~block~coding} H_\delta(X)
+$$
+Because in block coding, the entropy is mainly defined by(focus on) **typical block**
+
+Thus, we can say that **show typical $\approx$ short program**
+
+### The Approximate Kolmogorov Complexity
+
+$$
+Given~\epsilon >0,\exist N_0,st.N\ge N_0~~\rightarrow K(X)\le(\mathcal{H}(\theta)+\epsilon)N
+$$
+
+
+
+Also:
+$$
+(\mathcal{H}(\theta)-\epsilon)N\le K(X)\le(\mathcal{H}(\theta)+\epsilon)N
+$$
+![image-20191217153436172](assets/image-20191217153436172.png)
+
+we can consider the range of atypical and typical H(X) and K(X) as the diagram above.
+
+
+
+Notice that, we have to write a **program** to get all typical S:
+
+![image-20191217153909507](assets/image-20191217153909507.png)
+
+And the cost is fixed program cost C, plus logN, plus **Index** ,which is the most highly connected to N.
+
+This program , creates every possible s, and if the s is typical, then return the table with its index.
+
+## 15. Solomonoff Inference(learning of program)
+
+考慮幾個程序，對一個字串 010101010，的下一位進行預測。
+
+它的預測可能是0，可能是1，可能是0101010（halts here）。
+
+對於U(P)=x,若這個長度是M的程序P是用fair random bit flip的方式，那對任何可能的x的概率p(x)
+$$
+p(x)=\sum_P\frac{1}{2^M}[[U(P)=x]]
+$$
+
+
+那其實全部可能長度的程序P都是：
+$$
+p(x)=\sum_{m=1}^\infin\sum_P\frac{1}{2^m}[[U(P)=x]]
+$$
+
+
+那麽得到的這個p(x)就可能符合某種分佈。(有些特定的字串可能是有特定的程序產生，它的概率就低。簡單的字串可能很多程序都能打印出來，它的概率就高)
+
+回到一開始的問題，我們現在在比較：
+$$
+p(x_{t-1} 0)
+$$
+
+$$
+p(x_{t-1} 1)
+$$
+
+哪個大。也就是説程序預測下一位是0還是1哪個概率大。
+
+
+
+
+
+*對於全部能生成從1到M字節長度的程式，按道理說，假設一個程式生成器（比如猴子敲鍵盤），它對於N字節長度能有1/2^N的可能性生成共2^N個程式。
+
+但是我們不需要這樣平凡分散的情況。那有幾種解決辦法：
+
+1. 只保留“合法”的程式。（定義出合法的規則）（但是無法 guarantee on $\sum P_r(P)$
+
+2. 有個問題是每種情況的可能性總數：$\sum Pr(P)$加起來都是1。我們能不能修改$\sum Pr(P)$的定義?
+
+   我們把每個程式的可能性：$\frac{1}{2^N}$改成 $\frac{1}{4^N}$
+
+殘念，以上的情況都很少人有研究。
+
+主流的解決方案：
+
+​	**Consider programs that are prefix-free**(什麽是prefix-free？ huffman code就是prefix-free)
+
+define ensemble : {$\underline p$}
+$$
+0<\sum_{|p|~of~{\underline p}}2^{-|p|}\le1 \tag{Kraff's Ineg}
+$$
+這個意思是，全部定字節長度的全部prefix-free的程式的概率肯定在0到1之間。
+
+用這種規則定義出來的程式集合記作  **prefix K-complexity aka prefix Chaitin-Complexity**
+
+而我們一開始定義的稱 **plain K-complexity**
+
+類似entropy的：
+$$
+H（X;Y）=H(X)+H(Y|X)
+$$
+對於兩個program，generate出兩個b string s， t ,也有：
+$$
+K_c(s,t)\approx K_C(s)+K_C(t|s)
+$$
+***Simple-string distribution(encode了對計算簡單和計算困難的想象)**
+$$
+p(\underline s)=\sum_{p:U(\underline p)=\underline s} 2^{-|\underline p|}
+$$
+描述一個prefix字符串s的概率。
+
+對於計算困難，chaitin説明了計算困難的string是找不到（很難找到）程式的。
+
+***Chaitin's constant**
+
+for any Program that can **halt** ：
+
+define
+$$
+\Omega_F=\sum_{p\in P_F}2^{-|p|}
+$$
+大概的解釋：http://www.matrix67.com/blog/archives/901
+
+這個常數表示一個程式halt的概率，它是存在且可定義的，但是不可計算。
