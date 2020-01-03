@@ -922,7 +922,7 @@ and error max_m $P_E^{\underline c_m} \le \epsilon $
 
 > underline x 和 x bar 疑似是一樣的
 
-### 白話
+### Explanation  in General
 
 我們在這一章做的是，對於一個沒有概率問題需要考慮的X^n,要通過channel來transmit成Y^n.
 
@@ -1150,6 +1150,8 @@ This program , creates every possible s, and if the s is typical, then return th
 
 ## 15. Solomonoff Inference(learning of program)
 
+### Learning and prediction of  Universal Machine
+
 考慮幾個程序，對一個字串 010101010，的下一位進行預測。
 
 它的預測可能是0，可能是1，可能是0101010（halts here）。
@@ -1165,8 +1167,9 @@ $$
 p(x)=\sum_{m=1}^\infin\sum_P\frac{1}{2^m}[[U(P)=x]]
 $$
 
-
 那麽得到的這個p(x)就可能符合某種分佈。(有些特定的字串可能是有特定的程序產生，它的概率就低。簡單的字串可能很多程序都能打印出來，它的概率就高)
+
+這個分佈可以叫做  **Universal Distribution**
 
 回到一開始的問題，我們現在在比較：
 $$
@@ -1180,6 +1183,8 @@ $$
 哪個大。也就是説程序預測下一位是0還是1哪個概率大。
 
 
+
+### Prefix-free solution of learning
 
 
 
@@ -1203,6 +1208,8 @@ define ensemble : {$\underline p$}
 $$
 0<\sum_{|p|~of~{\underline p}}2^{-|p|}\le1 \tag{Kraff's Ineg}
 $$
+
+
 這個意思是，全部定字節長度的全部prefix-free的程式的概率肯定在0到1之間。
 
 用這種規則定義出來的程式集合記作  **prefix K-complexity aka prefix Chaitin-Complexity**
@@ -1213,19 +1220,23 @@ $$
 $$
 H（X;Y）=H(X)+H(Y|X)
 $$
-對於兩個program，generate出兩個b string s， t ,也有：
+對於兩個program，generate出兩個b string s， t ,也有
 $$
 K_c(s,t)\approx K_C(s)+K_C(t|s)
 $$
+### Universal Distribution aka Simple-string distribution
+
 ***Simple-string distribution(encode了對計算簡單和計算困難的想象)**
 $$
-p(\underline s)=\sum_{p:U(\underline p)=\underline s} 2^{-|\underline p|}
+p(\underline s)=\sum_{p:U(\underline p)=\underline s} 2^{-|\underline p|} \tag{1}
 $$
 描述一個prefix字符串s的概率。
 
+![image-20191231155212457](assets/image-20191231155212457.png)
+
 對於計算困難，chaitin説明了計算困難的string是找不到（很難找到）程式的。
 
-***Chaitin's constant**
+### ***Chaitin's constant**
 
 for any Program that can **halt** ：
 
@@ -1236,3 +1247,148 @@ $$
 大概的解釋：http://www.matrix67.com/blog/archives/901
 
 這個常數表示一個程式halt的概率，它是存在且可定義的，但是不可計算。
+
+
+
+(1)是predict任意一個字串的概率。
+
+*對於給的t-1個bit和下一個未知bit x組成的字串 $s_1s_2 s_3\dots s_{t-1} s_x$
+
+定義 
+$$
+p_x(\underline s)=\sum_{x\in \beta ^+ \cup \{\Lambda\}}p(\underline s \underline x)
+$$
+p_x 就是得出一個字符串，前t-1個是固定的bit的概率。（beta+ \cup \lambda 指的是 0和1的集合以及停止符。）
+
+那麽有：
+$$
+p_x(s_t|\underline {s_{t-1}})=\frac{p(\underline s_x)}{p_x(\underline{s_{x-1})}}
+$$
+
+$$
+p_x(\lambda|\underline s_{t-1})=1-p_x(1|\underline s_{t-1})-p_x(0|s_{t-1})
+$$
+
+（定義lambda是下一個是停止符)上式的意思是下一個是停止符的概率是1-p（下一個是1）-p（下一個是0）
+
+
+
+定義我們做預測要付出的error rate:
+
+首先我們知道對於一個要預測的\hat s_t
+$$
+p(\hat s_t=1)=p_x(1|s_{t-1})
+$$
+
+$$
+p(\hat s_t=0)=p_x(0|s_{t-1})
+$$
+
+$$
+p(\hat s_t=\lambda)=p_x(\lambda|s_{t-1})
+$$
+
+那麽，error就是：
+
+定義 q_t,是第t個bit的預測的錯誤率。
+$$
+e_t=[[\hat s_t \ne s_t]]
+$$
+
+$$
+q_t=1-p_x(s_t|s_{t-1})
+$$
+所以我們對整個字符串的預測錯誤率是：
+$$
+\mathbb{E}\sum_{t=1}^Te_t=\sum_{t=1}^Tq_t=\sum_{t=1}^T (1-\frac{p_x(\underline s_t)}{p_x{\underline s_t-1}})
+$$
+
+*這裏不是大家覺得理所當然的 **連乘錯誤率** 因爲我們定義p_x總是基於之前的結果。所以實際predict的時候每次都看了前面已經做出的全部結果。
+
+???->
+$$
+\mathbb{E}\sum_{t=1}^Te_t=\sum_{t=1}^Tq_t=\sum_{t=1}^T (1-\frac{p_x(\underline s_t)}{p_x{\underline s_t-1}})\le\sum_{t-1}^T-ln\frac{p_x(\underline s_t)}{p_x(\underline s_{t-1})}=-lnp_x(\underline s_T)+lnp_x(\underline s_t)\dots
+$$
+這個不等式是考慮說產生2^T+2^T-1+....=M種的全部program中肯定有一個是對的，那我們的錯誤率肯定是小於1/M，如果T趨近於無限，則M趨近於無限，那麽我們的error rate應該趨近於1, learning impossible.
+
+再定義 
+$$
+K_x (\underline s_T)=min\{|P|:\underline s_t \times \underline v\}
+$$
+那：
+$$
+error\le -ln2^{-K_x(\underline s_T)}=K_x(\underline s_t)\times ln2
+$$
+上面的意思是最大極限的一堆ln裏有一個最短的program P，已經生成了目標字串。
+
+綜上，我們發現error$\le$ 一個常數。它表示最壞情況和找到的最短Program的柯氏複雜度有關係，這個複雜度和要生成的字符串s有關係。
+
+且平均錯誤率：
+$$
+\bar {error}\le \frac {K_x(\underline s_t)ln2}{T}
+$$
+上式表示prediction的upper bound.
+
+## 16. PAC Learning: Probably Approximately Correct Learning
+
+*consider hypothesis set :
+$$
+\mathcal{H}=\{h\}
+$$
+and examples : 
+$$
+D=\{(x_n,y_n=h_*(x_n)\}(input(feature),ouput(label))
+$$
+and
+$$
+\exist h_*\in \mathcal{H}
+$$
+define all $x_n$ iid from some program p(x)
+
+對應關係是：
+
+programs->hypotheses
+
+generating programs -> h_*
+
+errors -> $e(h)=\mathbb{E_{x\~p(\underline x)}}[[h(\underline x)\ne h_*(\underline x)]]$
+
+PAC:
+
+get g w/ small :(我們在hypothesis裏拿一個 **g**,這個g的error有上限而且準確度還可以)
+$$
+e(g)\le“\epsilon”
+$$
+or
+$$
+prob \ge 1-\delta ~over~generation~of~D
+$$
+see http://blog.pluskid.org/?p=821 ??
+
+*if always pick $g\in \mathcal{H}$：
+
+
+
+
+$$
+g(\underline x_n)=y_n~for~all~n(zero~training~error)
+$$
+//PROOF HERE AND ABOVE
+
+---
+
+CONCLUSION
+
+if having a preference(aka prior) p(h) on $h\in \mathcal{H}$ ：
+$$
+p(h)\ge0,\sum_h p(h)=1
+$$
+
+
+then for any given $0\le\delta\le1$
+$$
+^{p_r}_{D\sim p^N(\underline x)}(e(g)\le \frac{1}{N}(ln\frac{1}{\delta}+ln\frac{1}{p(g)}))\ge 1-\delta
+$$
+大概意思是是找比較簡單的h,(Occam’s Razor)來丟進去,在N沒那麽大的時候可以控制學習的錯誤率。p(h)是**preference**
+
+h不複雜，preference就大一點。這樣在N情況下控制錯誤率。
