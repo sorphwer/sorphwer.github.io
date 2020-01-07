@@ -987,6 +987,8 @@ $$
 
 注意:这里的K值（柯氏复杂度）是基于U的。所以记K_U， U不一样，K也不同。这里的P是program，可以是一些不同的Turing machine之类。
 
+**An important feature of K-Complexity: Kolmogorov complexity is small relative to the string's size**
+
 Explain:
 
 S is a binary string $\in \{0,1\}$, let U run a function with input of P, and check if we can get such S as a output. Here, the symbol "=" , means halts and outputs.(S’s length is limited). And an extra **requirement** is we want the simplest program P.
@@ -1020,6 +1022,10 @@ $$
 P_2->|P_2|,P_s->K_{U_2}(S)
 $$
 **上面的意思是， 本来S是U2通过运行Ps产生的，现在用U1模拟运行U2，且我们要付出额外代价，也可产生S。**
+
+上面这句话会引出不变性定理：Invariance theorem：
+
+不变性定理说：对于S，有机会用一些最佳的程式P来运行，但是总要付出一个额外固定常数的代价，这个常数取决于P的类型（java、python、English，etc.)。
 
 结论：存在C2大于等于0：
 $$
@@ -1148,7 +1154,9 @@ And the cost is fixed program cost C, plus logN, plus **Index** ,which is the mo
 
 This program , creates every possible s, and if the s is typical, then return the table with its index.
 
-## 15. Solomonoff Inference(learning of program)
+## 15. Solomonoff Inference: Mathematical  Description of Occam's Razor
+
+## (learning of program)
 
 ### Learning and prediction of  Universal Machine
 
@@ -1373,7 +1381,21 @@ see http://blog.pluskid.org/?p=821 ??
 $$
 g(\underline x_n)=y_n~for~all~n(zero~training~error)
 $$
-//PROOF HERE AND ABOVE
+//PROOF HERE AND ABOVE、
+
+### A PAC  bound
+
+
+
+PROOF
+
+**key: $e_D(h)=\sigma$, atypical with large e(h)**
+
+**if N is large enough, atypical <$\delta p(h)$**
+$$
+e_D(h)=0,e(h)\le\frac{1}{N}(ln\frac{1}{\delta}+ln\frac{1}{p(h)})\ge1-\delta
+$$
+,
 
 ---
 
@@ -1392,3 +1414,82 @@ $$
 大概意思是是找比較簡單的h,(Occam’s Razor)來丟進去,在N沒那麽大的時候可以控制學習的錯誤率。p(h)是**preference**
 
 h不複雜，preference就大一點。這樣在N情況下控制錯誤率。
+
+
+
+也許要用短小的hypothesis來learn<->也許需要用小的codeword來encode
+
+
+
+## 17. Final Summary
+
+$$
+How~many~bits?
+$$
+
+
+
+### Theme list:
+
+Shannon Entropy
+
+----
+
+- Store
+  $$
+  H(X)\approx\frac{1}{N}H_\delta(X^N)\le H_0(X)
+  $$
+  
+
+- Approximate
+  $$
+  min_{q:\bar d\le D}I(X;Y_q)
+  $$
+  
+
+- Commute(Way to Modern Communication)
+
+$$
+max_qI(X_q;Y_q)
+$$
+
+---
+
+- Compute(Way to Info. Engineering)(Extends `Gate Complexity`,way to logical design and Computational complexity)
+  $$
+  K(\underline S)
+  $$
+
+  $$
+  Shannon~Entropy\leftarrow K(\underline s: \underline t)--K(S)\rightarrow Algorithmic~Info.~Theory\rightarrow joint~ conditional
+  $$
+
+  
+
+- Learn(Way to ML)
+
+  - PAC bound
+
+  $$
+  \alpha:K_x(\underline s)(prefix-free)
+  $$
+
+  $$
+  \downarrow Alogorithmic~ distribution
+  $$
+
+  $$
+  for~preference~p(h):
+  $$
+
+  $$
+  \alpha: log\frac{1}{p(h)}
+  $$
+
+  - Code the hypo.
+
+  - Min Description Length*  of Learning enhancement
+
+    
+
+    ---
