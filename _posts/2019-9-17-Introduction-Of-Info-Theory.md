@@ -1,4 +1,5 @@
- layout: post
+---
+layout: post
 title: "Learning I.T.T "
 author: "Riino"
 header-img: "img/lunur.jpg"
@@ -8,7 +9,7 @@ sticky: false
 tags:
 
   - information theory
-
+---
 [TOC]
 # I.T.T
 
@@ -85,6 +86,7 @@ One-to-one: $encoder: v(x)->\forall a_1 != a_2 , v(a_1)!=v(a_2)$   $ \exists dec
 log（x的正確集合的數量）=H0（x的正確集合的數量)
 
 ![1569308313629](assets/1569308313629.png)
+<img src="..//assets/1569308313629.png"/>
 
 //// 因爲正確集合的性質是在enc和dec全對，那由於鴿籠，它的量肯定比Y籠子的量小。
 
@@ -1440,13 +1442,11 @@ Shannon Entropy
   H(X)\approx\frac{1}{N}H_\delta(X^N)\le H_0(X)
   $$
   
-
 - Approximate
   $$
   min_{q:\bar d\le D}I(X;Y_q)
   $$
   
-
 - Commute(Way to Modern Communication)
 
 $$
