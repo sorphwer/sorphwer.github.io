@@ -59,14 +59,15 @@ layout: default
     color:white;
     background:black;
   }
-  li{
-    padding-left: 10px;
-    text-transform:inherit
+  .toc{
+    padding-left: 10px !important;
+    text-transform:inherit !important;
+   
   }
-  
+
 </style>
 
-<section style="height: 100px;"></section>
+<section style="height: 0px;"></section>
 {% if page.toc == true %}
 <div class="sidebar_catelog sticky-top"></div>
 {% endif %}
@@ -137,6 +138,10 @@ layout: default
   //for the last rising operation will make footer in wrong place, set another wedge to fix it.
   $('.js-fadein').append("<section class='wedge-main'></section>");
   $('.wedge-main').css("height","250px");
+
+
+  $('.sidebar_catelog').find("li").addClass('toc');
+  //alert($('#table-of-contents').find("a").html());
   }
 
 /*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
