@@ -56,7 +56,7 @@ layout: default
 </style>
 
 <section style="height: 0px;"></section>
-{% if page.toc == true %}
+{% if page.toc != false %}
 <div class="sidebar_catelog sticky-top"></div>
 {% endif %}
 <section class="js-fadein">
@@ -83,10 +83,11 @@ layout: default
 
   <section style="height: 50px;"></section>
   <div class="container">
-    
+    {% if page.toc != false %}
     <div id="table-of-contents">
       {% include toc.html html=content %}
     </div>
+    {% endif %}
     <div id="markdown-content">
       
       {{ content  }}
