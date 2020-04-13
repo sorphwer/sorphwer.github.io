@@ -1,0 +1,78 @@
+<style type="text/css">
+    li{
+        text-transform:uppercase;
+    }
+    </style>
+    <header><div class="header__inner u-clearfix">
+        <nav class="header__navi pc">
+            <ul class="u-clearfix">
+                <!--
+                <li>
+                    <a href="{{ site.baseurl }}/">Home</a>
+                </li>
+                -->
+
+
+                {% for link in site.navigation %}
+                    {% assign current = nil %}
+                     {% if page.url == link.url or page.layout == link.layout %}
+                            {% assign current = 'is-current is-active' %}
+                    {% endif %}
+                    
+                     <li class=" {{ current }} ">
+                        <a href="{{ link.url }}">{{ link.text }}</a>
+                    </li>
+                    
+                {% endfor %}
+
+
+
+
+<!--
+                {% for page in site.pages %}
+               
+                    {% if page.title and page.hide-in-nav != true %}
+                    
+                    <li>
+                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+    -->
+    
+                <li class="navi__lang js-lang">
+                    <a class="navi__langLink" href="javascript:void(0);">BLOG</a>
+                    <div class="navi__langList">
+                        <span><a href="javascript:void(0);">LOW ILL.</a></span>
+                        <span><a href="javascript:void(0);">MINECRAFT</a></span>
+                        
+                    </div>
+                </li>
+                
+            </ul>
+        </nav><!-- .header__navi -->
+                    <nav class="header__sns pc">
+                <ul class="u-clearfix">
+                    <li><a href="https://github.com/sorphwer" target="_blank">GITHUB</a></li>
+                </ul>
+            </nav><!-- .header__sns -->
+            <div class="header__logo sp" style="background-color: white;">
+                <a href="">
+                    <p class="header__logoTxt"><img src="{{ site.url }}/img/logo_Nest.png" alt="Riino BLOG"></p>
+                </a>
+            </div><!-- .header__logo -->
+        
+        <div class="menuBtn sp">
+            <div class="menuBtn__inner">
+                <a href="javascript:void(0);">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div><!-- .menuBtn__inner -->
+        </div><!-- .menuBtn -->
+    </div></header>
+    
+    
+    
+    <!--<section style="height: 200px;"></section>-->

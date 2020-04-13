@@ -10,7 +10,7 @@ tags:
   - Embedded System
   - Raspberry Pi
   - STM32
-
+toc: true
 ---
 
 ## Get training data

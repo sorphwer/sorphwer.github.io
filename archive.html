@@ -1,42 +1,105 @@
 ---
 title: Archive
-layout: default
+layout: forarchive
 description: Check Everything Here.
 header-img: "img/bg2.jpg"
 ---
+
 
 <!-- 
 Credits: this page shamelessly borrowed a lot from:
 https://github.com/kitian616/jekyll-TeXt-theme
 -->
 <!-- Page Header -->
-{% include intro-header.html type='page' short=true %}
 
+<script src='{{ "/js/archive.js " | prepend: site.baseurl }}'></script>
+<style type='text/css'>
+.tag-button--all{
+	padding:2px;
+	border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+	color:black;
+	margin:10px;
+	text-decoration:none;
+}
+.tag-button--all:hover{
+	margin:10px;
+	border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:white;
+    background:black;
+}
+#tag_cloud .tag-button{
+	padding:2px;
+	margin:10px;
+    border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:black;
+	
+  }
+#tag_cloud .tag-button:hover{
+	margin:10px;
+    border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:white;
+    background:black;
+  }
+.post-subtitle{
+	font-size: 18px;
+	color:#777;
+	line-height: 1.75;
+}
+.post-title{
+	color: #282828;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+.tag-text{
+	font-size: 22px;
+	color:black;
+	text-align: center;
+}
+.focus{
+	color:white !important;
+    background:black;
+}
+</style>
+
+<!--<link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | prepend: site.baseurl }}">-->
 <!-- Main Content -->
+<section style="height:100px"></section>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		<div class="col-md">
 			<!-- Tags (as filter) -->
 			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					Show All
+				<a class="tag-button--all" data-encode="" href="{{site.baseurl }}/archive">
+					<b>Show All</b>
 					<sup>{{site.posts.size}}</sup>
 				</a>
 
 				{% capture tags %}
 				{% for tag in site.tags %}
-				<a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
+				<a 
+				 href="archive.html?tag={{ tag[0] }}"
+				 data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
 					data-encode="{{ tag[0] | strip | url_encode }}"
 					class="tag-button"
 					title="{{ tag[0] }}" rel="{{ tag[1].size }}">
 					{{ tag[0] }}
 					<sup>{{tag[1].size}}</sup>
-				</a>
+			    </a>
 				{% endfor %}
 				{% endcapture %}
         {{ tags | split:'</a>' | sort | join:'</a>' }}
 			</div>
-
+            <section style="height:100px"></section>
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
 			{%- assign _sorted_list = site.posts -%}
@@ -61,25 +124,29 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{%- unless forloop.first -%}</section>{%- endunless -%}
 				<section>
 				<span class="fa listing-seperator">
-					<span class="tag-text">{{ _currentdate }}</span>
+					<span class="tag-text"><h3>{{ _currentdate }}</h3></span>
 				</span>
 				{%- assign _date = _currentdate -%}
 			{%- endif -%}
 
 				<div class="post-preview item" data-tags="{{ _tags }}">
 				    <a href="{{ _article.url | prepend: site.baseurl }}">
-				        <h2 class="post-title">
+						
+				        <h3 class="post-title">
                             {{ _article.title }}
-				        </h2>
-				        {% if _article.subtitle %}
-				        <h3 class="post-subtitle">
-				            {{ _article.subtitle }}
 				        </h3>
+				        {% if _article.subtitle %}
+				        <h4 class="post-subtitle">
+				            {{ _article.subtitle }}
+				        </h4>
 				        {% endif %}
 				    </a>
 					<hr>
+				
 				</div>
 			{% endfor %}
 		</div>
 	</div>
 </div>
+
+
