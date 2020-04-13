@@ -16,9 +16,9 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-# Outline
+# Table of Contents
 
-TOC outline is supported by  `jekyll-toc`, you can set such yaml head to enable it. When enabled, a toc at top of the article or the sidebar will be created automatically:
+TOC is enabled automatically, you can set such yaml head to disable it with `toc:false`. When enabled, a toc at top of the article or the sidebar will be created automatically, and you do not need to add anything, any standard markdown titles will be recognized.
 
 ```yaml
 layout: post
@@ -27,7 +27,6 @@ date:   2020-03-01 17:08:09 +0800
 tags: 
 - jekyll 
 - doc
-toc: true
 ```
 
 Also, tags is enabled in archive page. Current version **do not** support space in tag.
@@ -50,10 +49,13 @@ print_hi('Tom')
 ```
 ## Latex
 
-Latex formatter is supported by `mathjax`
+Latex formatter is supported by `mathjax`, such latex block need two extra enter to create isolated paragraph.
+
 $$
 f(x)'=lim_{x\rightarrow0}\frac{f(x)}{x}
 $$
+
+
 
 To use inline latex like $\theta$, please check the config in head label, which is supposed to be:
 

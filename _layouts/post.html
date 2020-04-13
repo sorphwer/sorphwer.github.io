@@ -66,7 +66,7 @@ layout: default
     <h4 class="subheading">{{ page.subtitle }}</h4>
     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
       on {{ page.date | date: "%B %-d, %Y" }}</span>
-
+<!--
       <span id="http://www.cloudchou.com" class="leancloud_visitors meta_data_item" data-flag-title="">
         <span class="post-meta-item-icon">
           <span class="octicon octicon-eye"></span> 
@@ -74,7 +74,7 @@ layout: default
         <span class="old-visitors-count" style="display: none;"></span>
         <span class="leancloud-visitors-count"></span>
         <span class="post-meta-item-text"> Number of visits</span>
-   </span>
+   </span>-->
 
     {% for tag in page.tags %}
     <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
