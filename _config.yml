@@ -32,7 +32,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-toc
  # - jekyll-sitemap
 paginate: 10
 
