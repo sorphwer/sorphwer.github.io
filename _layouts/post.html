@@ -150,6 +150,7 @@ layout: default
   }
 
 $(function() {
+  $('#table-of-contents').find("li").addClass('toc');
   if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width()<1000) {
     console.log("toc disabled");
   }
