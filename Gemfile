@@ -34,4 +34,4 @@ gem "jekyll-toc"
 
 gem "jekyll-sitemap"
 
-gem "nokogiri", ">= 1.10.8"
+#gem "nokogiri", ">= 1.10.8"

@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-toc
-  - jekyll-sitemap
+ # - jekyll-sitemap
 paginate: 10
 
 toc:
@@ -54,10 +54,10 @@ toc:
 # this goes inside _config.yml. Change as required
 navigation:
 - text: Home
-  url: /index/
+  url: /index.html
   layout: home
 - text: Archive
-  url: /archive/
+  url: /archive.html
   layout: forarchive
 - text: Portfolio
   url: /portfolio/
