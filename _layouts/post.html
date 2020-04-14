@@ -10,63 +10,77 @@ layout: default
       visibility: hidden;
     }
   }
+
   .sidebar_catelog {
     /*float: left;*/
     width: auto;
     /*margin-right: -200px;*/
     padding-right: -200px;
-    
-  }
-  .sidebar_catelog a{
-    color:black;
-  }
-  .sidebar_catelog a:hover{
-    background:black;
-    color:white;
-  }
-  .sidebar_catelog .list-click{
-    background:black;
-    color:white;
-  }
-  
 
-  .list_click{
-    color:white !important;
-    background:black;
   }
-  .tag{
+
+  .sidebar_catelog a {
+    color: black;
+  }
+
+  .sidebar_catelog a:hover {
+    background: black;
+    color: white;
+  }
+
+  .sidebar_catelog .list-click {
+    background: black;
+    color: white;
+  }
+
+
+  .list_click {
+    color: white !important;
+    background: black;
+  }
+
+  .tag {
     border: 1px #000 solid;
     border-radius: 3px;
     padding: 0 11px;
-    color:black;
+    color: black;
   }
-  .tag:hover{
+
+  .tag:hover {
     border: 1px #000 solid;
     border-radius: 3px;
     padding: 0 11px;
-    color:white;
-    background:black;
+    color: white;
+    background: black;
   }
-  .toc{
+
+  .toc {
     padding-left: 10px !important;
-    text-transform:inherit !important;
-   
+    text-transform: inherit !important;
   }
 
+  .edit-button {
+    color: black;
+    font-size: 1rem;
+  }
 </style>
 
-<section style="height: 0px;"></section>
+<section id="front-wedge" style="height: 0px;"></section>
 {% if page.toc != false %}
 <div class="sidebar_catelog sticky-top"></div>
 {% endif %}
 <section class="js-fadein">
 
   <div class="home-message__ttl" style="text-align: left;">
-    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      <a class="edit-button" href="{{site.repo_url}}/blob/master/{{page.path}}" title="Edit on GitHub"><i
+          class="fa fa-edit"></i></a>
+      <!--<a class="download tbutton" href="{{site.url}}/_posts/{{page.name}}">D</a>-->
+    </h1>
     <h4 class="subheading">{{ page.subtitle }}</h4>
-    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
-      on {{ page.date | date: "%B %-d, %Y" }}</span>
-<!--
+    <span class="meta">Posted by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</i>
+      on {{ page.date | date: "%B %-d, %Y" }} </span><i class="fa fa-tags"></i>
+    <!--
       <span id="http://www.cloudchou.com" class="leancloud_visitors meta_data_item" data-flag-title="">
         <span class="post-meta-item-icon">
           <span class="octicon octicon-eye"></span> 
@@ -81,7 +95,7 @@ layout: default
     {% endfor %}
   </div>
 
-  <section style="height: 50px;"></section>
+  <!--<section style="height: 50px;"></section>-->
   <div class="container">
     {% if page.toc != false %}
     <div id="table-of-contents">
@@ -89,7 +103,7 @@ layout: default
     </div>
     {% endif %}
     <div id="markdown-content">
-      
+
       {{ content  }}
     </div>
 
@@ -107,34 +121,35 @@ layout: default
 
 <script type="text/javascript">
 
-  function initSidebar(){
-  // var sidebarLength = $('.sidebar_catelog').width();
-  var titleHeight = $('.home-message__ttl').height();
-  //move sidebar to right:
-  $('.sidebar_catelog').css("margin-left", $('#markdown-content').width()+50);
-  //for everything in this html will be in a layout with left/right marging, set negetive margin to let sidebar break this border.
-  $('.sidebar_catelog').css("margin-right", "-200px");
-  //replace content into toc.
-  $('.sidebar_catelog').html($('#table-of-contents').html());
-  //hide origin toc on the head of the article.
-  $('#table-of-contents').css("visibility", "hidden");
-  $('#markdown-content').css("margin-top",-100);
-  //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
-  $('.sidebar_catelog').prepend("<div class='wedge'></div>")
-  $('.wedge').css("height","250px");
-  //for the first wedge will create space for every component, use negetive margin to rise toe content:
-  $('.js-fadein').css("margin-top","-250px");
-  //for the last rising operation will make footer in wrong place, set another wedge to fix it.
-  $('.js-fadein').append("<section class='wedge-main'></section>");
-  $('.wedge-main').css("height","250px");
+  function initSidebar() {
+    // var sidebarLength = $('.sidebar_catelog').width();
+    var titleHeight = $('.home-message__ttl').height();
+    //move sidebar to right:
+    $('.sidebar_catelog').css("margin-left", $('#markdown-content').width() + 50);
+    //for everything in this html will be in a layout with left/right marging, set negetive margin to let sidebar break this border.
+    $('.sidebar_catelog').css("margin-right", "-200px");
+    //replace content into toc.
+    $('.sidebar_catelog').html($('#table-of-contents').html());
+    //hide origin toc on the head of the article.
+    $('#table-of-contents').css("visibility", "hidden");
+    $('#markdown-content').css("margin-top", -100);
+    //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
+    $('.sidebar_catelog').prepend("<div class='wedge'></div>")
+    $('.wedge').css("height", "250px");
+    //for the first wedge will create space for every component, use negetive margin to rise toe content:
+    $('.js-fadein').css("margin-top", "-250px");
+    //for the last rising operation will make footer in wrong place, set another wedge to fix it.
+    $('.js-fadein').append("<section class='wedge-main'></section>");
+    $('.wedge-main').css("height", "250px");
 
 
-  $('.sidebar_catelog').find("li").addClass('toc');
-  //alert($('#table-of-contents').find("a").html());
+    $('.sidebar_catelog').find("li").addClass('toc');
+    //alert($('#table-of-contents').find("a").html());
+
   }
 
-/*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
-*/
+  /*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
+  */
   function locateCatelogList() {
     var alis = $('#markdown-content :header');
     var sidebar_alis = $('.sidebar_catelog').find('a');
@@ -143,25 +158,28 @@ layout: default
       var a_height = $(alis[i]).offset().top;
       if (a_height < scroll_height) {
         sidebar_alis.removeClass('list_click');
-       
+
         $(sidebar_alis[i]).addClass('list_click');
-        
+
       }
     }
   }
 
-$(function() {
-  $('#table-of-contents').find("li").addClass('toc');
-  if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width()<1000) {
-    console.log("toc disabled");
-  }
-  else{
-    console.log("hello world:");
- initSidebar();
- $(window).bind('scroll',locateCatelogList); 
-  }
- 
-});
+  $(function () {
+    $('#table-of-contents').find("li").addClass('toc');
+    $('#table-of-contents').find('a').css('color', 'black');
+    if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {
+      console.log("toc disabled");
+      $('.container').prepend('<section style="height: 50px;"></section>');
+      $('#front-wedge').css('height', 100);
+    }
+    else {
+      console.log("hello world:)");
+      initSidebar();
+      $(window).bind('scroll', locateCatelogList);
+    }
+
+  });
 
 
 </script>
