@@ -1,40 +1,70 @@
-
 <footer class="js-fadein">
-    <div class="footer__link">
-        <p><a href="{{ site.url }}/feed.xml">RSS Subscribe</a><span>/</span><a href="">Privacy Policy</a></p>
-    </div><!-- .footer__link -->
-    <div class="footer__copy">
-        <small>Riino Lin. All Rights Reserved.</small>
-        <small>&copy</small>
-        <ul>
-            <li><a href="{{site.github_url}}" target="_blank"><img src="{{ site.url }}/img/logo_Nest.png" alt="Github"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></a></li>
-        </ul>
-    </div><!-- .footer__copy -->
+  <div class="footer__link">
+    <p>
+      <a href="{{ site.url }}/feed.xml">RSS Subscribe</a><span>/</span
+      ><a href="">Privacy Policy</a>
+    </p>
+  </div>
+  <!-- .footer__link -->
+  <div class="footer__copy">
+    <small>Riino Lin. All Rights Reserved.</small>
+    <small>&copy</small>
+    <ul>
+      <li>
+        <a href="{{site.github_url}}" target="_blank"
+          ><img src="{{ site.url }}/img/logo_Nest.png" alt="Github" /><span
+            class="glyphicon glyphicon-align-left"
+            aria-hidden="true"
+          ></span
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <!-- .footer__copy -->
 </footer>
+
+
 <div class="menu sp">
-    <div class="menu__inner">
-        <ul>
-            <li>
-                <a href="{{ site.baseurl }}/">Home</a>
-            </li>
-            {% for page in site.pages %}
-           
-                {% if page.title and page.hide-in-nav != true %}
-                
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-                {% endif %}
-                {% endfor %}
-        </ul>
-        <div class="menu_closeBtn">
-            <div class="menu_closeBtn__inner">
-                <a href="javascript:void(0);">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div><!-- .menu_closeBtn__inner -->
-        </div><!-- .menu_closeBtn -->
-    </div><!-- .menu__inner -->
-</div><!-- .menu -->
+  <div class="menu__inner">
+    
+
+
+    <ul>
+      {% for link in site.navigation %} {% assign current = nil %} {% if
+      page.url == link.url or page.layout == link.layout %} {% assign current =
+      'is-current is-active' %} {% endif %}
+
+      <li class=" {{ current }} ">
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+
+      {% endfor %}
+    </ul>
+<!--
+    <ul style="left: 200px;">
+        <li>???</li>
+        <li>???1</li>
+        <li>???1</li>
+        <li>???1</li>
+    </ul>
+
+-->
+
+
+    <div class="menu_closeBtn">
+      <div class="menu_closeBtn__inner">
+        <a href="javascript:void(0);">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <!-- .menu_closeBtn__inner -->
+    </div>
+    <!-- .menu_closeBtn -->
+
+
+  </div>
+  <!-- .menu__inner -->
+</div>
+<!-- .menu -->

@@ -213,13 +213,16 @@ function newsCrossSearch() {
 
 // menu for sp
 function sp__menu() {
+
   $('.menuBtn a').on('click', function(){
-    $('.menu').addClass('js-active');
+    $('.menu').addClass('js-active');//important
     // 背景のコンテンツがスクロールしないようにする
     scrollpos = $(window).scrollTop();
     $('body').attr('data-scroll',scrollpos);
     $('body').addClass('is-menu-active').css({'top': -scrollpos});
+    //is-menu-active => position 
   });
+
   $('.menu_closeBtn').on('click', function(){
     $('.menu').removeClass('js-active');
     // 背景のコンテンツがスクロールしないようにする
