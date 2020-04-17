@@ -37,6 +37,7 @@ layout: default
   .list_click {
     color: white !important;
     background: black;
+    transition: all 0.4s;
   }
 
   .tag {
@@ -44,6 +45,7 @@ layout: default
     border-radius: 3px;
     padding: 0 11px;
     color: black;
+    transition: all 0.4s;
   }
 
   .tag:hover {
@@ -167,7 +169,7 @@ layout: default
 
   $(function () {
     $('#table-of-contents').find("li").addClass('toc');
-    $('#table-of-contents').find('a').css('color', 'black');
+    
     if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {
       console.log("toc disabled");
       $('.container').prepend('<section style="height: 50px;"></section>');
@@ -178,6 +180,7 @@ layout: default
       initSidebar();
       $(window).bind('scroll', locateCatelogList);
     }
+    $('#table-of-contents').find('a').css('color', 'black');
 
   });
 
