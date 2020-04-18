@@ -65,6 +65,16 @@ layout: default
     color: black;
     font-size: 1rem;
   }
+  img {
+  border:0;
+  max-width:650px;
+  overflow:hidden;
+  margin-left: auto; 
+  margin-right:auto; 
+  display:block;
+  width:expression(this.width > 650  ? 650 : "auto");
+ 
+ }
 </style>
 
 <section id="front-wedge" style="height: 0px;"></section>
@@ -99,7 +109,12 @@ layout: default
 
   <!--<section style="height: 50px;"></section>-->
   <div class="container">
-    {% if page.toc != false %}
+    {% if page.toc == "inline" %}
+    <div >
+      {% include toc.html html=content class='toc' h_max=3 %}
+    </div>
+    {% endif %}
+    {% if page.toc != false and page.toc != "inline"%}
     <div id="table-of-contents">
       {% include toc.html html=content %}
     </div>
@@ -145,7 +160,7 @@ layout: default
     $('.wedge-main').css("height", "250px");
 
 
-    $('.sidebar_catelog').find("li").addClass('toc');
+    //$('.sidebar_catelog').find("li").addClass('toc');
     //alert($('#table-of-contents').find("a").html());
 
   }

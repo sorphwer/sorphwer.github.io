@@ -1,12 +1,14 @@
 ---
 layout: post
+title: "VVC Experiment with VTM"
+subtitle: A VTM Offical Benchmark Test Usage Report
 author: "Riino Lin"
 mathjax: true
 sticky: false
 tags:
   - VVC-Coding
   - Completed
-toc: false
+
 ---
 
 
@@ -16,7 +18,7 @@ toc: false
 
 According to [1]: 
 
-![image-20200125131808485](https://riino.site/img/assets/image-20200125131808485.png)
+![Fig. 1: Procedure of VVC](https://riino.site/img/assets/image-20200125131808485.png)
 
 <center>Fig. 1: Procedure of VVC</center>
 There’re 6 main module in VVC procedure, and the like H.265, main compression is in `motion prediction` ,`transform/quantization` and the optimization of `entropy coding`. Also, loop filter plays an important role here, according to [3], the effect of `Adaptive Loop Filter (ALF)` is quite obvious. 
@@ -80,7 +82,7 @@ ISP is the latest version of LIP, whose main thought was re-designed in HEVC. IS
 
 ISP is based on LIP, whose purpose is in meeting K, [11]. The main thought is to use intra motion predictor to decrease the size of encoded file. 
 
-<img src="assets/image-20200125212734459.png" alt="image-20200125212734459" style="zoom:80%;" />
+<img src="https://riino.site/img/assets/image-20200125212734459.png" alt="image-20200125212734459" style="zoom:80%;" />
 
 <center>Fig. 2 Predictor based on lines in HEVC,[12]</center>
 LIP looks like Intra Prediction in HEVC,([12]): *“At the same time, the residue compensation is introduced to calibrate the prediction of boundary regions in a block when we utilize further reference lines. ”* And in [12],  we can see that the predictor contains a block with a vector, and the approach is to find reference line, and further reference lines are also utilized.
@@ -237,9 +239,10 @@ All the data can be found in **evaluation excel file**. Here are some screenshot
 ![image-20200127220427206](https://riino.site/img/assets/image-20200127220427206.png)
 
 <center>Fig.8 AI result, table by JVET-N1010</center>
-<img src="assets/image-20200127220702331.png" alt="image-20200127220702331" style="zoom:50%;" />
+<img src="https://riino.site/img/assets/image-20200127220702331.png" alt="image-20200127220702331" style="zoom:50%;" />
 
 <center>Fig.9 AI mode,BD-rate,from top to bottom:Tango,FoodMarket,Campfire. table by JVET-N1010</center>
+
 ![image-20200127220859427](https://riino.site/img/assets/image-20200127220859427.png)
 
 <center>Fig.10 Y PSNR vs Bitrate,RA,Tango.Plot by JVET-N1010</center>
