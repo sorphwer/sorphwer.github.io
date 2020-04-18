@@ -73,6 +73,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
 }
+
 @media screen and (min-width: 769px) {
   .sp {
     display: none !important;
@@ -86,6 +87,7 @@ textarea {
     display: none !important;
   }
 }
+
 .about-mission01__list li:before,
 .about-mission02__txt .u-ttl__01 span:after,
 .about-mission02__txt .u-ttl__01 span:before,
