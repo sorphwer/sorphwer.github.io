@@ -6,9 +6,10 @@ header-img: "img/lunur.jpg"
 header-mask: 0.3
 mathjax: true
 sticky: false
+toc: inline
 tags:
 
-  - information theory
+  - information-theory
 ---
 [TOC]
 # I.T.T
