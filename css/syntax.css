@@ -4,6 +4,13 @@
   color: #999988;
   font-style: italic;
 }
+div .highlight{
+  -webkit-box-shadow:  10px 10px 5px  rgba(71, 71, 71, 0.2);
+   -moz-box-shadow: 10px 10px 5px  rgba(71, 71, 71, 0.2);
+   box-shadow: 10px 10px 5px  rgba(71, 71, 71, 0.2);
+   background: #e9e8e8;
+}
+
 .highlight .cp {
   color: #999999;
   font-weight: bold;

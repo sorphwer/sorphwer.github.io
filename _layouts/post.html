@@ -4,6 +4,10 @@ layout: default
 <!DOCTYPE html>
 
 <style>
+  #markdown-content li{
+    text-transform:capitalize;
+  }
+
   /*.section-nav is the embedded toc, .sidebar_catelog is the toc in sidebar.*/
   @media screen and (max-width: 1000px) {
     .sidebar_catelog {
@@ -18,6 +22,8 @@ layout: default
     padding-right: -200px;
 
   }
+
+
 
   .sidebar_catelog a {
     color: black;
@@ -98,6 +104,7 @@ td{
   border: 1px solid grey;
 }
 
+
 </style>
 
 <section id="front-wedge" style="height: 0px;"></section>
@@ -173,7 +180,7 @@ td{
     $('.sidebar_catelog').html($('#table-of-contents').html());
     //hide origin toc on the head of the article.
     $('#table-of-contents').css("visibility", "hidden");
-    $('#markdown-content').css("margin-top", -100);
+    //$('#markdown-content').css("margin-top", -100);//###########################This is in experiment##############
     //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
     $('.sidebar_catelog').prepend("<div class='wedge'></div>")
     $('.wedge').css("height", "250px");
