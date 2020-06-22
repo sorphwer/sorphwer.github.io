@@ -1,20 +1,32 @@
+## Current Project Status
 
+| Name            | Description           | Identify-Number | Supervisor    | Used-Name               | Status                   | Type         |
+| --------------- | --------------------- | --------------- | ------------- | ----------------------- | ------------------------ | ------------ |
+| #970            | N/A                   | N/A             | the COMMA$^1$ | N/A                     | :blue_heart: static      | Static       |
+| Nest-of-Etamine | learn                 | N/A             | the COMMA     | N/A                     | :yellow_heart: passive   | In-house$^5$ |
+| VOID$^3$        | automata,data-theory  | INCHINE.void    | DSP$^2$       | N/A                     | :green_heart: active     | Service      |
+| riinosite$^4$   | web,text              | INCHINE.blog    | the COMMA,DSP | stardust,tansaction-log | :green_heart: active     | Service      |
+| low-illuminance | Scene/2D-solution     | INCHINE.li      | N/A           | riinoinhuxi             | :yellow_heart: passive   | In-house     |
+| riinoworld      | Render, pixel-art     | N/A             | team TAS      | sorphwerworld           | :black_heart: terminated | Archive      |
+| in-the-rain$^6$ | Multiculture,language | in-the-rain     | PERO          | N/A                     | :green_heart: active     | Archive      |
+
+1*the COMMA: Commission Of Manoeuvre Management in Ascending , a supervisor team deploying guidance and advice for career.
+
+2*DSP: Dual-Start Project. A series of documents as guidance, including PC censorship, Format censorship, Wording censorship in both in-house and external documentations.
+
+3*VOID as service: Procedure automation, embedded script, web crawler with data warehouse. 
+
+4*riinosite as service: multi-page management, CDN config, jekyll theme, web auto-build, front-end solutions
+
+5*In-house: in-house is a specific type of POW:  Portfolio-Oriented Works, designed and maintained by PERO, whose main thought is to build with prototype.
+
+6*in-the-rain: Report and experiment in intercultural communications.
+
+---
 
 > About Codes, me, and my life experience.
-
-### Code's Force
-
-Most contens about codes here are not such ideal to read ,which isn't certain when they becomes "cheat sheet". There're so much content that can't be presented as this blog type, and we may try to discover better way of propagation, and better place to maintain. I'm not such 'geek' man, and am not addicted in components and frames. This site is based on Hux's open template, thanks everyone who creates these attached scripts.Also , all the contents here can be check in [GitHub](<https://github.com/sorphwer>) .
-
-### Self's Force
-
-As you can see, this just a website of my own , and if you want to know more about my projects ,go check the **in the rain**  **portfolio** in menu bar above ,which are what I actually earn profits and my main causes. If you want to get businesses relationship ,please contact via sorphwer@gmail.com.
 
 ### Life's Experience
 
 As for my own works you can check my 500px profile. I'm not a professional cameraman, but I am in such jobs tempporally.
 Also check my Minecraft friends: @CKansases @maizuki_3203 @Nobuyosi_Satake @Hayanasa @ lobin_fete @OtsukaTakumi23 @minikkomia @kenhirashima86 @b_kakka_fh @sunoski_karasu @syunxeno @HakohiZK @itsBedeh @ AvilionMc @blitishside @MCtabunoki23 @Nizeyuan @blacksnow_s2k @ragunarohu1412 @runa_youtubeaka @ginsetu10537 @mc_natumikan
-
-### Others
-
-If you want to add links in **Other sites** , please contacts via any possible pattern.

@@ -7,6 +7,7 @@ header-mask: 0.3
 mathjax: true
 sticky: false
 toc: inline
+typora-root-url:  ..
 tags:
 
   - information-theory
@@ -86,8 +87,7 @@ One-to-one: $encoder: v(x)->\forall a_1 != a_2 , v(a_1)!=v(a_2)$   $ \exists dec
 
 log（x的正確集合的數量）=H0（x的正確集合的數量)
 
-![1569308313629](assets/1569308313629.png)
-<img src="..//assets/1569308313629.png"/>
+<img src="/img/assets/1569308313629.png"/>
 
 //// 因爲正確集合的性質是在enc和dec全對，那由於鴿籠，它的量肯定比Y籠子的量小。
 
@@ -290,7 +290,9 @@ N>=N_0 -> H-e<(1/N)H_\delta(\mathbb{X}^N)<H+e  (1式)
 $$
 做了N次實驗的典型結果T：
 
-![1570517684744](assets/1570517684744.png)
+
+
+<img src="/img/assets/1570517684744.png"/>
 
 其P（T）>1-$\sigma^2/e^2N<\delta$ ,説明了（1式的上界）
 
@@ -615,7 +617,7 @@ $$
 
 n.d.  如果x,y是獨立事件，p(x,y)=p(x)p(y),那麽log裏的東西是1，log1=0，I（X;Y)=0.即X,Y之間無mutual Info.
 
-![IMG_5173](assets/IMG_5173.JPG)
+<img src="/img/assets/IMG_5173.JPG"/>
 
 ↑ The whole graph represents H(X,Y)
 
@@ -687,7 +689,7 @@ $$
 
 這個小q是個scale quantization 
 
-<img src="assets/FFAFC3FE43E3711ED0E51D0089D6AD4A.png" alt="FFAFC3FE43E3711ED0E51D0089D6AD4A" style="zoom: 33%;" />
+<img src="/img/assets/FFAFC3FE43E3711ED0E51D0089D6AD4A.png"/>
 
 該圖叫 rate-distortion curve， 描述 VQ Scheme
 
@@ -1142,7 +1144,7 @@ Also:
 $$
 (\mathcal{H}(\theta)-\epsilon)N\le K(X)\le(\mathcal{H}(\theta)+\epsilon)N
 $$
-![image-20191217153436172](assets/image-20191217153436172.png)
+<img src="/img/assets/image-20191217153436172.png"/>
 
 we can consider the range of atypical and typical H(X) and K(X) as the diagram above.
 
@@ -1150,7 +1152,7 @@ we can consider the range of atypical and typical H(X) and K(X) as the diagram a
 
 Notice that, we have to write a **program** to get all typical S:
 
-![image-20191217153909507](assets/image-20191217153909507.png)
+<img src="/img/assets/image-20191217153909507.png"/>
 
 And the cost is fixed program cost C, plus logN, plus **Index** ,which is the most highly connected to N.
 
@@ -1242,7 +1244,7 @@ p(\underline s)=\sum_{p:U(\underline p)=\underline s} 2^{-|\underline p|} \tag{1
 $$
 描述一個prefix字符串s的概率。
 
-![image-20191231155212457](assets/image-20191231155212457.png)
+<img src="/img/assets/image-20191231155212457.png"/>
 
 對於計算困難，chaitin説明了計算困難的string是找不到（很難找到）程式的。
 

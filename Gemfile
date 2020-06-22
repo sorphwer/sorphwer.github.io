@@ -33,4 +33,5 @@ gem "jekyll-paginate"
 
 gem "jekyll-sitemap"
 
+gem 'jemoji'
 #gem "nokogiri", ">= 1.10.8"
