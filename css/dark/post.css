@@ -1,0 +1,100 @@
+#markdown-content li{
+    text-transform:capitalize;
+  }
+
+  /*.section-nav is the embedded toc, .sidebar_catelog is the toc in sidebar.*/
+  @media screen and (max-width: 1000px) {
+    .sidebar_catelog {
+      visibility: hidden;
+    }
+  }
+
+  .sidebar_catelog {
+    /*float: left;*/
+    width: auto;
+    /*margin-right: -200px;*/
+    padding-right: -200px;
+
+  }
+
+
+
+  .sidebar_catelog a {
+    color: black;
+  }
+
+  .sidebar_catelog a:hover {
+    background: black;
+    color: white;
+  }
+
+  .sidebar_catelog .list-click {
+    background: black;
+    color: white;
+  }
+
+
+  .list_click {
+    color: white !important;
+    background: black;
+    transition: all 0.4s;
+  }
+
+  .tag {
+    border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color: black;
+    transition: all 0.4s;
+  }
+
+  .tag:hover {
+    border: 1px #000 solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color: white;
+    background: black;
+  }
+
+  .toc {
+    padding-left: 10px !important;
+    text-transform: inherit !important;
+  }
+
+  .edit-button {
+    color: black;
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    img{
+      width: 100%;
+    }
+  }
+  img {
+  border:0;
+  max-width:650px;
+  overflow:hidden;
+  margin-left: auto; 
+  margin-right:auto; 
+  display:block;
+  /*width:expression(this.width > 650  ? 650 : "auto");*/
+  /*width:auto;*/
+ }
+ table{
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+th{
+  background-color: lighten grey ;
+    border: 1px solid darken grey;
+    border-bottom-color: darken grey;
+}
+
+td{
+  border: 1px solid grey;
+}
+
