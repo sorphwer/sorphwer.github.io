@@ -22,7 +22,8 @@ function pageTransition() {
     e.preventDefault(); // ナビゲートをキャンセル
     url = $(this).attr('href'); // 遷移先のURLを取得
     if (url !== '') {
-      $('main,footer,.menu').addClass('js-fadeOut');
+      //$('main,footer,.menu').addClass('js-fadeOut');
+      $('main,.menu').addClass('js-fadeOut');
       setTimeout(function(){
         window.location = url;  // 0.6秒後に取得したURLに遷移
       }, 600);
