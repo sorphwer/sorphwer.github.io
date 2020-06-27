@@ -2,25 +2,15 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: defaultdark
+layout: default
 
 ---
-<style type="text/css">
-
-.home-message{ 
+<style>
+    .home-message{ 
     
-    margin-top:50px;
-    /*which was 165px in common.css*/
-}
-a:hover{
-    text-decoration: underline ;
-    color: black ;
-}
-a{
-    color:black;
-}
-
-
+    margin-top:50px!important;/*Only works in home.html*/
+  
+  }
 </style>
    <section style="height: 200px;"></section>
 {% for post in site.posts %}{% if post.sticky %}

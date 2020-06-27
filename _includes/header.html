@@ -24,7 +24,7 @@
                     </li>
                     
                 {% endfor %}
-
+     
 
 
 
@@ -48,8 +48,14 @@
                         
                     </div>
                 </li>
+                <li>
+                    <i class="fa fa-adjust" aria-hidden="true" style="display:inline"></i>
+                    <a id="theme-toggle" href="javascript:void(0)" style="list-style-type:none!important;display:inline"onclick="modeSwitcher()">theme-toggle</a>
+                </li>
                 
             </ul>
+    
+
         </nav><!-- .header__navi -->
                     <nav class="header__sns pc">
                 <ul class="u-clearfix">
@@ -76,3 +82,12 @@
     
     
     <!--<section style="height: 200px;"></section>-->
+<script>
+if (systemInitiatedDark.matches) {
+	//document.getElementById("theme-toggle").innerHTML = "Light Mode";
+	$("#theme-toggle").html("Light Mode");
+} else {
+	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+	$("#theme-toggle").html("Dark Mode");
+}
+</script>

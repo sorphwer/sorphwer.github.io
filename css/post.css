@@ -1,6 +1,80 @@
 #markdown-content li{
     text-transform:capitalize;
   }
+html, html[data-theme="light"] { 
+
+  	--link-color: rgb(0, 112, 201);
+    --main-background-color: #FFF;
+    --footer-color:#FFF;
+    --main-text-color: #000;
+    --post-title-color: #282828;
+    --message-border-color:#000;
+    --author-color:#212529;
+    --text:#000;
+}
+
+html[data-theme="dark"] {
+
+  		--link-color: rgb( 100, 210, 255);
+      --main-background-color: #171717;
+      --footer-color:#282828;
+      --main-text-color: #FFF;
+      --post-title-color:#FFF;
+      --message-border-color:#282828;
+      --author-color:#FFF;
+      --text:#e3e3e3;
+  }
+  
+@media (prefers-color-scheme: dark) {
+    html, html[data-theme="light"] { 
+
+      --link-color: rgb(0, 112, 201);
+      --main-background-color: #FFF;
+      --footer-color:#FFF;
+      --main-text-color: #000;
+      --post-title-color: #282828;
+      --message-border-color:#000;
+      --author-color:#212529;
+      --text:#000;
+    }
+  
+    html[data-theme="dark"] {
+        --link-color: rgb( 100, 210, 255);
+        --main-background-color: #171717;
+        --footer-color:#282828;
+        --main-text-color: #FFF;
+        --post-title-color:#FFF;
+        --message-border-color:#282828;
+        --author-color:#FFF;
+        --text:#e3e3e3;
+    }
+}
+div .highlight{
+  background: var(--color-background-color);
+}
+.MathJax_CHTML {
+    color: var(--main-text-color)!important;
+}
+#markdown-content h1,h2,h3,h4,h5,h6{
+  color: var(--main-text-color)!important;
+}
+.home-message__ttl h1,h2,h3,h4,h5,h6{
+  color: var(--main-text-color)!important;
+}
+#markdown-content p,th,td,center,li{
+  color:var(--text);
+  font-family: Helvetica Neue, Helvetica, Arial, "PingFang SC","Hiragino Kaku Gothic ProN",
+    "游ゴシック", YuGothic, Meiryo, sans-serif !important;
+}
+p{
+  color:var(--text);
+}
+.meta,.fa{
+  color:var(--main-text-color);
+}
+.toc li a{
+  color:var(--link-color);
+}
 
   /*.section-nav is the embedded toc, .sidebar_catelog is the toc in sidebar.*/
   @media screen and (max-width: 1000px) {
@@ -41,19 +115,19 @@
   }
 
   .tag {
-    border: 1px #000 solid;
+    border: 1px var(--main-text-color) solid;
     border-radius: 3px;
     padding: 0 11px;
-    color: black;
+    color: var(--main-text-color);
     transition: all 0.4s;
   }
 
   .tag:hover {
-    border: 1px #000 solid;
+    border: 1px var(--main-text-color) solid;
     border-radius: 3px;
     padding: 0 11px;
-    color: white;
-    background: black;
+    color: var(--main-background-color);
+    background: var(--main-text-color);
   }
 
   .toc {
@@ -98,3 +172,60 @@ td{
   border: 1px solid grey;
 }
 
+/* CSS FOR ARCHIVE */
+
+.tag-button--all{
+	padding:2px;
+	border: 1px var(--main-text-color) solid;
+    border-radius: 3px;
+    padding: 0 11px;
+	color:var(--main-text-color);
+	margin:10px;
+	text-decoration:none;
+}
+.tag-button--all:hover{
+	margin:10px;
+	border: 1px var(--main-text-color) solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:var(--main-background-color);
+    background:var(--main-text-color);
+}
+#tag_cloud .tag-button{
+	padding:2px;
+	margin:10px;
+    border: 1px var(--main-text-color) solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:var(--main-text-color);
+	
+  }
+#tag_cloud .tag-button:hover{
+	margin:10px;
+    border: 1px var(--main-text-color) solid;
+    border-radius: 3px;
+    padding: 0 11px;
+    color:var(--main-background-color);
+    background:var(--main-text-color);
+  }
+.post-subtitle{
+	font-size: 18px;
+	color:var(--text)!important;
+	line-height: 1.75;
+}
+.post-title{
+	/* color: #282828; */
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+.tag-text {
+	font-size: 22px;
+	color:black;
+	float: center;
+}
+.focus{
+	color:var(--main-background-color)!important;
+    background:var(--main-text-color);
+}

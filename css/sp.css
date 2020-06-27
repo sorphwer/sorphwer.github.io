@@ -303,7 +303,6 @@ header {
 .menuBtn .menuBtn__inner a span {
   width: 30px;
   height: 1px;
-  background: #000;
   position: absolute;
   left: 0;
 }
