@@ -99,12 +99,14 @@ function prefersColorTest(systemInitiatedDark) {
   	document.documentElement.setAttribute('data-theme', 'dark');		
 	   //document.getElementById("theme-toggle").innerHTML = "Light Mode";
 	$("#theme-toggle").html("Light Mode");
-   	sessionStorage.setItem('theme', '');
+    sessionStorage.setItem('theme', '');
+    console.log("Your default theme is Dark");
   } else {
   	document.documentElement.setAttribute('data-theme', 'light');
 	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
 	$("#theme-toggle").html("Dark Mode");
     sessionStorage.setItem('theme', '');
+    console.log("Your default theme is Light");
   }
 }
 systemInitiatedDark.addListener(prefersColorTest);
@@ -143,4 +145,11 @@ if (theme == "dark") {
 	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
 	$("#theme-toggle").html("Dark Mode");
 }
+
+// //force Dark
+// document.documentElement.setAttribute('data-theme', 'dark');
+// 	sessionStorage.setItem('theme', 'dark');
+// 	//document.getElementById("theme-toggle").innerHTML = "Light Mode";
+// 	$("#theme-toggle").html("Light Mode");
+prefersColorTest(systemInitiatedDark);
 </script>
