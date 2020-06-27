@@ -2,6 +2,10 @@
     li{
         text-transform:uppercase;
     }
+    #theme-toggle-mobile{
+        vertical-align:text-bottom;
+        font-size:13px;
+    }
     </style>
     <header><div class="header__inner u-clearfix">
         <nav class="header__navi pc">
@@ -62,12 +66,22 @@
                     <li><a href="{{site.github_url}}" target="_blank"><i class="fa fa-github-alt"></i>GITHUB</a></li>
                 </ul>
             </nav><!-- .header__sns -->
-            <div class="header__logo sp" style="background-color: white;">
+            <div class="header__logo sp" >
                 <a href="{{site.url}}">
                     <p class="header__logoTxt"><img src="{{ site.url }}/img/logo_Nest.png" alt="Riino BLOG"></p>
                 </a>
             </div><!-- .header__logo -->
-        
+
+            <div class="header__logo sp"   style="margin-left: 20px;" onclick="modeSwitcher()" >
+                <a href="javascript:void(0);">
+                    <p class="header__logoTxt"><img src="{{ site.url }}/img/switcher.png" alt="Riino BLOG"></p>
+                </a>
+            </div><!-- .swithcer__logo -->
+
+
+            
+            
+
         <div class="menuBtn sp">
             <div class="menuBtn__inner">
                 <a href="javascript:void(0);">
