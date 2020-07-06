@@ -10,6 +10,7 @@ tags:
   Flask
   Server
   Web
+  html
 ---
 
 # Web Source Structure
