@@ -63,7 +63,7 @@ navigation:
 - text: Portfolio
   url: /portfolio/
   #layout: default
-- text: About
+- text: Status
   url: /about/
 
 #- text: test
