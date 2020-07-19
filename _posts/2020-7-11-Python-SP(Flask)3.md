@@ -150,6 +150,7 @@ Now, we have to write a js script to let the js know these things:
 For the step 1, we can import `echart.js` and assign target div, notice that in this case, we should use **Pyecharts’ Echart js dependency**, and I DO NOT recommend you to set the url as the pyecharts’ url, actually you can download these js in: https://github.com/pyecharts/pyecharts-assets and put them into your static folder.
 
 ```python
+{% raw %}
   <script
     type="text/javascript"
     src="{{ url_for('static', filename='js/world.js') }}"
@@ -158,6 +159,7 @@ For the step 1, we can import `echart.js` and assign target div, notice that in 
   type="text/javascript"
   src="{{ url_for('static', filename='js/echarts.min.js') }}"
 ></script>
+{% endraw %}
 ```
 
 Now you may ask: **What if I don’t know the name of required js file?** (Caution: This only in 1.8.0  level )
