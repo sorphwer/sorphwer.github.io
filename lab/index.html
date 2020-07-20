@@ -1,0 +1,47 @@
+---
+layout: default
+title: Lab
+permalink: /lab/
+---
+<head>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js'></script>
+</head>
+<body>
+    <section class="container-fluid" id='container'></section>
+</body>
+
+<script>
+    let x = 100,
+    y = 100,
+    angle1 = 0.0,
+    segLength = 50;
+    function segment(p, x, y, a) {
+        // push();
+        p.translate(x, y);
+        p.rotate(a);
+        p.line(0, 0, segLength, 0);
+        // p.pop();
+    }
+
+    let sketch = function(p) {
+    p.setup = function(){
+    p.createCanvas(710, 400);
+    p.strokeWeight(20.0);
+    p.stroke(255, 100);
+    }
+    p.draw = function(){
+        p.background(0);
+        dx = p.mouseX - x;
+        dy = p.mouseY - y;
+        angle1 = p.atan2(dy, dx);
+        x = p.mouseX - p.cos(angle1) * segLength;
+        y = p.mouseY - p.sin(angle1) * segLength;
+
+        segment(p,x, y, angle1);
+        p.ellipse(x, y, 20, 20);
+    }
+  };
+
+  new p5(sketch, window.document.getElementById('container'));
+</script>
+

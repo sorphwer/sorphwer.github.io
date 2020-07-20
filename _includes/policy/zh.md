@@ -1,9 +1,9 @@
-## Privacy Policy 隐私协议
+## 隐私协议
 
-Riinosite will not collect any information from user including IP address, device type and browser type.
+本网站不会主动收集您的个人信息，包括访问IP，设备类型以及浏览器类型。
 
-This website is opensource, powered by Jekyll and Github.
+本网站是开源的，通过 Jekyll 实现。
 
-However, if you want to submit third-part comment, they your operation will be recorded by corresponding service holder.
+然而，请注意如果您使用任何嵌入的评论系统，则您的操作会受到所提供服务的第三方的服务器。
 
-Besides, the DNS server will record your location via your IP address automatically.
+除此之外，您的访问IP及其地理位置会被 DNS 服务器收集。
