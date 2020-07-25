@@ -63,11 +63,14 @@ div .highlight{
 }
 #markdown-content p,th,td,center,li{
   color:var(--text);
-  font-family: Helvetica Neue, Helvetica, Arial, "PingFang SC","Hiragino Kaku Gothic ProN",
+  font-family: Segoe UI,SegoeUI,Helvetica Neue, Helvetica, Arial, "PingFang SC","Hiragino Kaku Gothic ProN",
     "游ゴシック", YuGothic, Meiryo, sans-serif !important;
 }
 p{
   color:var(--text);
+  margin-top: 1rem;
+  margin-bottom: 0;
+
 }
 .meta,.fa{
   color:var(--main-text-color);
