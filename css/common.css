@@ -76,6 +76,7 @@ body {
 /* .home-message__ttl a h2:hover{
   border-bottom:1px solid var(--link-color)!important;
 } */
+
 hr {
   height: 1px;
   background-color: var(--main-text-color);
@@ -100,14 +101,19 @@ a{
   }
 }
 ::-moz-selection {
-  color: #fff;
-  background: #282828;
+  color: var(--main-background-color);
+  background: var(--author-color);
   text-shadow: none;
 }
 ::selection {
-  color: #fff;
-  background: #282828;
+  color: var(--main-background-color);
+  background: var(--author-color);
   text-shadow: none;
+}
+sup{
+  color: #e83e8c;
+  font-size:20px;
+  font-style:italic;
 }
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);

@@ -114,7 +114,7 @@ td{
 <section class="js-fadein">
 
   <div class="home-message__ttl" style="text-align: left;">
-    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+    <h1>{% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
       <a class="edit-button" href="{{site.repo_url}}/blob/master/{{page.path}}" title="Edit on GitHub"><i
           class="fa fa-edit"></i></a>
       <!--<a class="download tbutton" href="{{site.url}}/_posts/{{page.name}}">D</a>-->
@@ -180,7 +180,7 @@ td{
     $('.sidebar_catelog').html($('#table-of-contents').html());
     //hide origin toc on the head of the article.
     $('#table-of-contents').css("visibility", "hidden");
-    //$('#markdown-content').css("margin-top", -100);//###########################This is in experiment##############
+    $('#markdown-content').css("margin-top", -$("ul.toc").height());//###########################This is in experiment##############
     //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
     $('.sidebar_catelog').prepend("<div class='wedge'></div>")
     $('.wedge').css("height", "250px");

@@ -7,6 +7,10 @@ tags:
 - doc
 toc: true
 sticky : true
+hide: false
+status: doc
+toc: true
+# toc: inline
 ---
 
 
@@ -16,9 +20,28 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-# Table of Contents
+# Features
+
+- Auto archive based on tags management
+- Support custom page
+- Attribution control via yaml data:
+  - Optional TOC style configuration : inline, hidden, auto
+  - Hide article in home page
+  - Make article pinned at home page
+  - Mark a custom status symbol
+- Auto/Manual Dark/Light Mode 
+- Responsive design, optimized for mobile devices
+- Global search bar
+- `xml` subscribe
+- Code highlights & Latex support
+- Multilanguage Support
+- Emoji Support
+
+# Ymal Configurations
 
 TOC is enabled automatically, you can set such yaml head to disable it with `toc:false`. When enabled, a toc at top of the article or the sidebar will be created automatically, and you do not need to add anything, any standard markdown titles will be recognized.
+
+You can edit these attribution in yaml data of your markdown file:
 
 ```yaml
 layout: post
@@ -27,6 +50,12 @@ date:   2020-03-01 17:08:09 +0800
 tags: 
 - jekyll 
 - doc
+toc: true       #default: true
+sticky : true   #default: false
+hide: false     #default: false
+status: doc     #optional
+mathjax: true   #default: true
+# toc options: inline, true, false
 ```
 
 Also, tags is enabled in archive page. Current version **do not** support space in tag.
@@ -73,7 +102,21 @@ To use inline latex like $\theta$, please check the config in head label, which 
 </script>
 ```
 
+## Language
 
+Current font family was set to display **English, Japanese and Chinese** :
+
+<center>English Word Display Test</center>
+
+<center>中文语言显示测试/中文語言顯示測試</center>
+
+<center>日本語表示テスト/にほんごひょうじテスト</center>
+
+## Emoji
+
+:stuck_out_tongue_winking_eye: ​`:stuck_out_tongue_winking_eye:`
+
+:two_hearts: `:two_hearts:`
 
 # Jekyll Doc
 

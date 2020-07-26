@@ -19,9 +19,15 @@ layout: default
 <section class="home-message js-fadein">
     <div class="home-message__ttl">
     <a href="{{ post.url | prepend: site.baseurl }}"  >
+        {% if post.status %}
         <h2>
-            <b>[Pinned]</b>{{ post.title }}
+            <b>[Pinned] </b>{{ post.title }}<sup>[{{post.status}}]</sup>
         </h2>
+        {% else %}
+        <h2>
+            <b>[Pinned] </b>{{ post.title }}
+        </h2>
+        {% endif %}
         {% if post.subtitle %}
         <p class="u-txt__label">
             {{ post.subtitle }}
@@ -52,12 +58,19 @@ layout: default
 
 
 {% for post in paginator.posts %}{% unless post.sticky %}
+{% unless post.hide %}
 <section class="home-message js-fadein">
     <div class="home-message__ttl">
     <a href="{{ post.url | prepend: site.baseurl }}"  >
+        {% if post.status %}
+        <h2>
+            {{ post.title }}<sup>[{{post.status}}]</sup>
+        </h2>
+        {% else %}
         <h2>
             {{ post.title }}
         </h2>
+        {% endif %}
         {% if post.subtitle %}
         <p class="u-txt__label">
             {{ post.subtitle }}
@@ -81,6 +94,7 @@ layout: default
     </p>
 </section>
 <hr>
+{%endunless%}
 {% endunless %}{% endfor %}
 
 <!-- Pager -->

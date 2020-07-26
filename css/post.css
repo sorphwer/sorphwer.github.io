@@ -70,13 +70,15 @@ p{
   color:var(--text);
   margin-top: 1rem;
   margin-bottom: 0;
-
 }
 .meta,.fa{
   color:var(--main-text-color);
 }
 .toc li a{
   color:var(--link-color);
+}
+#markdown-content li{
+  margin-left:50px;
 }
 
   /*.section-nav is the embedded toc, .sidebar_catelog is the toc in sidebar.*/

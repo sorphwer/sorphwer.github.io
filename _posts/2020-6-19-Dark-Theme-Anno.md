@@ -14,6 +14,10 @@ We are currently developing the **dark theme** of this website!
 
 To get the latest information of dark theme and its details, please contact me directly. The new entrance of dark theme will come in late June.
 
+# Custom banner
+
+We are considering bring back banner into article page, which should be fully editable. We will provide html banner or image banner with custom text, still designing.
+
 
 # Riinoworld & Riinovibe 
 

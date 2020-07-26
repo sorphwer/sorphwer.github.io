@@ -6,6 +6,7 @@ header-img: "img/banner_among_noise.jpg"
 header-mask: 0.3
 mathjax: true
 sticky: false
+hide: true
 tags:
 
   - life
