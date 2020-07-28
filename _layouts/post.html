@@ -3,109 +3,14 @@ layout: default
 ---
 <!DOCTYPE html>
 
-<!-- <style>
-  #markdown-content li{
-    text-transform:capitalize;
-  }
-
-  /*.section-nav is the embedded toc, .sidebar_catelog is the toc in sidebar.*/
-  @media screen and (max-width: 1000px) {
-    .sidebar_catelog {
-      visibility: hidden;
-    }
-  }
-
-  .sidebar_catelog {
-    /*float: left;*/
-    width: auto;
-    /*margin-right: -200px;*/
-    padding-right: -200px;
-
-  }
-
-
-
-  .sidebar_catelog a {
-    color: black;
-  }
-
-  .sidebar_catelog a:hover {
-    background: black;
-    color: white;
-  }
-
-  .sidebar_catelog .list-click {
-    background: black;
-    color: white;
-  }
-
-
-  .list_click {
-    color: white !important;
-    background: black;
-    transition: all 0.4s;
-  }
-
-  .tag {
-    border: 1px #000 solid;
-    border-radius: 3px;
-    padding: 0 11px;
-    color: black;
-    transition: all 0.4s;
-  }
-
-  .tag:hover {
-    border: 1px #000 solid;
-    border-radius: 3px;
-    padding: 0 11px;
-    color: white;
-    background: black;
-  }
-
-  .toc {
-    padding-left: 10px !important;
-    text-transform: inherit !important;
-  }
-
-  .edit-button {
-    color: black;
-    font-size: 1rem;
-  }
-  @media screen and (max-width: 768px) {
-    img{
-      width: 100%;
-    }
-  }
-  img {
-  border:0;
-  max-width:650px;
-  overflow:hidden;
-  margin-left: auto; 
-  margin-right:auto; 
-  display:block;
-  /*width:expression(this.width > 650  ? 650 : "auto");*/
-  /*width:auto;*/
- }
- table{
-  margin-bottom: 5px;
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-  border: 1px solid grey;
-}
-
-th{
-  background-color: lighten grey ;
-    border: 1px solid darken grey;
-    border-bottom-color: darken grey;
-}
-
-td{
-  border: 1px solid grey;
-}
-
-
-</style> -->
+{%if page.img%}
+<section id="banner" class="home-visual" data-bottom-top="background-position: 50% -1%;"
+  data--100-top-top="background-position: 50% 100%;"
+  style="background-image:url({{site.url}}/img/{{page.img}});width:100vw ;overflow-x: visible;position: relative;align-items: center;text-align: left;">???
+  <!-- <h1>Heading</h1>
+  <p>Bunch of awesome content</p> -->
+</section>
+{%endif%}
 
 <section id="front-wedge" style="height: 0px;"></section>
 {% if page.toc != false %}
@@ -114,7 +19,8 @@ td{
 <section class="js-fadein">
 
   <div class="home-message__ttl" style="text-align: left;">
-    <h1>{% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+    <h1>
+      {% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
       <a class="edit-button" href="{{site.repo_url}}/blob/master/{{page.path}}" title="Edit on GitHub"><i
           class="fa fa-edit"></i></a>
       <!--<a class="download tbutton" href="{{site.url}}/_posts/{{page.name}}">D</a>-->
@@ -122,15 +28,6 @@ td{
     <h4 class="subheading">{{ page.subtitle }}</h4>
     <span class="meta">Posted by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</i>
       on {{ page.date | date: "%B %-d, %Y" }} </span><i class="fa fa-tags"></i>
-    <!--
-      <span id="http://www.cloudchou.com" class="leancloud_visitors meta_data_item" data-flag-title="">
-        <span class="post-meta-item-icon">
-          <span class="octicon octicon-eye"></span> 
-        </span>
-        <span class="old-visitors-count" style="display: none;"></span>
-        <span class="leancloud-visitors-count"></span>
-        <span class="post-meta-item-text"> Number of visits</span>
-   </span>-->
 
     {% for tag in page.tags %}
     <a class="tag" href="{{ site.baseurl }}/archive.html?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
@@ -140,7 +37,7 @@ td{
   <!--<section style="height: 50px;"></section>-->
   <div class="container">
     {% if page.toc == "inline" %}
-    <div >
+    <div>
       {% include toc.html html=content class='toc' h_max=3 %}
       <section style="height: 100px;"></section>
     </div>
@@ -196,6 +93,12 @@ td{
 
   }
 
+  function shiftBanner() {
+    let shift = ($(".home-message").outerWidth(true) - $(".home-message").outerWidth()) / 2;
+    $('#banner').css("left", -shift + "px");
+    console.log("shift:" + shift);
+  }
+
   /*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
   */
   function locateCatelogList() {
@@ -214,10 +117,10 @@ td{
   }
 
   $(function () {
-   // $('img').css('width',$('#table-of-contents').width())
-    
+    // $('img').css('width',$('#table-of-contents').width())
+    shiftBanner();
     $('#table-of-contents').find("li").addClass('toc');
-    
+
     if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {
       console.log("toc disabled");
       $('.container').prepend('<section style="height: 50px;"></section>');
@@ -226,6 +129,7 @@ td{
     else {
       console.log("hello world:)");
       initSidebar();
+
       $(window).bind('scroll', locateCatelogList);
     }
     //$('#table-of-contents').find('a').css('color', 'black');
