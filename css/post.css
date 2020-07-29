@@ -1,5 +1,5 @@
 #markdown-content li{
-    text-transform:capitalize;
+    text-transform:none;
   }
 html, html[data-theme="light"] { 
 

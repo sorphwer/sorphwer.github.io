@@ -180,7 +180,7 @@ td{
     $('.sidebar_catelog').html($('#table-of-contents').html());
     //hide origin toc on the head of the article.
     $('#table-of-contents').css("visibility", "hidden");
-    $('#markdown-content').css("margin-top", -$("ul.toc").height());//###########################This is in experiment##############
+    $('#markdown-content').css("margin-top", -$("#table-of-contents").height()*1);//###########################This is in experiment##############
     //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
     $('.sidebar_catelog').prepend("<div class='wedge'></div>")
     $('.wedge').css("height", "250px");
