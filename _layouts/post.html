@@ -4,12 +4,11 @@ layout: default
 <!DOCTYPE html>
 
 {%if page.img%}
-<section id="banner" class="home-visual" data-bottom-top="background-position: 50% -1%;"
+<!-- <section id="banner" class="home-visual" data-bottom-top="background-position: 50% -1%;"
   data--100-top-top="background-position: 50% 100%;"
   style="background-image:url({{site.url}}/img/{{page.img}});width:100vw ;overflow-x: visible;position: relative;align-items: center;text-align: left;">???
-  <!-- <h1>Heading</h1>
-  <p>Bunch of awesome content</p> -->
-</section>
+</section> --> 
+<!-- experiment banner################ -->
 {%endif%}
 
 <section id="front-wedge" style="height: 0px;"></section>
@@ -32,6 +31,9 @@ layout: default
     {% for tag in page.tags %}
     <a class="tag" href="{{ site.baseurl }}/archive.html?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
     {% endfor %}
+    {%if page.last-modify%}
+    <br><span class="meta">Last modified: {{page.last-modify}} </span>
+    {%endif%}
   </div>
 
   <!--<section style="height: 50px;"></section>-->
