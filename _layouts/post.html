@@ -95,11 +95,11 @@ layout: default
 
   }
 
-  function shiftBanner() {
-    let shift = ($(".home-message").outerWidth(true) - $(".home-message").outerWidth()) / 2;
-    $('#banner').css("left", -shift + "px");
-    console.log("shift:" + shift);
-  }
+  // function shiftBanner() {
+  //   let shift = ($(".home-message").outerWidth(true) - $(".home-message").outerWidth()) / 2;
+  //   $('#banner').css("left", -shift + "px");
+  //   console.log("shift:" + shift);
+  // }
 
   /*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
   */
@@ -120,7 +120,7 @@ layout: default
 
   $(function () {
     // $('img').css('width',$('#table-of-contents').width())
-    shiftBanner();
+    // shiftBanner();
     $('#table-of-contents').find("li").addClass('toc');
 
     if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {

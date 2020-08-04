@@ -82,6 +82,9 @@ hr {
   background-color: var(--main-text-color);
   border: none;
 }
+.inverted {
+	filter: invert(100%);
+}
 .next a{
   color:var(--main-text-color);
 }
