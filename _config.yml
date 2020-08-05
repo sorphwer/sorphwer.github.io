@@ -63,8 +63,8 @@ navigation:
 - text: Portfolio
   url: /portfolio/
   #layout: default
-# - text: Lab
-#   url: /lab/
+- text: Lab
+  url: /lab/
 - text: Status
   url: /about/
 
