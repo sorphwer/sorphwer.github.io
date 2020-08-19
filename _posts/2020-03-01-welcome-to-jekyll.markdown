@@ -86,7 +86,7 @@ $$
 
 
 
-To use inline latex like $\theta$, please check the config in head label, which is supposed to be:
+To use inline latex like $\theta$ , $\pi$ , $\frac{18^2}{5}$, please check the config in head label, which is supposed to be:
 
 ```html
 <script type="text/x-mathjax-config">
@@ -97,26 +97,23 @@ To use inline latex like $\theta$, please check the config in head label, which 
         }
     });
 </script>
-  <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 ```
 
-## Language
+## Language & Quote
 
-Current font family was set to display **English, Japanese and Chinese** :
 
-<center>English Word Display Test</center>
-
-<center>中文语言显示测试/中文語言顯示測試</center>
-
-<center>日本語表示テスト/にほんごひょうじテスト</center>
+> English Word Display Test
+> 中文语言显示测试/中文語言顯示測試
+> 日本語表示テスト/にほんごひょうじテスト
 
 ## Emoji
 
-:stuck_out_tongue_winking_eye: ​`:stuck_out_tongue_winking_eye:`
+Gone camping! :tent: Be back soon.
 
-:two_hearts: `:two_hearts:`
+That is so funny! :joy:
 
 # Jekyll Doc
 

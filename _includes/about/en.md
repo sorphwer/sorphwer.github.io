@@ -10,6 +10,8 @@
 | riinoworld      | Render, pixel-art     | N/A             | team TAS      | sorphwerworld           | :black_heart: terminated | Archive      |
 | in-the-rain$^6$ | Multiculture,language | in-the-rain     | PERO          | N/A                     | :green_heart: active     | Archive      |
 
+
+$8^3 is not $
 1*the COMMA: Commission Of Manoeuvre Management in Ascending , a supervisor team deploying guidance and advice for career.
 
 2*DSP: Dual-Start Project. A series of documents as guidance, including PC censorship, Format censorship, Wording censorship in both in-house and external documentations.
@@ -22,7 +24,7 @@
 
 6*in-the-rain: Report and experiment in intercultural communications.
 
----
+
 
 > About Codes, me, and my life experience.
 
