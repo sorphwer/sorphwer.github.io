@@ -84,7 +84,7 @@ layout: default
     $('.sidebar_catelog').prepend("<div class='wedge'></div>")
     $('.wedge').css("height", "250px");
     //for the first wedge will create space for every component, use negetive margin to rise toe content:
-    $('.js-fadein').css("margin-top", "-250px");
+    $('.js-fadein').css("margin-top",  -($("#table-of-contents").height()+250));
     //for the last rising operation will make footer in wrong place, set another wedge to fix it.
     $('.js-fadein').append("<section class='wedge-main'></section>");
     $('.wedge-main').css("height", "250px");
