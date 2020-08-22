@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unexpectef Http Response"
+title: "Unexpected Http Response"
 subtitle: 'when using ajax'
 author: "Riino"
 mathjax: false

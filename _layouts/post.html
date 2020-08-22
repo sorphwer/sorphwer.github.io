@@ -15,7 +15,7 @@ layout: default
 {% if page.toc != false %}
 <div class="sidebar_catelog sticky-top"></div>
 {% endif %}
-<section class="js-fadein">
+<section class="js-fadein main-body">
 
   <div class="home-message__ttl" style="text-align: left;">
     <h1>
@@ -84,7 +84,7 @@ layout: default
     $('.sidebar_catelog').prepend("<div class='wedge'></div>")
     $('.wedge').css("height", "250px");
     //for the first wedge will create space for every component, use negetive margin to rise toe content:
-    $('.js-fadein').css("margin-top",  -($("#table-of-contents").height()+250));
+    $('.main-body').css("margin-top",  -($("#table-of-contents").height()+250));
     //for the last rising operation will make footer in wrong place, set another wedge to fix it.
     $('.js-fadein').append("<section class='wedge-main'></section>");
     $('.wedge-main').css("height", "250px");
