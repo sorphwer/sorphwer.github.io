@@ -1,34 +1,91 @@
-## Current Project Status
+### Riino, ZHANG
 
-| Name            | Description           | Identify-Number | Supervisor    | Used-Name               | Status                   | Type         |
-| --------------- | --------------------- | --------------- | ------------- | ----------------------- | ------------------------ | ------------ |
-| #970            | N/A                   | N/A             | the COMMA$^1$ | N/A                     | :blue_heart: static      | Static       |
-| Nest-of-Etamine | learn                 | N/A             | the COMMA     | N/A                     | :yellow_heart: passive   | In-house$^5$ |
-| VOID$^3$        | automata,data-theory  | INCHINE.void    | DSP$^2$       | N/A                     | :green_heart: active     | Service      |
-| riinosite$^4$   | web,text              | INCHINE.blog    | the COMMA,DSP | stardust,tansaction-log | :green_heart: active     | Service      |
-| low-illuminance | Scene/2D-solution     | INCHINE.li      | N/A           | riinoinhuxi             | :yellow_heart: passive   | In-house     |
-| riinoworld      | Render, pixel-art     | N/A             | team TAS      | sorphwerworld           | :black_heart: terminated | Archive      |
-| in-the-rain$^6$ | Multiculture,language | in-the-rain     | PERO          | N/A                     | :green_heart: active     | Archive      |
+ <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a>
 
+- 🔭 I’m currently working as an intern in PricewaterhouseCoopers US Advisory - Shanghai AC
+- 👯 I’m looking to collaborate on my Jekyll theme WIP :  [Readme](https://riino.site/2020/03/01/welcome-to-jekyll.html)
+- ⚡ I'm interested in **Information theory, codec theory** , with related visualization.
+- 📫 If there's anything I should be reminded with : sorphwer@gmail.com 
+- 💬 Language Support : English/繁體中文(台灣)/简体中文/日本語
 
-$8^3 is not $
-1*the COMMA: Commission Of Manoeuvre Management in Ascending , a supervisor team deploying guidance and advice for career.
+[**Chongqing University,**](https://www.cqu.edu.cn/) Bachelor
 
-2*DSP: Dual-Start Project. A series of documents as guidance, including PC censorship, Format censorship, Wording censorship in both in-house and external documentations.
+- Discipline : Software Engineering
+- Ex-Discipline : Architectural Environment And Instrument Engineering
 
-3*VOID as service: Procedure automation, embedded script, web crawler with data warehouse. 
+[**20’ PwC AC Shanghai PwC Digital**](http://pwc.com/), Intern
 
-4*riinosite as service: multi-page management, CDN config, jekyll theme, web auto-build, front-end solutions
+- Job : Developer 
 
-5*In-house: in-house is a specific type of POW:  Portfolio-Oriented Works, designed and maintained by PERO, whose main thought is to build with prototype.
+[**19’ Youzipu Exchange Student Service**](https://weibo.com/u/6186561564), Intern
 
-6*in-the-rain: Report and experiment in intercultural communications.
+- Job : Photographer & Editor
 
+[**18’ CQUNEWS**](https://weibo.com/cqdx), Staff
 
+- Job: Leader of Video Branch
 
-> About Codes, me, and my life experience.
+[**17’ CQUNEWS**](https://weibo.com/cqdx), Staff
 
-### Life's Experience
+- Job: Member of Video Branch
 
-As for my own works you can check my 500px profile. I'm not a professional cameraman, but I am in such jobs tempporally.
-Also check my Minecraft friends: @CKansases @maizuki_3203 @Nobuyosi_Satake @Hayanasa @ lobin_fete @OtsukaTakumi23 @minikkomia @kenhirashima86 @b_kakka_fh @sunoski_karasu @syunxeno @HakohiZK @itsBedeh @ AvilionMc @blitishside @MCtabunoki23 @Nizeyuan @blacksnow_s2k @ragunarohu1412 @runa_youtubeaka @ginsetu10537 @mc_natumikan
+### Organization
+
+[low illuminance](https://li.riino.site/), hoster
+
+[The Ancient Stone Art Team](https://weibo.com/TASArt), member
+
+[Microsoft Student Club](http://studentclub.msra.cn/), member
+
+[NTUPhoto](https://www.ntuphoto.tw/), 108-1 member
+
+[BPC](https://www.weibo.com/u/6607274197), member
+
+[Taipei Camera Club](https://www.taipeicameraclub.net/), supporter
+
+### Albums
+
+[Postcard Series](https://500px.com.cn/community/set/e13a3edc25ef43b980ee8a6240628495/details)
+
+[The First Light](https://500px.com.cn/community/set/57bf603792ca44d692a5bbe9c4d50110/details)
+
+[春花夏葉](https://500px.com.cn/community/set/de2b4a81f4844a00bdffea2be275681e/details)
+
+### Filters
+
+[Shilin-fliter](https://li.riino.site/shilin.html)
+
+Chongqing-filter(Coming Soon)
+
+### Live Wallpaers
+
+1980*1080 25fps ParticleEarth 粒子地球(循环) <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=839960893"><img src="https://img.shields.io/badge/Subscribe-36k-blue"></a>
+
+Ghost in the Shell(1080p 50fps)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101"><img src="https://img.shields.io/badge/Subscribe-28k-blue"></a>
+
+1920*1080 60fps AllSystemsGo 系统准备完毕（循环）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=847018742"><img src="https://img.shields.io/badge/Subscribe-1830-blue"></a>
+
+Dynamic inochi Logo 2025<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024"><img src="https://img.shields.io/badge/Subscribe-81-blue"></a>
+
+### Minecraft Works
+
+Google ‘sorphwer’
+
+### Encounters
+
+[@CKansases](https://twitter.com/CKansases)
+
+[@Hayanasa](https://twitter.com/Hayanasa)
+
+[@lobin_fete](https://twitter.com/lobin_fete)
+
+[@sunoski_karasu ](https://twitter.com/sunoski_karasu)
+
+[@syunxeno ](https://twitter.com/syunxeno)
+
+[@HakohiZK ](https://twitter.com/HakohiZK)
+
+[@blitishside ](https://twitter.com/CKansases)
+
+[@Nizeyuan ](https://twitter.com/Nizeyuan)
+

@@ -60,12 +60,12 @@ navigation:
 - text: Archive
   url: /archive.html
   layout: forarchive
-- text: Portfolio
-  url: /portfolio/
+# - text: Portfolio
+#   url: /portfolio/
   #layout: default
 - text: Lab
   url: /lab/
-- text: Status
+- text: profile
   url: /about/
 
 #- text: test
