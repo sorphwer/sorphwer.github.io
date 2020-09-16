@@ -2,7 +2,7 @@
 
  <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a>
 
-- 🔭 I’m currently working as an intern in PricewaterhouseCoopers US Advisory - Shanghai AC
+- 🔭 I’m currently working as an intern in PwC
 - 👯 I’m looking to collaborate on my Jekyll theme WIP :  [Readme](https://riino.site/2020/03/01/welcome-to-jekyll.html)
 - ⚡ I'm interested in **Information theory, codec theory** , with related visualization.
 - 📫 If there's anything I should be reminded with : sorphwer@gmail.com 
@@ -13,7 +13,7 @@
 - Discipline : Software Engineering
 - Ex-Discipline : Architectural Environment And Instrument Engineering
 
-[**20’ PwC AC Shanghai PwC Digital**](http://pwc.com/), Intern
+[**20’ PwC Digital**](http://pwc.com/), Intern
 
 - Job : Developer 
 
@@ -25,11 +25,8 @@
 
 - Job: Leader of Video Branch
 
-[**17’ CQUNEWS**](https://weibo.com/cqdx), Staff
 
-- Job: Member of Video Branch
-
-### Organization
+### Encounted Organizations 
 
 [low illuminance](https://li.riino.site/), hoster
 
@@ -43,7 +40,11 @@
 
 [Taipei Camera Club](https://www.taipeicameraclub.net/), supporter
 
-### Albums
+[MyCraft](http://bbs.mycraft.cc/), member, staff
+
+[PlusCraft](https://plus.google.com/u/0/communities/117203041845651730126), staff
+
+### Photography Albums
 
 [Postcard Series](https://500px.com.cn/community/set/e13a3edc25ef43b980ee8a6240628495/details)
 
@@ -51,7 +52,7 @@
 
 [春花夏葉](https://500px.com.cn/community/set/de2b4a81f4844a00bdffea2be275681e/details)
 
-### Filters
+### Photography Filters
 
 [Shilin-fliter](https://li.riino.site/shilin.html)
 
