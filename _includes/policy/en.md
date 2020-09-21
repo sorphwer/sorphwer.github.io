@@ -4,11 +4,11 @@
 
 
 ### Personal Information
-Riinosite will not collect any information from user including IP address, device type and browser type.
+Riinosite will NOT collect any information from users, including IP address, device type and browser type. Therefore, this site should be available in your enterprise networks.
 
 This website is opensource, powered by Jekyll and Github.
 
-However, if you want to submit third-part comment, they your operation will be recorded by corresponding service holder.
+However, if you want to submit third-part comment, your operation will be recorded by corresponding service holder.
 
 Besides, the DNS server will record your location via your IP address automatically.
 
@@ -19,4 +19,5 @@ Riinosite will not, and can not disclose any information about any name, project
 
 ### Media Copyright
 
-All photos in riinosite belongs to [low illuminance](li.riino.site), and anyone can't reuse these photos without permissions. 
+All photography images, assets in riinosite belongs to [low illuminance](li.riino.site), and anyone can't reuse these photos without permissions. 
+Other images are from internet. 
