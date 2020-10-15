@@ -1,21 +1,22 @@
 <html>
   <body>
-    <p>Assume that you open this html in your desktop: file:///C:/Users/Username/Desktop/pat_test.html</p>
-    <p>'/' Means root ,this will navigate you to root(Highest Level): file:///C:/test/ </p>
+    <p>Assume that you open this html in your desktop: https://riino.site/download/pat_test.html</p>
+
+    <p>'/' Means root ,this will navigate you to root(Highest Level): https://riino.site/test/ </p>
     <a href="/test/" target="_blank">/test/</a><br>
-    <p>Without '/', this will navigate you to SAME level of current path: file:///C:/Users/Username/Desktop/test/ , including base url</p>
+    <p>Without '/', this will navigate you to SAME level of current path: https://riino.site/download/test/ , including base url</p>
     <a href="test/" target="_blank">test/</a><br>
-    <p>'./' Means SAME level,too. This will navigate you to root: file:///C:/Users/Username/Desktop/test/ </p>
+    <p>'./' Means SAME level,too. This will navigate you to root: https://riino.site/download/test/ </p>
     <a href="./test/" target="_blank">./test/</a><br>
-    <p>'../' Means PARENT level, here the parent level is 'Desktop', so relocate in same level as Desktop. This will navigate you to root: file:///C:/Users/Username/test/ </p>
+    <p>'../' Means PARENT level, here the parent level is 'Desktop', so relocate in same level as Desktop. This will navigate you to root: https://riino.site/test/ </p>
     <a href="../test/" target="_blank">../test/</a><br>
-    <p>'.../' is not a standard usage, here you mean navigate to text1/text2, while text1 or text2 can be blank, therefore, it will lead you to file:///C:/Users/Username/Desktop/.../ </p>
+    <p>'.../' is not a standard usage, here you mean navigate to text1/text2, while text1 or text2 can be blank, therefore, it will lead you to https://riino.site/download/.../ </p>
     <a href=".../" target="_blank">.../</a><br>
-    <p>'test/' is a sample like the one above, which will lead you to file:///C:/Users/Username/Desktop/test/ </p>
+    <p>'test/' is a sample like the one above, which will lead you to https://riino.site/download/test/ </p>
     <a href="test/" target="_blank">test/</a><br>
     <p>Here is a case neither text1 nor text2 is blank, which will lead you to file:///C:/Users/Username/Desktop/test1/text2 </p>
     <a href="test1/text2" target="_blank">test1/text2</a><br>
-    <p>Here is a case neither text1 nor text2 is blank,but we add '/' which will lead you to file:///C:/test1/text2 </p>
+    <p>Here is a case neither text1 nor text2 is blank,but we add '/' which will lead you to https://riino.site/download/test1/text2</p>
     <a href="/test1/text2" target="_blank">/test1/text2</a><br>
 
     <p>With a 'Protocol', this will navigate you to a new URL, starts with this protocal. </p>
