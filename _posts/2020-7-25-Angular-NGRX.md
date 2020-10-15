@@ -63,7 +63,7 @@ export const reset = createAction('[Counter Component] Reset');
 
 Here we export 3 types of action, via given method `createAction` from ngrx, we can add a string as the comment as a attribution in this method.
 
-Also we declare the format of state:
+Also we declare the format of state as `AppState`:
 
 ```typescript
 //component-state.model.ts
@@ -74,7 +74,7 @@ export interface AppState{
 
 
 
-### Step2: Reducer within Store
+### Step 2: Reducer within Store
 
 Notice that the **action** is just the **‘Message Carrier’**, and **reducer** plays the role maintains the states:
 
@@ -109,7 +109,7 @@ export function counterReducer(state, action) {
 
 ### Step 3: Selector
 
-Now the state was save in to store. here we only have one : `initialState = 0`
+Now the state was save in to store. here we only have one : `initialState.counter = 0`
 
 ```typescript
 //module.selector.ts
@@ -119,7 +119,7 @@ export const getState = createFeatureSelector<AppState>(featureKey);
  
 const getCount = createSelector(
   getState,
-  (state: FeatureState) => state.counter
+  (state: AppState) => state.counter
 );
 export const query = {
     getCount
