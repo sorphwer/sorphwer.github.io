@@ -15,7 +15,7 @@ tags:
 
 # Why NGRX Store?
 
-In some cases, we need to manage the states inside a component, or even a global state to let our page render corresponding contents for users. NGRX uses `store` to save a current state, and component can get this live state via observeable variables. **In this way, the store isolate the state from the script of component.** The NGRX doc is [here](https://ngrx.io/guide/store).
+In some cases, we need to manage the states inside a component, or even a global state to let our page render corresponding contents for users. NGRX uses `store` to save a current state, and component can get this live state via observeable variables(from `Rxjs`. **In this way, the store isolate the state from the script of component.** The NGRX doc is [here](https://ngrx.io/guide/store).
 
 Traditionally, we can use a variable as a member inside our component script and make this as a state flag, our code will review this variable and change their state during life cycle. But, to use NGRX can bring such advantages in my opinion:
 
@@ -33,10 +33,27 @@ In our cases, our facade class will interact with selector and action, compared 
 
 ![image-20200804211140235](/img/assets/image-20200804211140235.png)
 
+## NGRX: Logic is your code.
+
+### Case study
+
+Suppose we have a component showing a counter's value, it can call facade for **4** operations: 
+
+1. Get counter's value continuously from facade
+2. Tell facade to increase counter
+3. Tell facade to decrease counter
+4. Tell facade to reset counter
+
+![image-20201015172901041](/img/assets/image-20201015172901041.png)
+
+![image-20201015173213724](/img/assets/image-20201015173213724.png)
+
+### Step 1: Action and state format
+
 The first step is to define actions, which is the type of message our facade will dispatch, and the same message that will be caught by **reducer** and **effect**.
 
 ```typescript
-//module.action.ts
+//module.actions.ts
 import { createAction } from '@ngrx/store';
 
 export const increment = createAction('[Counter Component] Increment');
@@ -46,24 +63,67 @@ export const reset = createAction('[Counter Component] Reset');
 
 Here we export 3 types of action, via given method `createAction` from ngrx, we can add a string as the comment as a attribution in this method.
 
+Also we declare the format of state:
+
+```typescript
+//component-state.model.ts
+export interface AppState{
+  counter?: number;
+}
+```
+
+
+
+### Step2: Reducer within Store
+
 Notice that the **action** is just the **‘Message Carrier’**, and **reducer** plays the role maintains the states:
 
 ```typescript
 //module.reducer.ts
 import { createReducer, on } from '@ngrx/store';
 import { increment, decrement, reset } from './counter.actions';
- 
-export const initialState = 0;//Notice: reducer declare the initial state here
+export const featureKey = 'somemodule';
+export const initialState : AppState = {
+    counter: 0
+};//Notice: reducer declare the initial state here
  
 const _counterReducer = createReducer(initialState,
-  on(increment, state => state + 1),
-  on(decrement, state => state - 1),
-  on(reset, state => 0),
+  on(increment, state => ({
+    ...state,
+    counter: state.counter + 1
+})),
+  on(decrement, state => ({
+    ...state,
+    counter: state.counter - 1
+})),
+  on(reset, state => ({
+    ...state,
+    counter: 0
+}))
 );//all action handler should be in `createReducer`'s parameters.
  
 export function counterReducer(state, action) {
   return _counterReducer(state, action);
 }
+```
+
+### Step 3: Selector
+
+Now the state was save in to store. here we only have one : `initialState = 0`
+
+```typescript
+//module.selector.ts
+import { createSelector } from '@ngrx/store';
+ 
+export const getState = createFeatureSelector<AppState>(featureKey);
+ 
+const getCount = createSelector(
+  getState,
+  (state: FeatureState) => state.counter
+);
+export const query = {
+    getCount
+};
 ```
 
 
@@ -82,41 +142,58 @@ Effect: Capture action dispatched, and do other things, like call api to send ht
 
 ### Set State
 
-First we need define which state we have:
+First let us review what state we have:
 
-```
-code here
+```typescript
+//component-state.model.ts
+export interface AppState{
+  counter?: number;
+}
 ```
 
 To set a state, component script need to call facade’s method, and the latter will dispatch a action:
 
-```
-Code here
+```typescript
+//component.facade.ts
+import { Actions } from './module.actions'
+public increaseCounter():void {
+	this.store.dispatch(Actions.increment());
+}
+
 ```
 
 And reducer will capture it and change store’s state :
 
-```
-code here
+```typescript
+ ...
+ on(increment, state => ({
+    ...state,
+    counter: state.counter + 1
+})),
+...
 ```
 
-### Get State
-
-Define selector:
-
-```
-code here
-```
+### Get State from facade
 
 Get observable variable from state via selector:
 
-```
-code here
+```typescript
+//component.facade.ts
+public counter$ = this.store.pipe(select(query.getCount));
 ```
 
-## Store-Action-Reducer
+### From component's aspect
 
-Reducer is a place where all pure function who will replace the state in store locate.
+```typescript
+//module.component.ts
+public counter$ = Observable<number>;
+public ngOnInit():void {
+    this.counter$ = this.facade.counter$;
+    this.facade.increaseCounter();
+}
+```
+
+
 
 ## Deep in Store : RxJS 
 
