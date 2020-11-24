@@ -1,6 +1,8 @@
 #markdown-content li{
     text-transform:none;
   }
+
+
 html, html[data-theme="light"] { 
 
   	--link-color: rgb(0, 112, 201);
@@ -36,6 +38,7 @@ html[data-theme="dark"] {
       --message-border-color:#000;
       --author-color:#212529;
       --text:#000;
+      --rect-color: #ECECFF;
     }
   
     html[data-theme="dark"] {
@@ -47,8 +50,36 @@ html[data-theme="dark"] {
         --message-border-color:#282828;
         --author-color:#FFF;
         --text:#e3e3e3;
+        --rect-color: #282828;
     }
 }
+/* override mermaid: */
+.messageText{
+  fill: var(--text)!important;
+  stroke: none !important;
+}
+tspan{
+  fill: var(--post-title-color)!important;
+}
+rect.actor{
+  fill: var(--rect-color)!important;
+}
+line{
+  stroke: var(--text)!important;
+}
+.noteText tspan{
+  fill: #000!important;
+}
+.labelText{
+  fill: #000!important;
+}
+g text{
+  fill: var(--post-title-color)!important;
+}
+path{
+  stroke: var(--text)!important;
+}
+/* override mermaid: */
 div .highlight{
   background: var(--color-background-color);
 }

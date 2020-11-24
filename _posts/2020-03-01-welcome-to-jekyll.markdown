@@ -34,6 +34,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 - Global search bar
 - `xml` subscribe
 - Code highlights & Latex support
+- Mermaid support
 - Multilanguage Support
 - Emoji Support
 
@@ -101,6 +102,49 @@ To use inline latex like $\theta$ , $\pi$ , $\frac{18^2}{5}$, please check the c
 <script type="text/javascript"
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+```
+
+
+
+## Mermaid 
+
+UML Seq Diagram
+
+```mermaid
+sequenceDiagram
+
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+     John-->>Alice: Great!
+     John->>Bob   : How about you?
+     Bob-->>John  : Jolly good!
+```
+Gantt Diagram
+```mermaid
+gantt
+
+section Section
+          Completed: done,   des1,       2014-01-06, 2014-01-08
+          Active   : active, des2,       2014-01-07, 3d
+         Parallel 1        : des3,   after des1, 1d
+         Parallel 2        : des4,   after des1, 1d
+         Parallel 3        : des5,   after des3, 1d
+         Parallel 4        : des6,   after des4, 1d
+```
+
+Pie Chart
+
+```mermaid
+pie
+
+  title Key elements in Product X
+  "Calcium" : 42.96
+  "Potassium" : 50.05
+  "Magnesium" : 10.01
+  "Iron" :  5
 ```
 
 ## Language & Quote
