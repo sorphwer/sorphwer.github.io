@@ -8,7 +8,7 @@
 - 📫 If there's anything I should be reminded with : sorphwer@gmail.com 
 - 💬 Language Support : English/繁體中文(台灣)/简体中文/日本語
 
-[**Chongqing University,**](https://www.cqu.edu.cn/) Bachelor
+[**Chongqing University,**](https://www.cqu.edu.cn/) Undergraduate
 
 - Discipline : Software Engineering
 - Ex-Discipline : Architectural Environment And Instrument Engineering
@@ -26,7 +26,7 @@
 - Job: Leader of Video Branch
 
 
-### Encounted Organizations 
+### Organizations 
 
 [low illuminance](https://li.riino.site/), hoster
 
@@ -56,7 +56,7 @@
 
 [Shilin-fliter](https://li.riino.site/shilin.html)
 
-Chongqing-filter(Coming Soon)
+[Chongqing-filter](https://li.riino.site/chongqing.html)
 
 ### Live Wallpaers
 
@@ -90,3 +90,13 @@ Google ‘sorphwer’
 
 [@Nizeyuan ](https://twitter.com/Nizeyuan)
 
+
+### Personal Recommendation
+
+Check out these amazing website:
+
+[PwC Digital](https://digital.pwc.com/)
+
+[DBMX](https://dbmx.net/)
+
+[NIVO](https://nivo.rocks/)
