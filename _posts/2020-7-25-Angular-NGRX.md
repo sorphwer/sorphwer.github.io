@@ -59,6 +59,7 @@ import { createAction } from '@ngrx/store';
 export const increment = createAction('[Counter Component] Increment');
 export const decrement = createAction('[Counter Component] Decrement');
 export const reset = createAction('[Counter Component] Reset');
+export const error = createAction('[Counter Component] Fail', props<{ error: any }>());;
 ```
 
 Here we export 3 types of action, via given method `createAction` from ngrx, we can add a string as the comment as a attribution in this method.
@@ -71,7 +72,6 @@ export interface AppState{
   counter?: number;
 }
 ```
-
 
 
 ### Step 2: Reducer within Store
@@ -186,19 +186,101 @@ public counter$ = this.store.pipe(select(query.getCount));
 
 ```typescript
 //module.component.ts
-public counter$ = Observable<number>;
+public counter$ : Observable<number>;
 public ngOnInit():void {
     this.counter$ = this.facade.counter$;
     this.facade.increaseCounter();
 }
 ```
 
+Normally, we assign var as xxx+$ to mark it as an `Observable Source`.  To capture it's inner source, there's two ways to do that:
 
+1. Declare an observable source in container component, and pass it into child component using html template :
+For example, if we have a `counter-component.bs-container.ts`, and we declare a `public counter$ = Observable<number>;`, and bind it using `this.counter$ = this.facade.counter$;`, we can use it in container's template:
+```typescript
+//counter-component.bs-container.ts
+@Component({
+  selector: 'counter-component-bs-container',
+  template: `
+    <counter-component
+      [counter]="counter$ | async"
+    >
+    </counter-component>
+  `
+})
+```
+And we can directly use `counter` in counter-component.
+```typescript
+//counter-component.component.ts
+@Input() counter: number;
+```
+
+2. Subscribe this source in the same place.
+```typescript
+//module.component.ts
+public counter$ : Observable<number>;
+public counter : number;
+public ngOnInit():void {
+    this.counter$ = this.facade.counter$;
+    //bind
+    this.counter$.subscribe(i=>this.counter=i);
+    this.facade.increaseCounter();
+}
+
+
+```
 
 ## Deep in Store : RxJS 
 
 In our procedure, we are actually using  async observable variables to link all the ‘observable chain’. 
 
+A observable can have a `subscribe` method, to allow you to subscribe it.
+
+```typescript
+this.counter$.subscribe(i=>this.counter=i);
+
+```
+
+Also, it have `next` to allow you to update it.
+```typescript
+const observable = new Observable(subscriber => {
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  setTimeout(() => {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+```
+
 # @ngrx/Effect
 
-https://juejin.im/post/58ed71f5a0bb9f006a4aeb9b
+Effect allow you to do extra codes. As we know, reducer will only update states and send actions. But effect can give ability to run any code when receiving an action.
+For example, if we send a action `increment`, we can also write an effect to let it to call an API.
+```typescript
+import { Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import * as CounterActions from './module.actions.ts';
+export class ProfileEffects {
+  constructor(    
+  	private actions$: Actions,
+	//your api service
+   	private api: ApiService
+	){}
+    incrementEffectAPI$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(CounterActions.increment),
+      switchMap(action => {
+        const apiResult$ = this.api.callSomeAPI();
+        return apiResult$.pipe(
+	//if success, trigger another increment.
+          tap(res => CounterActions.increment),
+	//if fail, send an error action
+          catchError(error => of(ProfileActions.error({ error })))
+        );
+      })
+    )
+  );
+}
+```
