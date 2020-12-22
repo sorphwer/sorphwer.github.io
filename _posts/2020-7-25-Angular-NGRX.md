@@ -260,7 +260,7 @@ For example, if we send a action `increment`, we can also write an effect to let
 ```typescript
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import * as CounterActions from './module.actions.ts';
+import * as CounterActions from './module.actions';
 export class ProfileEffects {
   constructor(    
   	private actions$: Actions,
@@ -282,4 +282,54 @@ export class ProfileEffects {
     )
   );
 }
+
+```
+
+# Ngrx Unit Test
+
+We mainly test `reducer` and `selector`.
+
+## Test reducer
+```typescript
+import * as CounterActions from './module.actions';
+import * as fromCounter from './module.reducer';
+describe('Profile Reducer', () => {
+	it('should ignore undefined action', () => {
+		// arrange
+		const { initialState } = fromCounter;
+		const action = createAction('undefined');
+		// act
+		const state = fromCounter.profileReducer(initialState, action);
+		// assert
+		expect(state).toEqual(initialState);
+	});
+	it('should increase', () => {
+		// arrange
+		const { initialState } = fromCounter;
+		const action = CounterActions.increase();
+		// act
+		const state = fromCounter.profileReducer(initialState, action);
+		// assert
+		expect(state.counter).toBe(1);
+	});
+});
+```
+
+## Test Selector
+```typescript
+import { query } from './module.selectors';
+import { AppState } from '/component-state.model.ts'
+describe('Counter Selectors', () => {
+	it('should select counter value',()=>{
+		// arrange
+		const counter = 7;
+		const state: Partal<AppState>={
+			counter
+		};
+		// act
+		const selectorResult = query.getCount.projector(state);
+		// assert
+		expect(selectorResult).toBe(counter);
+	});
+});
 ```
