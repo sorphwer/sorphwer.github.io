@@ -4,7 +4,6 @@ title: "Learning Angular NGRX"
 subtitle: 'Component State switch and effects'
 author: "Riino"
 mathjax: true
-status: WIP
 sticky: false
 tags:
   Web
