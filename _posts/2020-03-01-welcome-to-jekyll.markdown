@@ -9,7 +9,6 @@ toc: true
 sticky : true
 hide: false
 status: doc
-toc: true
 # toc: inline
 ---
 

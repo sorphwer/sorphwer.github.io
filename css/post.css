@@ -107,11 +107,12 @@ p{
 }
 .toc {
   padding-left: 10px !important;
-  text-transform: inherit !important;
+  /* text-transform: inherit !important; */
 }
 
 .toc li a{
   color:var(--link-color);
+  text-transform: none;
 }
 
 .toc li{

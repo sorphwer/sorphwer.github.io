@@ -9,12 +9,12 @@
   <div class="footer__copy">
     <small>Shiqi Riino Zhang</small>
     <small>Legality and internal compliance review by <i>NoE Perspective</i></small>
-    <small>Asserts &copy by <i>Low illuminance</i></small>
+    <small>Image and animte asserts &copy by <i>Low illuminance</i></small>
     <small>All Rights Reserved.</small>
     <ul style="margin-bottom: 0;">
       <li>
         <a href="{{site.github_url}}" target="_blank"
-          ><img src="{{ site.url }}/img/logo_Nest.png" alt="Github" /><span
+          ><img src="{{ site.url }}/img/logo_Nest.png" alt="Github" class=" black-white-image" /><span
             class="glyphicon glyphicon-align-left"
             aria-hidden="true"
           ></span
@@ -22,8 +22,8 @@
       </li>
 
     </ul>
-      <small style="color: black;">Nest of Etamine - 10 Year Anniversary</small>
-      <small style="color: black;">2012-2022</small>
+      <small>Nest of Etamine - 10th Year Anniversary</small>
+      <small>2012-2022</small>
   </div>
   <!-- .footer__copy -->
 </footer>
@@ -81,3 +81,10 @@
   <!-- .menu__inner -->
 </div>
 <!-- .menu -->
+<script>
+  if(sessionStorage.getItem('theme')==="dark"){
+    $('.black-white-image').css("filter",  'brightness(100)');
+  }else{
+    $('.black-white-image').css("filter",  'brightness(0)');
+  };
+</script>

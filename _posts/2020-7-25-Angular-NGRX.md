@@ -3,8 +3,9 @@ layout: post
 title: "Learning Angular NGRX"
 subtitle: 'Component State switch and effects'
 author: "Riino"
-mathjax: true
+mathjax: false
 sticky: false
+toc: inline
 tags:
   Web
   html
@@ -32,9 +33,7 @@ In our cases, our facade class will interact with selector and action, compared 
 
 ![image-20200804211140235](/img/assets/image-20200804211140235.png)
 
-## NGRX: Logic is your code.
-
-### Case study
+## Case study
 
 Suppose we have a component showing a counter's value, it can call facade for **4** operations: 
 
@@ -195,7 +194,7 @@ public ngOnInit():void {
 Normally, we assign var as xxx+$ to mark it as an `Observable Source`.  To capture it's inner source, there's two ways to do that:
 
 1. Declare an observable source in container component, and pass it into child component using html template :
-For example, if we have a `counter-component.bs-container.ts`, and we declare a `public counter$ = Observable<number>;`, and bind it using `this.counter$ = this.facade.counter$;`, we can use it in container's template:
+  For example, if we have a `counter-component.bs-container.ts`, and we declare a `public counter$ = Observable<number>;`, and bind it using `this.counter$ = this.facade.counter$;`, we can use it in container's template:
 ```typescript
 //counter-component.bs-container.ts
 @Component({
@@ -225,8 +224,6 @@ public ngOnInit():void {
     this.counter$.subscribe(i=>this.counter=i);
     this.facade.increaseCounter();
 }
-
-
 ```
 
 ## Deep in Store : RxJS 
@@ -237,7 +234,6 @@ A observable can have a `subscribe` method, to allow you to subscribe it.
 
 ```typescript
 this.counter$.subscribe(i=>this.counter=i);
-
 ```
 
 Also, it have `next` to allow you to update it.
@@ -285,7 +281,7 @@ export class ProfileEffects {
 
 ```
 
-# Ngrx Unit Test
+# @ngrx: Unit Test
 
 We mainly test `reducer` and `selector`.
 

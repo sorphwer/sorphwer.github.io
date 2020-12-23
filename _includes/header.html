@@ -68,13 +68,13 @@
             </nav><!-- .header__sns -->
             <div class="header__logo sp" >
                 <a href="{{site.url}}">
-                    <p class="header__logoTxt"><img src="{{ site.url }}/img/logo_Nest.png" alt="Riino BLOG"></p>
+                    <p class="header__logoTxt black-white-image"><img src="{{ site.url }}/img/logo_Nest.png" alt="Riino BLOG"></p>
                 </a>
             </div><!-- .header__logo -->
 
             <div class="header__logo sp"   style="margin-left: 20px;" onclick="modeSwitcher()" >
                 <a href="javascript:void(0);">
-                    <p class="header__logoTxt"><img src="{{ site.url }}/img/switcher.png" alt="Riino BLOG"></p>
+                    <p class="header__logoTxt black-white-image"><img src="{{ site.url }}/img/switcher.png" alt="Riino BLOG"></p>
                 </a>
             </div><!-- .swithcer__logo -->
 
@@ -109,65 +109,52 @@ if (systemInitiatedDark.matches) {
     $("#theme-toggle").html("Dark Mode");
     $("#theme-toggle-mobile").html("Dark Mode");
 }
+function setAsLightTheme(){
+    document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
+    $("#theme-toggle").html("Dark Mode");
+    $("#theme-toggle-mobile").html("Dark Mode");
+    $('.black-white-image').css("filter",  'brightness(0)');
+};
+function setAsDarkTheme(){
+    document.documentElement.setAttribute('data-theme', 'dark');
+	sessionStorage.setItem('theme', 'dark');
+    $("#theme-toggle").html("Light Mode");
+    $("#theme-toggle-mobile").html("Light Mode");
+    $('.black-white-image').css("filter",  'brightness(100)');
+}
 
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
-  	document.documentElement.setAttribute('data-theme', 'dark');		
-	   //document.getElementById("theme-toggle").innerHTML = "Light Mode";
-    $("#theme-toggle").html("Light Mode");
-    $("#theme-toggle-mobile").html("Light Mode");
-    sessionStorage.setItem('theme', '');
+  	setAsDarkTheme();
     console.log("Your default theme is Dark");
   } else {
-  	document.documentElement.setAttribute('data-theme', 'light');
-	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-    $("#theme-toggle").html("Dark Mode");
-    $("#theme-toggle-mobile").html("Dark Mode");
-    sessionStorage.setItem('theme', '');
+    setAsLightTheme();
     console.log("Your default theme is Light");
   }
 }
 systemInitiatedDark.addListener(prefersColorTest);
 
 
+
 function modeSwitcher() {
 	let theme = sessionStorage.getItem('theme');
 	if (theme === "dark") {
-		document.documentElement.setAttribute('data-theme', 'light');
-		sessionStorage.setItem('theme', 'light');
-        $("#theme-toggle").html("Dark Mode");
-        $("#theme-toggle-mobile").html("Dark Mode");
-	}	else if (theme === "light") {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		sessionStorage.setItem('theme', 'dark');
-        $("#theme-toggle").html("Light Mode");
-        $("#theme-toggle-mobile").html("Light Mode");
+		setAsLightTheme();
+	} else if (theme === "light") {
+        setAsDarkTheme()
 	} else if (systemInitiatedDark.matches) {	
-		document.documentElement.setAttribute('data-theme', 'light');
-		sessionStorage.setItem('theme', 'light');
-        $("#theme-toggle").html("Dark Mode");
-        $("#theme-toggle-mobile").html("Dark Mode");
+        setAsLightTheme();
 	} else {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		sessionStorage.setItem('theme', 'dark');
-        $("#theme-toggle").html("Light Mode");
-        $("#theme-toggle-mobile").html("Light Mode");
+        setAsDarkTheme();
 	}
-}
+};
 
 
 if (theme == "dark") {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	sessionStorage.setItem('theme', 'dark');
-	//document.getElementById("theme-toggle").innerHTML = "Light Mode";
-    $("#theme-toggle").html("Light Mode");
-    $("#theme-toggle-mobile").html("Light Mode");
+    setAsDarkTheme();
 } else if (theme == "light") {
-	document.documentElement.setAttribute('data-theme', 'light');
-	sessionStorage.setItem('theme', 'light');
-	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-    $("#theme-toggle").html("Dark Mode");
-    $("#theme-toggle-mobile").html("Dark Mode");
+    setAsLightTheme();
 }
 
 // //force Dark

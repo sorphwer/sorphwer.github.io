@@ -76,7 +76,6 @@ body {
 /* .home-message__ttl a h2:hover{
   border-bottom:1px solid var(--link-color)!important;
 } */
-
 hr {
   height: 1px;
   background-color: var(--main-text-color);
