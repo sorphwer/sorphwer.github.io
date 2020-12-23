@@ -1343,6 +1343,7 @@ footer{
 }
 .footer__link p a:hover {
   opacity: 0.8;
+  color: var(--link-color);
 }
 .footer__link p span {
   margin: 0 10px;
@@ -1383,6 +1384,12 @@ footer{
 }
 .footer__copy ul li a:hover {
   opacity: 0.8;
+}
+.footer__copy a i{
+  color: var(--main-text-color);
+}
+.footer__copy a i:hover{
+  color: var(--link-color);
 }
 .home-lead {
   margin-top: 300px;
