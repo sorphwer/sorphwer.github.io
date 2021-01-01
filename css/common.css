@@ -1272,7 +1272,7 @@ header {
   left: 0;
   width: 7px;
   height: 14px;
-  background: url(./../images/icon_facebook.png) no-repeat 0 0/100% auto;
+  /* background: url(./../images/icon_facebook.png) no-repeat 0 0/100% auto; */
 }
 .header__logo {
   float: right;

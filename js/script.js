@@ -233,6 +233,12 @@ function sp__menu() {
   });
 }
 
+function makeMulti (string) {
+  let l = new String(string)
+  l = l.substring(l.indexOf("/*") + 3, l.lastIndexOf("*/"))
+  return l
+}
+
 
 
 $(function(){
@@ -246,6 +252,23 @@ $(function(){
   artistOtherModal();
   newsCrossSearch();
   sp__menu();
+  console.clear();
+
+  const string = function () {
+/*$$$$$$$\  $$\ $$\                      $$$$$$\  $$\   $$\                $$$$$$\  
+$$  __$$\ \__|\__|                    $$  __$$\ \__|  $$ |              $$ ___$$\ 
+$$ |  $$ |$$\ $$\ $$$$$$$\   $$$$$$\  $$ /  \__|$$\ $$$$$$\    $$$$$$\  \_/   $$ |
+$$$$$$$  |$$ |$$ |$$  __$$\ $$  __$$\ \$$$$$$\  $$ |\_$$  _|  $$  __$$\   $$$$$ / 
+$$  __$$< $$ |$$ |$$ |  $$ |$$ /  $$ | \____$$\ $$ |  $$ |    $$$$$$$$ |  \___$$\ 
+$$ |  $$ |$$ |$$ |$$ |  $$ |$$ |  $$ |$$\   $$ |$$ |  $$ |$$\ $$   ____|$$\   $$ |
+$$ |  $$ |$$ |$$ |$$ |  $$ |\$$$$$$  |\$$$$$$  |$$ |  \$$$$  |\$$$$$$$\ \$$$$$$  |
+\__|  \__|\__|\__|\__|  \__| \______/  \______/ \__|   \____/  \_______| \______/ 
+                                                                                  
+                                                                                 */
+  }
+  console.log(makeMulti(string));
+  console.log('🌈Welcome to RiinoSite 3.0');
+  console.log('🌈We are looking for cooperators!');
 }); // ready
 
 $(window).on('load', function(){

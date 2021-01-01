@@ -97,18 +97,9 @@
     
     <!--<section style="height: 200px;"></section>-->
 <script>
+const sessionStorage = window.sessionStorage;
 let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)"); 
 let theme = sessionStorage.getItem('theme');
-
-if (systemInitiatedDark.matches) { 
-	//document.getElementById("theme-toggle").innerHTML = "Light Mode";
-    $("#theme-toggle").html("Light Mode");
-    $("#theme-toggle-mobile").html("Light Mode");
-} else {
-	//document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-    $("#theme-toggle").html("Dark Mode");
-    $("#theme-toggle-mobile").html("Dark Mode");
-}
 function setAsLightTheme(){
     document.documentElement.setAttribute('data-theme', 'light');
 	sessionStorage.setItem('theme', 'light');
@@ -123,20 +114,17 @@ function setAsDarkTheme(){
     $("#theme-toggle-mobile").html("Light Mode");
     $('.black-white-image').css("filter",  'brightness(100)');
 }
-
+//handle theme change
 function prefersColorTest(systemInitiatedDark) {
   if (systemInitiatedDark.matches) {
   	setAsDarkTheme();
-    console.log("Your default theme is Dark");
   } else {
     setAsLightTheme();
-    console.log("Your default theme is Light");
   }
 }
 systemInitiatedDark.addListener(prefersColorTest);
 
-
-
+//handle click
 function modeSwitcher() {
 	let theme = sessionStorage.getItem('theme');
 	if (theme === "dark") {
@@ -150,17 +138,14 @@ function modeSwitcher() {
 	}
 };
 
-
-if (theme == "dark") {
-    setAsDarkTheme();
-} else if (theme == "light") {
-    setAsLightTheme();
+if(theme){
+    if (theme == "dark") {
+        setAsDarkTheme();
+    } else if (theme == "light") {
+        setAsLightTheme();
+    }
 }
-
-// //force Dark
-// document.documentElement.setAttribute('data-theme', 'dark');
-// 	sessionStorage.setItem('theme', 'dark');
-// 	//document.getElementById("theme-toggle").innerHTML = "Light Mode";
-// 	$("#theme-toggle").html("Light Mode");
-prefersColorTest(systemInitiatedDark);
+else{
+    prefersColorTest(systemInitiatedDark)
+}
 </script>
