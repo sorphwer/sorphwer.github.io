@@ -252,7 +252,7 @@ $(function(){
   artistOtherModal();
   newsCrossSearch();
   sp__menu();
-  console.clear();
+  // console.clear();
 
   const string = function () {
 /*$$$$$$$\  $$\ $$\                      $$$$$$\  $$\   $$\                $$$$$$\  
