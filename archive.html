@@ -12,7 +12,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 -->
 <!-- Page Header -->
 
-<script src='{{ "/js/archive.js " | prepend: site.baseurl }}'></script>
+
 
 <!-- Main Content -->
 <section style="height:100px"></section>
@@ -20,7 +20,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 	<div class="row">
 		<div class="col-md">
 			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
+			<div id='tag_cloud' class="d-flex flex-wrap js-tags">
 				<a class="tag-button--all" data-encode="" href="{{site.baseurl }}/archive.html">
 					<b>Show All</b>
 					<sup>{{site.posts.size}}</sup>
@@ -90,5 +90,5 @@ https://github.com/kitian616/jekyll-TeXt-theme
 		</div>
 	</div>
 </div>
-
+<script src='{{ "/js/archive.js " | prepend: site.baseurl }}'></script>
 

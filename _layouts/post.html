@@ -124,7 +124,7 @@ layout: default
     $('#table-of-contents').find("li").addClass('toc');
 
     if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {
-      console.log("toc disabled");
+      console.log("[POST] toc disabled");
       $('.container').prepend('<section style="height: 50px;"></section>');
       $('#front-wedge').css('height', 100);
     }
