@@ -11,6 +11,23 @@ layout: default
 <!-- experiment banner################ -->
 {%endif%}
 
+{%if page.mathjax != false %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+      }
+  });
+</script>
+<script type="text/javascript"
+ async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{%endif%}
+{%if page.mathjax != false %}
+<script type="text/javascript" async src='{{ "/js/mermaid.min.js" | prepend: site.baseurl }}'></script>
+{%endif%}
+
 <section id="front-wedge" style="height: 0px;"></section>
 {% if page.toc != false %}
 <div class="sidebar_catelog sticky-top"></div>

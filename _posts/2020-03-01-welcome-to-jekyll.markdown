@@ -1,15 +1,20 @@
 ---
 layout: post
 title:  "Welcome to RiinoSite3!"
+subtitle: "Features of RiinoSite3 Blog" #optional 
+author: "RiinoSite"    #optional
 date:   2020-03-01 17:08:09 +0800
-tags: 
+tags:           #optional
 - jekyll 
 - doc
-toc: true
-sticky : true
-hide: false
-status: doc
-# toc: inline
+status: doc     #optional
+last-modify: Jan 1st, 2021 #optional
+toc: true       #default: true
+sticky : true   #default: false
+hide: false     #default: false (hide from Home page only)
+mathjax: true   #default: true
+mermaid: true   #default: true
+# toc options: inline, true, false
 ---
 
 
@@ -22,18 +27,19 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 # Features
 
 - Auto archive based on tags management
-- Support custom page
+- Support custom page from origin jekyll
 - Attribution control via yaml data:
   - Optional TOC style configuration : inline, hidden, auto
   - Hide article in home page
   - Make article pinned at home page
   - Mark a custom status symbol
+  
 - Auto/Manual Dark/Light Mode 
 - Responsive design, optimized for mobile devices
 - Global search bar
 - `xml` subscribe
-- Code highlights & Latex support
-- Mermaid support
+- Code highlights & Optional Latex support
+- Optional Mermaid support
 - Multilanguage Support
 - Emoji Support
 
@@ -46,16 +52,19 @@ You can edit these attribution in yaml data of your markdown file:
 ```yaml
 layout: post
 title:  "Welcome to RiinoSite3!"
+subtitle: "Readme" #optional 
+author: "Riino"    #optional
 date:   2020-03-01 17:08:09 +0800
-tags: 
+tags:           #optional
 - jekyll 
 - doc
+status: doc     #optional
+last-modify: Jan 1st, 2021 #optional
 toc: true       #default: true
 sticky : true   #default: false
-hide: false     #default: false
-status: doc     #optional
+hide: false     #default: false (hide from Home page only)
 mathjax: true   #default: true
-last-modify: Nov 14, 2020 #optional
+mermaid: true   #default: true
 # toc options: inline, true, false
 ```
 
@@ -148,6 +157,8 @@ pie
 
 ## Language & Quote
 
+Currently we don't fully support Chinese display.
+
 
 > English Word Display Test
 > 中文语言显示测试/中文語言顯示測試
@@ -158,6 +169,10 @@ pie
 Gone camping! :tent: Be back soon.
 
 That is so funny! :joy:
+
+# Dev Backlog
+
+Please visit our [dynamic blog of dev routine](https://riino.site/2020/06/19/Anno.html)
 
 # Jekyll Doc
 
