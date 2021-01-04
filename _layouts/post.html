@@ -36,21 +36,32 @@ layout: default
 
   <div class="home-message__ttl" style="text-align: left;">
     <h1>
-      {% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+
+      {% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}
       <a class="edit-button" href="{{site.repo_url}}/blob/master/{{page.path}}" title="Edit on GitHub"><i
-          class="fa fa-edit"></i></a>
-      <!--<a class="download tbutton" href="{{site.url}}/_posts/{{page.name}}">D</a>-->
+        class="fa fa-edit"></i></a>
+      <!-- <a class="download tbutton" href="{{site.url}}/{{page.path}}">Download</a> -->
     </h1>
     <h4 class="subheading">{{ page.subtitle }}</h4>
-    <span class="meta">Posted by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</i>
-      on {{ page.date | date: "%B %-d, %Y" }} </span><i class="fa fa-tags"></i>
 
-    {% for tag in page.tags %}
-    <a class="tag" href="{{ site.baseurl }}/archive.html?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-    {%if page.last-modify%}
-    <br><span class="meta">Last modified: {{page.last-modify}} </span>
-    {%endif%}
+    {% if page.last-modify %}
+    <span class="meta">Last modified by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</i> on {{page.last-modify | date: "%B %-d, %Y"}} 
+
+    {% else %}
+    <span class="meta">Posted by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</i> on {{ page.date | date: "%B %-d, %Y" }} 
+
+    {% endif %}
+
+
+    </span><i class="fa fa-tags"></i>
+
+      {% for tag in page.tags %}
+      <a class="tag" href="{{ site.baseurl }}/archive.html?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+
+
+
   </div>
 
   <!--<section style="height: 50px;"></section>-->

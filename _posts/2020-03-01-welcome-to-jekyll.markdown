@@ -8,7 +8,7 @@ tags:           #optional
 - jekyll 
 - doc
 status: doc     #optional
-last-modify: Jan 1st, 2021 #optional
+last-modify: 2020-01-04 10:30:00 +0000 #optional
 toc: true       #default: true
 sticky : true   #default: false
 hide: false     #default: false (hide from Home page only)
@@ -59,7 +59,7 @@ tags:           #optional
 - jekyll 
 - doc
 status: doc     #optional
-last-modify: Jan 1st, 2021 #optional
+last-modify: 2020-01-04 10:30:00 +0000 #optional *
 toc: true       #default: true
 sticky : true   #default: false
 hide: false     #default: false (hide from Home page only)
@@ -71,6 +71,8 @@ mermaid: true   #default: true
 Also, tags is enabled in archive page. Current version **do not** support space in tag.
 
 To edit min & max level of generated outline, please check `_config.yml`. Max level is 3 now.
+
+*You have to manually input last modify date since github page do not support related plugins. (https://tomkadwill.com/adding-last-modified-date-to-jekyll)
 
 # Content Scripts
 
