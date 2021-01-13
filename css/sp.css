@@ -243,7 +243,8 @@ header {
 }
 .header__logo a p.header__logoTxt {
   margin-top: 5px;
-  width: 71px;
+  /* width: 71px; */
+  width: 40px;
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .js-header-stick .header__logo {
