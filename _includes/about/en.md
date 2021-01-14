@@ -2,20 +2,24 @@
 
  <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a>
 
-- 🔭 I’m currently working as an intern in PwC
+- 🔭 I’m currently a senior at Chongqing University
 - 👯 I’m looking to collaborate on my Jekyll theme WIP :  [Readme](https://riino.site/2020/03/01/welcome-to-jekyll.html)
 - ⚡ I'm interested in **Information theory, codec theory** , with related visualization.
 - 📫 If there's anything I should be reminded with : sorphwer@gmail.com 
 - 💬 Language Support : English/繁體中文(台灣)/简体中文/日本語
 
-[**Chongqing University,**](https://www.cqu.edu.cn/) Undergraduate
+[**Chongqing University**](https://www.cqu.edu.cn/),Undergraduate
 
 - Discipline : Software Engineering
 - Ex-Discipline : Architectural Environment And Instrument Engineering
 
+[**21’ Deloitte China**](https://www2.deloitte.com/cn/en/services/risk.html), Prospective FTE
+
+- Job : Risk Advisory Associate 
+
 [**20’ PwC Digital**](http://pwc.com/), Intern
 
-- Job : Developer 
+- Job : FE Developer 
 
 [**19’ Youzipu Exchange Student Service**](https://weibo.com/u/6186561564), Intern
 
