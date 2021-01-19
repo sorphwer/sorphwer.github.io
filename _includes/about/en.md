@@ -66,11 +66,13 @@
 
 1980*1080 25fps ParticleEarth 粒子地球(循环) <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=839960893"><img src="https://img.shields.io/badge/Subscribe-36k-blue"></a>
 
-Ghost in the Shell(1080p 50fps)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101"><img src="https://img.shields.io/badge/Subscribe-28k-blue"></a>
+Ghost in the Shell(1080p 50fps)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101"><img src="https://img.shields.io/badge/Subscribe-30k-blue"></a>
 
-1920*1080 60fps AllSystemsGo 系统准备完毕（循环）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=847018742"><img src="https://img.shields.io/badge/Subscribe-1830-blue"></a>
+1920*1080 60fps AllSystemsGo 系统准备完毕（循环）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=847018742"><img src="https://img.shields.io/badge/Subscribe-1860-blue"></a>
 
-Dynamic inochi Logo 2025<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024"><img src="https://img.shields.io/badge/Subscribe-81-blue"></a>
+Dynamic inochi Logo 2025<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024"><img src="https://img.shields.io/badge/Subscribe-93-blue"></a>
+
+星雲 （Nebulousity）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=969550005"><img src="https://img.shields.io/badge/Subscribe-1397-blue"></a>
 
 ### Minecraft Works
 
