@@ -112,6 +112,10 @@ p.banner-text{
   object-fit: cover;
   margin-left: 0px;
 }
+.banner img.warning-image{
+  filter: invert(38%) sepia(73%) saturate(3208%) hue-rotate(310deg) brightness(96%) contrast(90%);
+}
+
 p{
   color:var(--text);
   margin-top: 1rem;

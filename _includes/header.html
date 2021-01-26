@@ -106,6 +106,8 @@ function setAsLightTheme(){
     $("#theme-toggle").html("Dark Mode");
     $("#theme-toggle-mobile").html("Dark Mode");
     $('.black-white-image').css("filter",  'brightness(0)');
+    $('.warning-image').css("filter",  'invert(51%)sepia(93%)saturate(4588%)hue-rotate(309deg)brightness(94%)contrast(93%)');
+    // $('.warning-image').css("filter",'invert(51%) sepia(93%) saturate(4588%) hue-rotate(309deg) brightness(94%) contrast(93%);');
 };
 function setAsDarkTheme(){
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -113,6 +115,9 @@ function setAsDarkTheme(){
     $("#theme-toggle").html("Light Mode");
     $("#theme-toggle-mobile").html("Light Mode");
     $('.black-white-image').css("filter",  'brightness(100)');
+    $('.warning-image').css("filter",  'invert(38%)sepia(73%)saturate(3208%)hue-rotate(310deg)brightness(96%)contrast(90%)');
+    // $('.warning-image').css("filter",'invert(38%) sepia(73%) saturate(3208%) hue-rotate(310deg) brightness(96%) contrast(90%)');
+    
 }
 //handle theme change
 function prefersColorTest(systemInitiatedDark) {
