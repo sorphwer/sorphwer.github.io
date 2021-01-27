@@ -142,16 +142,19 @@ function modeSwitcher() {
         setAsDarkTheme();
 	}
 };
-
-if(theme){
+$(document).ready(function (){
+    if(theme){
     if (theme == "dark") {
         setAsDarkTheme();
     } else if (theme == "light") {
         setAsLightTheme();
     }
-}
-else{
-    prefersColorTest(systemInitiatedDark);
-}
+    }
+    else{
+        prefersColorTest(systemInitiatedDark);
+    }
+
+})
+
 console.log('[↓]BEGIN');
 </script>
