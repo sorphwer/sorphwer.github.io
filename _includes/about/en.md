@@ -96,6 +96,10 @@ Google ‘sorphwer’
 
 [@Nizeyuan ](https://twitter.com/Nizeyuan)
 
+[Nios34的博客](https://nios.cf)
+
+[Hackerchai Blog](https://blog.hackerchai.com)
+
 
 ### Personal Recommendation
 
@@ -106,3 +110,4 @@ Check out these amazing website:
 [DBMX](https://dbmx.net/)
 
 [NIVO](https://nivo.rocks/)
+
