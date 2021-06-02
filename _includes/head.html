@@ -67,8 +67,12 @@
         }
         $(function () {
         loadCSS();
+        // mermaid.initialize({startOnLoad:true});
+
         console.log('[↑]END');
+        mermaid.init(undefined, $('.language-mermaid'));
       });
+
 </script>
   
 

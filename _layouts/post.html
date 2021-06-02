@@ -25,7 +25,8 @@ layout: default
 </script>
 {%endif%}
 {%if page.mathjax != false %}
-<script type="text/javascript" async src='{{ "/js/mermaid.min.js" | prepend: site.baseurl }}'></script>
+<!-- <script type="text/javascript" async src='{{ "/js/mermaid.min.js" | prepend: site.baseurl }}'></script> -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 {%endif%}
 
 <section id="front-wedge" style="height: 0px;"></section>
@@ -203,7 +204,7 @@ layout: default
     //$('#table-of-contents').find('a').css('color', 'black');
 
     //marmaid
-    mermaid.init(undefined, $('.language-mermaid'));
+    // mermaid.init(undefined, $('.language-mermaid'));
     $('.language-mermaid').parent().css('text-align','center');
 
 
