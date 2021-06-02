@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Combine swagger, flask and db driver"
+title:  "Combine Swagger, Flask and python db driver"
 subtitle: "With an example of neo4j graph database" #optional 
 author: "Riino"    #optional
 tags:           #optional

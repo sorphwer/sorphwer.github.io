@@ -2,7 +2,6 @@
 layout: post
 title:  "Experience of Getting A Neo4j Certification"
 
-date:   2020-03-01 17:08:09 +0800
 tags:           #optional
 - neo4j
 - certification
