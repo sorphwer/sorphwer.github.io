@@ -58,13 +58,13 @@ navigation:
   url: /index.html
   layout: home
 - text: Archive
-  url: /archive.html
+  url: /archive/
   layout: forarchive
 # - text: Portfolio
 #   url: /portfolio/
   #layout: default
-- text: Lab
-  url: /lab/
+# - text: Lab
+#   url: /lab/
 - text: profile
   url: /about/
 
