@@ -58,7 +58,7 @@ navigation:
   url: /index.html
   layout: home
 - text: Archive
-  url: /archive/
+  url: /archive
   layout: forarchive
 # - text: Portfolio
 #   url: /portfolio/
