@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Why GithubPage Theme is complex to modify"
+title:  "Why GithubPage theme is complex to modify"
 
 tags:           #optional
 - Jekyll
 - Ruby
 ---
-## Why Riinosite haven't come as a theme
+## Why Riinosite hasn't come as a theme
 
 A theme form help isolate the update of theme files and post files. For we can choose to update style files and the posts independently. But why Riinosite, and even most GithubPage Blogs do not use theme?
 
 ## How Jekyll Theme works
 
-Theme is a type of `Gem`, which is managed by Bundler, a Ruby library management tool. Typically a gem is a pre-built package of files, which can be ruby codes or jekyll **theme** template files, which can be initiate by `jekyll new-theme jekyll-theme-awesome`, you can check the [jekyll theme doc](https://jekyllrb.com/docs/themes/).  Normally when you declare the name of gems in `Gemfile` and used `bundle install` , bundler will scan your `Gemfile` config and download all gems, including your theme gem file.Then you have to declare `theme: theme-name` in `_config.yml` in your jekyll to let your jekyll site know that **it can use a gem file downloaded by bundler whose name is 'theme-name' as the theme**
+Theme is a type of **Gem**, which is managed by Bundler, a Ruby library management tool. Typically a gem is a pre-built package of files, which can be ruby codes or jekyll **theme** template files, which can be initiate by `jekyll new-theme jekyll-theme-awesome`, you can check the [jekyll theme doc](https://jekyllrb.com/docs/themes/).  Normally when you declare the name of gems in `Gemfile` and used `bundle install` , bundler will scan your **Gemfile** config and download all gems, including your theme gem file.Then you have to declare `theme: theme-name` in `_config.yml` in your jekyll to let your jekyll site know that **it can use a gem file downloaded by bundler whose name is 'theme-name' as the theme**
 
-## But Github Page do not follow the rule above
+## But Github Page does not follow the rule above
 
 First, Github Page has a [gem whitelist](https://pages.github.com/versions/), which means **only the gems in this whitelist can be installed**, where few theme gems is availble, and the default one is the **jekyll-theme-minimal**, you can use `theme: minimal` in your `_config.yml` to enable this theme, which is also the default theme when generating a new jekyll blog. Therefore, although you can write, build and publish your own gem called `jekyll-theme-mytheme`, you can not use this gem in your GithubPage.
 
