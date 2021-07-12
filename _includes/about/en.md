@@ -1,6 +1,6 @@
 ### Riino, ZHANG
 
- <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a>
+ <!-- <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a> -->
 
 - 🔭 I’m currently a senior at Chongqing University
 - 👯 I’m looking to collaborate on my Jekyll theme WIP :  [Readme](https://riino.site/2020/03/01/welcome-to-jekyll.html)
