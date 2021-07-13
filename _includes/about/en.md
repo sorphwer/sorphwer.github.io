@@ -2,33 +2,27 @@
 
  <!-- <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a> -->
 
-- 🔭 I’m currently a senior at Chongqing University
-- 👯 I’m looking to collaborate on my Jekyll theme WIP :  [Readme](https://riino.site/2020/03/01/welcome-to-jekyll.html)
+- 🔭 Programmer/Designer
 - ⚡ I'm interested in **Information theory, codec theory** , with related visualization.
 - 📫 If there's anything I should be reminded with : sorphwer@gmail.com 
 - 💬 Language Support : English/繁體中文(台灣)/简体中文/日本語
 
-[**Chongqing University**](https://www.cqu.edu.cn/),Undergraduate
+[**Chongqing University**](https://www.cqu.edu.cn/), Undergraduate
 
-- Discipline : Software Engineering
-- Ex-Discipline : Architectural Environment And Instrument Engineering
+[**21’ Deloitte China**](https://www2.deloitte.com/cn/en/services/risk.html), Analyst(Cyber & Internet privacy)
 
-[**21’ Deloitte China**](https://www2.deloitte.com/cn/en/services/risk.html), Prospective FTE
+[**20’ PwC Digital**](http://pwc.com/), FE Developer(Intern)
 
-- Job : Risk Advisory Associate 
+[**19’ Youzipu Exchange Student Service**](https://weibo.com/u/6186561564), Photographer(Intern)
 
-[**20’ PwC Digital**](http://pwc.com/), Intern
+[**18’ CQUNEWS**](https://weibo.com/cqdx), Leader of video branch / Staff
 
-- Job : FE Developer 
 
-[**19’ Youzipu Exchange Student Service**](https://weibo.com/u/6186561564), Intern
+### Projects
 
-- Job : Photographer & Editor
+[jekyll-theme-panda](https://github.com/sorphwer/jekyll-theme-panda) ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
 
-[**18’ CQUNEWS**](https://weibo.com/cqdx), Staff
-
-- Job: Leader of Video Branch
-
+[jekyll-search-bar](https://github.com/sorphwer/jekyll-search-bar)
 
 ### Organizations 
 
@@ -48,66 +42,61 @@
 
 [PlusCraft](https://plus.google.com/u/0/communities/117203041845651730126), staff
 
-### Photography Albums
-
-[Postcard Series](https://500px.com.cn/community/set/e13a3edc25ef43b980ee8a6240628495/details)
-
-[The First Light](https://500px.com.cn/community/set/57bf603792ca44d692a5bbe9c4d50110/details)
-
-[春花夏葉](https://500px.com.cn/community/set/de2b4a81f4844a00bdffea2be275681e/details)
-
-### Photography Filters
-
-[Shilin-fliter](https://li.riino.site/shilin.html)
-
-[Chongqing-filter](https://li.riino.site/chongqing.html)
 
 ### Live Wallpaers
 
-1980*1080 25fps ParticleEarth 粒子地球(循环) <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=839960893"><img src="https://img.shields.io/badge/Subscribe-36k-blue"></a>
+[1980*1080 25fps ParticleEarth 粒子地球(循环)](https://steamcommunity.com/sharedfiles/filedetails/?id=839960893) <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=839960893"><img src="https://img.shields.io/badge/Subscribe-36k-blue"></a>
 
-Ghost in the Shell(1080p 50fps)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101"><img src="https://img.shields.io/badge/Subscribe-30k-blue"></a>
+[Ghost in the Shell(1080p 50fps)](https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1334681101"><img src="https://img.shields.io/badge/Subscribe-31k-blue"></a>
 
-1920*1080 60fps AllSystemsGo 系统准备完毕（循环）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=847018742"><img src="https://img.shields.io/badge/Subscribe-1860-blue"></a>
+[1920*1080 60fps AllSystemsGo 系统准备完毕（循环）](https://steamcommunity.com/sharedfiles/filedetails/?id=847018742)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=847018742"><img src="https://img.shields.io/badge/Subscribe-1873-blue"></a>
 
-Dynamic inochi Logo 2025<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024"><img src="https://img.shields.io/badge/Subscribe-93-blue"></a>
+[Dynamic inochi Logo 2025](https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2212029024"><img src="https://img.shields.io/badge/Subscribe-93-blue"></a>
 
-星雲 （Nebulousity）<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=969550005"><img src="https://img.shields.io/badge/Subscribe-1397-blue"></a>
+[星雲 （Nebulousity）](https://steamcommunity.com/sharedfiles/filedetails/?id=969550005)<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=969550005"><img src="https://img.shields.io/badge/Subscribe-1397-blue"></a>
 
 ### Minecraft Works
 
-Google ‘sorphwer’
+Google ‘sorphwer+minecraft’
 
-### Encounters
-
-[@CKansases](https://twitter.com/CKansases)
-
-[@Hayanasa](https://twitter.com/Hayanasa)
-
-[@lobin_fete](https://twitter.com/lobin_fete)
-
-[@sunoski_karasu ](https://twitter.com/sunoski_karasu)
-
-[@syunxeno ](https://twitter.com/syunxeno)
-
-[@HakohiZK ](https://twitter.com/HakohiZK)
-
-[@blitishside ](https://twitter.com/CKansases)
-
-[@Nizeyuan ](https://twitter.com/Nizeyuan)
-
-[Nios34的博客](https://nios.cf)
-
-[Hackerchai Blog](https://blog.hackerchai.com)
-
-
-### Personal Recommendation
-
-Check out these amazing website:
-
-[PwC Digital](https://digital.pwc.com/)
+### Projects I'm following:
 
 [DBMX](https://dbmx.net/)
 
 [NIVO](https://nivo.rocks/)
+
+[pydash](https://github.com/dgilland/pydash)
+
+[ShellgeiBot](https://github.com/theoremoon/ShellgeiBot/)
+
+### Encounters
+
+[吳榮秦 Thomas Wu @figstudio](https://www.figstudio.org/)
+
+[Nios34的博客@nios](https://nios.cf)
+
+[Hackerchai Blog@hackerchai](https://blog.hackerchai.com)
+
+[林含章 Hanklin Zhroc@instagram](https://www.instagram.com/hankfulin8/)
+
+[Naohiko Nakayama@facebook](https://www.facebook.com/sunbird.nakayama)
+
+[Kizuna AI@twitter](https://twitter.com/aichan_nel)
+
+[枯白@twitter](https://twitter.com/Kubai087)
+
+[CKansases@twitter](https://twitter.com/CKansases)
+
+[Hayanasa@twitter](https://twitter.com/Hayanasa)
+
+[lobin_fete@twitter](https://twitter.com/lobin_fete)
+
+[sunoski karasu@twitter ](https://twitter.com/sunoski_karasu)
+
+[syunxeno@twitter ](https://twitter.com/syunxeno)
+
+[Hakohi@twitter ](https://twitter.com/HakohiZK)
+
+[Nizeyuan@twitter](https://twitter.com/Nizeyuan)
+
 
