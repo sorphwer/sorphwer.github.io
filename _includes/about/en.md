@@ -1,3 +1,5 @@
+
+<center><img class="black-white-image" src="/img/blogbanner.png"></center>
 ### Riino, ZHANG
 
  <!-- <a href="https://twitter.com/sorphwer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sorphwer?style=social"></a><a href="https://github.com/sorphwer">    <img alt="GitHub followers" src="https://img.shields.io/github/followers/sorphwer?style=social"></a> -->
@@ -9,7 +11,7 @@
 
 [**Chongqing University**](https://www.cqu.edu.cn/), Undergraduate
 
-[**21’ Deloitte China**](https://www2.deloitte.com/cn/en/services/risk.html), Analyst(Cyber & Internet privacy)
+[**21’ Deloitte China**](https://www2.deloitte.com/cn/en/services/risk.html), Analyst
 
 [**20’ PwC Digital**](http://pwc.com/), FE Developer(Intern)
 
