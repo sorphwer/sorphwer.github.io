@@ -33,7 +33,7 @@ Under the tutelage of Jacob and Justus, this live learning dashboard is our vers
 
 The knowledge roadmap(scope) will be based on the book 《WEB安全深度刨析》
 
-Please reading this page in **Light mode**, we will add mermaid dark style in next update of jekyll-theme-panda.   <a  onclick="modeSwitcher()" style=" color: #007bff" href="javascript:void(0)">Click here to switch theme. </a>
+Please read this page in **Light mode**, we will add mermaid dark style in next update of jekyll-theme-panda.   <a  onclick="modeSwitcher()" style=" color: #007bff" href="javascript:void(0)">Click here to switch theme. </a>
 
 # Learning Schedule
 
