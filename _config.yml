@@ -29,8 +29,9 @@ kramdown:
 plugins:
 - jekyll-remote-theme
 - jekyll-paginate
-paginate: 10
 
+paginate: 10
+gems: ["jemoji"]
 toc:
   min_level: 1 # default: 1
   max_level: 4 # default: 6
@@ -45,6 +46,9 @@ navigation:
 - text: Archive
   url: /archive
   layout: forarchive
+- text: Learn
+  url: /learning.html
+  layout: default
 - text: profile
   url: /about/
 
