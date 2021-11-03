@@ -85,28 +85,36 @@ Sprint 2A          :    des1, 2021-11-8,1w
 Sprint 2B          :    des1, 2021-11-15,1w
 Sprint 3A          :    des1, 2021-11-22,1w
 Sprint 3B          :    des1, 2021-11-29,1w
-section online course
+section Review Points
+Sprint Report 1: active, 2021-11-8,1d
+Sprint Report 2: active, 2021-11-22,1d
+Sprint Report 3: active, 2021-12-5,1d
+Assessment Day:active, 2021-12-7,1d
+section Online course
 i.Nmap         : active,   oc1, 2021-10-26,2021-11-02
-ii.Burp Suite Pro: active,   oc2, 2021-11-29,2021-11-02
-iii.WebApp Hacking: oc3, 2021-11-29,
-iv.App Pentesting:oc4, 2021-11-29,
-v. Pentesting Hacking:oc5, 2021-11-29,
-vi. iOS Pentesting: oc6, 2021-11-29,
-vii Android Pentesting:oc7, 2021-11-29,
+ii.Burp Suite Pro:active,    oc2, 2021-10-29,2021-11-11
+iii.WebApp Hacking: oc3, 2021-11-6,2021-12-7
+iv.App Pentesting:oc4, 2021-11-10,2021-12-7
+v. Pentesting Hacking:oc5, 2021-11-14,2021-12-7
+vi. iOS Pentesting: oc6, 2021-11-18,2021-12-7
+vii Android Pentesting:oc7, 2021-11-25,2021-12-7
 
-section book reading
+section Book reading
 WEB安全深度刨析Chapter 1-3 :active , des1,2021-10-29,1w
 WEB安全深度刨析Chapter 4 : ,2021-11-6,1w
 WEB安全深度刨析Chapter 5-6 : ,2021-11-13,1w
 WEB安全深度刨析Chapter 7-10 : 2021-11-20,1w
-WEB安全深度刨析Chapter 11-15 : ,2021-11-27,2w
-section tools learning
+WEB安全深度刨析Chapter 11-15 : ,2021-11-27,1w
+section Tools learning
 kali install: done,2021-10-30,2021-11-02
 Nmap: active,2021-11-1,2021-11-06
 Burp Suite Pro: 2021-11-06,2021-11-11
+Exercises in '漏洞盒子、补天平台': 2021-11-11,2021-12-7
 
-section project delivery DDL
+section Project delivery DDL
 Delivery 1:done, 2021-10-28,2021-11-02
+
+
 
 ```
 
