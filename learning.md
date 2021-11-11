@@ -80,8 +80,8 @@ todayMarker stroke-width:2px,stroke:#00,opacity:0.8
 axisFormat  %m-%d-W%W-%A(%w)
 section Sprints
 Sprint 1A          :done,    des1, 2021-10-25,1w
-Sprint 1B          :active,    des1, 2021-11-1,1w
-Sprint 2A          :    des1, 2021-11-8,1w
+Sprint 1B          :done,    des1, 2021-11-1,1w
+Sprint 2A          :active,    des1, 2021-11-8,1w
 Sprint 2B          :    des1, 2021-11-15,1w
 Sprint 3A          :    des1, 2021-11-22,1w
 Sprint 3B          :    des1, 2021-11-29,1w
@@ -91,28 +91,29 @@ Sprint Report 2: active, 2021-11-22,1d
 Sprint Report 3: active, 2021-12-5,1d
 Assessment Day:active, 2021-12-7,1d
 section Online course
-i.Nmap         : active,   oc1, 2021-10-26,2021-11-02
-ii.Burp Suite Pro:active,    oc2, 2021-10-29,2021-11-11
-iii.WebApp Hacking: oc3, 2021-11-6,2021-12-7
+i.Nmap         : done,   oc1, 2021-10-26,2021-11-02
+ii.Burp Suite Pro:active,    oc2, 2021-10-29,2021-11-15
+iii.WebApp Hacking: active,oc3, 2021-11-6,2021-12-7
 iv.App Pentesting:oc4, 2021-11-10,2021-12-7
 v. Pentesting Hacking:oc5, 2021-11-14,2021-12-7
 vi. iOS Pentesting: oc6, 2021-11-18,2021-12-7
 vii Android Pentesting:oc7, 2021-11-25,2021-12-7
 
 section Book reading
-WEB安全深度刨析Chapter 1-3 :active , des1,2021-10-29,1w
-WEB安全深度刨析Chapter 4 : ,2021-11-6,1w
+WEB安全深度刨析Chapter 1-3 :done , des1,2021-10-29,1w
+WEB安全深度刨析Chapter 4 : active,2021-11-6,1w
 WEB安全深度刨析Chapter 5-6 : ,2021-11-13,1w
 WEB安全深度刨析Chapter 7-10 : 2021-11-20,1w
 WEB安全深度刨析Chapter 11-15 : ,2021-11-27,1w
 section Tools learning
 kali install: done,2021-10-30,2021-11-02
-Nmap: active,2021-11-1,2021-11-06
-Burp Suite Pro: 2021-11-06,2021-11-11
+Nmap: active,2021-11-1,2021-11-015
+Burp Suite Pro: active,2021-11-10,2021-11-20
 Exercises in '漏洞盒子、补天平台': 2021-11-11,2021-12-7
 
 section Project delivery DDL
-Delivery 1:done, 2021-10-28,2021-11-02
+Delivery:done, 2021-10-28,2021-11-02
+Final Delivery : active, 2021-11-8,2021-11-12
 
 
 
@@ -124,20 +125,20 @@ Before a sprint some task will be moved out of backlog.
 
 | WBS Name                  | Type           | Status    | Planned Sprint | Actual Sprint |
 | ------------------------- | -------------- | --------- | -------------- | ------------- |
-| i.Nmap                    | Online Course  | ☑️Learning | 1A,1B          |               |
-| ii.Burp Suite Pro         | Online Course  | ☑️earning  | 1B             |               |
-| iii.Web App Hacking       | Online Course  | 🔲To-do    | 1B             |               |
-| iv.App pentesting         | Online Course  | 🔲To-do    | In Backlog     |               |
-| v.Pentesting/Hacking      | Online Course  | 🔲To-do    | In Backlog     |               |
-| vi.iOS pentesting         | Online Course  | 🔲To-do    | In Backlog     |               |
-| vii.Android pentesting    | Online Course  | 🔲To-do    | In Backlog     |               |
+| i.Nmap                    | Online Course  | ✅Done     | 1A,1B          |               |
+| ii.Burp Suite Pro         | Online Course  | ☑️earning  | 1B             | 2A            |
+| iii.Web App Hacking       | Online Course  | ☑️earning  | 1B             | 2A            |
+| iv.App pentesting         | Online Course  | 🔲To-do    | 2B             |               |
+| v.Pentesting/Hacking      | Online Course  | 🔲To-do    | 2B             |               |
+| vi.iOS pentesting         | Online Course  | 🔲To-do    | 3A             |               |
+| vii.Android pentesting    | Online Course  | 🔲To-do    | 3A             |               |
 | WEB安全深度刨析Chapter 1  | Book Reading   | ✅Done     | 1A             | 1A            |
 | WEB安全深度刨析Chapter 2  | Book Reading   | ✅Done     | 1A             | 1A            |
 | WEB安全深度刨析Chapter 3  | Book Reading   | ✅Done     | 1A             | 1B            |
-| WEB安全深度刨析Chapter 4  | Book Reading   | ☑️Learning | 1B             |               |
-| WEB安全深度刨析Chapter 5  | Book Reading   | ☑️Learning | 1B             |               |
-| WEB安全深度刨析Chapter 6  | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 7  | Book Reading   | 🔲To-do    | In Backlog     |               |
+| WEB安全深度刨析Chapter 4  | Book Reading   | ✅Done     | 1B             | 1B            |
+| WEB安全深度刨析Chapter 5  | Book Reading   | ☑️Learning | 1B             | 2A            |
+| WEB安全深度刨析Chapter 6  | Book Reading   | 🔲To-do    | 2A             | 2A            |
+| WEB安全深度刨析Chapter 7  | Book Reading   | 🔲To-do    | 2A             | 2A            |
 | WEB安全深度刨析Chapter 8  | Book Reading   | 🔲To-do    | In Backlog     |               |
 | WEB安全深度刨析Chapter 9  | Book Reading   | 🔲To-do    | In Backlog     |               |
 | WEB安全深度刨析Chapter 10 | Book Reading   | 🔲To-do    | In Backlog     |               |
@@ -147,12 +148,60 @@ Before a sprint some task will be moved out of backlog.
 | WEB安全深度刨析Chapter 14 | Book Reading   | 🔲To-do    | In Backlog     |               |
 | WEB安全深度刨析Chapter 15 | Book Reading   | 🔲To-do    | In Backlog     |               |
 | WEB安全深度刨析Chapter 16 | Book Reading   | 🔲To-do    | 1B             |               |
-| Nmap                      | Tools learning | ☑️Learning | 1B             |               |
-| Burp Suite Pro            | Tools learning | 🔲To-do    | In Backlog     |               |
+| Nmap                      | Tools learning | ☑️Learning | 1B             | 1B            |
+| Burp Suite Pro            | Tools learning | ☑️Learning | 2A             |               |
 
 ## Sprint 1 Report 
 
-Available when sprint 1 ends.
+[English Version will be available soon]
+
+### 小结
+
+在Sprint1，学习了Web安全基础和nmap的知识，并开始接触Burp Suite 工具。其中Web安全基础知识包括对各类网络通信协议的回顾，以及对计算机网络各层原理的复习，还有对现代网络通信认证方式的知识回顾。在这其中主要学习HTTP和HTTPS这两个web application最常用的通信协议，以及常见的能够基于这两个协议发起的网络攻击。Nmap是最经典的端口/网络扫描器，基于视频的讲解和书本上的知识补充，学习到了nmap在windows和Linux下的安装和基础使用，了解了nmap最常用的几种使用场景，知道nmap在搜索过程中的两大步骤（询问主机是否up，询问端口是否active），以及可以利用命令行参数配置对nmap的搜索方式进行进一步的调节，如选择使用TCP或者UDP进行搜索，只搜索IP不搜索端口，以及如何发起较为低调的搜索，防止服务器日志留下nmap的请求记录，另外，也学习了nmap对端口搜索的基础原理（利用最常见的1000个端口），以及如何查询指定端口是否开放。总的来说，nmap是一个简洁的的命令行工具，可以让我们快速了解一个网络中的主机以及各主机的服务开启状况。同时我们也可以利用更复杂的预制脚本来让nmap实现更复杂的功能，比如搜索web服务器中所有开放的静态资源，等等。Burp Suite工具可以理解为是一个网络通信断点调试器，在视频教程中，我们可以将本机互联网访问（request address: localhost:80 ）代理转发给localhost:8080，进而被BS截取。我们在BS中就可以查看https请求头，并可以决定是否修改，或者继续转发该请求到真正的请求目的地。当然，也可以利用多个代理，让局域网其他设备的请求转发到运行BS的机器上。BS的问题是转发后拿到的https response会默认带有BS的CA，我们需要去下载一份CA添加给浏览器，才能正常使用浏览器，否则浏览器会认为拿到的响应有异常CA。
+
+### 大纲
+
+##### 计算机网络
+
+HTTP
+
+HTTPS
+
+UDP/TCP
+
+Proxy
+
+ports and IP
+
+##### nmap
+
+对指定IP扫描
+
+对批量随机IP扫描
+
+反向扫描DNS
+
+只扫描IP
+
+只扫描UDP服务
+
+只扫描特定端口
+
+加载脚本
+
+图形界面zenmap
+
+Nmap Cheat Sheet
+
+##### Burp Suite 
+
+Burp Suite 代理
+
+Burp Suite CA
+
+Custom Proxy
+
+Burp Suite Target
 
 ## Sprint 2 Report 
 
