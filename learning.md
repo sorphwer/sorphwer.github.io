@@ -59,6 +59,8 @@ Install and run tools in Windows or Kali, and try them in a website(riino.site) 
 flowchart LR
     WSL2 --o Windows
     Windows --o Router
+    Windows --x Jspstudy
+    Windows --x bWAPP
     Router --x riino.site
 ```
 
@@ -165,7 +167,7 @@ Besides, I learnt the Brup Suite interrupter function, which we can make Brup Su
 
 ### Outline
 
-##### 计算机网络
+##### Computer network
 
 HTTP
 
@@ -179,27 +181,27 @@ ports and IP
 
 ##### nmap
 
-对指定IP扫描
+Scan IP in selected scope
 
-对批量随机IP扫描
+Scan IP randomly
 
-反向扫描DNS
+Scan DNS address
 
-只扫描IP
+Scan IP only
 
-只扫描UDP服务
+Scan UDP Service only
 
-只扫描特定端口
+Check specific ports' status
 
-加载脚本
+Load scripts
 
-图形界面zenmap
+Zenmap GUI
 
 Nmap Cheat Sheet
 
 ##### Burp Suite 
 
-Burp Suite 代理
+Burp Suite Proxy
 
 Burp Suite CA
 
@@ -209,7 +211,63 @@ Burp Suite Target
 
 ## Sprint 2 Report 
 
-Available when sprint 2 ends.
+### Summary 
+
+During sprint 2, I explored more about Brup Suite Pro, including its package interrupter, automation tools , and assistant tools.
+
+```mermaid
+flowchart LR
+    APP --Request--> Brup_Suite_Intercept
+    Brup_Suite_Intercept --Forward--> Server
+    Server --Response-->Brup_Suite_Intercept
+    Brup_Suite_Intercept --Response --> APP
+  	Brup_Suite_Intercept --Drop--x N
+  	Brup_Suite_Intercept --Send--> Brup_Suite_Comparer
+  	Brup_Suite_Intercept --Send--> Brup_Suite_Decoder
+  	Brup_Suite_Intercept --Send--> Brup_Suite_Intruder
+  	Brup_Suite_Scanner --Request--o Server
+  	Brup_Suite_Spider --Request--o Server
+  	Brup_Suite_Repeater --Request--o Server
+  	Brup_Suite_Intercept --Send--> Brup_Suite_Sequencer
+```
+
+```mermaid
+flowchart LR
+
+id(nmap 192.168.1.1\nnmap 192.168.1-254 \n nmap 192.168.1.1 riino.site)
+id --modifyIP?--> TS(Yes)
+id --SCAN NOTHING!-->sl{{-SL}}
+TS --Random 100--> -TS1(iR 100)
+TS --from file--> -TS2(iL list.txt)
+TS --exclude--> -TS3( --exclude)
+id --discover any?--> d(YES)
+id --discover any?--> dn(No)
+dn--No ping-->-Pn
+d --TCP SYN ping-->-PS
+d --TCP ACK ping-->-PA
+d --UDP ping-->-PU
+d --ARP ping-->-PR
+d --SCTP INIT ping-->-PY
+d --ICMP ping-->ICMP( -PE \n -PP \n -PM)
+d --IP P ping--> -P0
+id --scan port?--> ST(Yes)
+id --scan port?--> IPonly(No)
+IPonly -->-sn
+ST --is TCP?-->TCP(Yes)
+TCP--TCP-->-sT
+TCP --TCP SYN-->-sS
+TCP--TCP ACK-->-sA
+TCP--TCP Window-->-sW
+TCP--TCP maimon-->-sM
+ST --is UDP?-->-sU
+ST --> wp(which port?)
+wp --> p( -p 21 \n -p 21-100 \n -p U:53,T:21-25,80 \n -p http,https \n --top-ports 2000 \n -F  \n -p-65535 \n -p0- )
+ST --Check Service?-->CS(Yes)
+CS -->s( -sV \n -sV --version-all \n -A) 
+
+```
+
+
 
 ## Sprint 3 Report 
 
