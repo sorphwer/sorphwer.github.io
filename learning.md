@@ -128,40 +128,42 @@ Before a sprint some task will be moved out of backlog.
 | WBS Name                  | Type           | Status    | Planned Sprint | Actual Sprint |
 | ------------------------- | -------------- | --------- | -------------- | ------------- |
 | i.Nmap                    | Online Course  | ✅Done     | 1A,1B          |               |
-| ii.Burp Suite Pro         | Online Course  | ☑️earning  | 1B             | 2A            |
-| iii.Web App Hacking       | Online Course  | ☑️earning  | 1B             | 2A            |
-| iv.App pentesting         | Online Course  | 🔲To-do    | 2B             |               |
-| v.Pentesting/Hacking      | Online Course  | 🔲To-do    | 2B             |               |
-| vi.iOS pentesting         | Online Course  | 🔲To-do    | 3A             |               |
-| vii.Android pentesting    | Online Course  | 🔲To-do    | 3A             |               |
+| ii.Burp Suite Pro         | Online Course  | ✅Done     | 1B             | 2A            |
+| iii.Web App Hacking       | Online Course  | ✅Done     | 1B             | 2A            |
+| iv.App pentesting         | Online Course  | ✅Done     | 2B             | 2B            |
+| v.Pentesting/Hacking      | Online Course  | ☑️Learning | 2B             | 3A            |
+| vi.iOS pentesting         | Online Course  | ☑️Learning | 3A             | 3A            |
+| vii.Android pentesting    | Online Course  | ☑️Learning | 3A             | 3A            |
 | WEB安全深度刨析Chapter 1  | Book Reading   | ✅Done     | 1A             | 1A            |
 | WEB安全深度刨析Chapter 2  | Book Reading   | ✅Done     | 1A             | 1A            |
 | WEB安全深度刨析Chapter 3  | Book Reading   | ✅Done     | 1A             | 1B            |
 | WEB安全深度刨析Chapter 4  | Book Reading   | ✅Done     | 1B             | 1B            |
-| WEB安全深度刨析Chapter 5  | Book Reading   | ☑️Learning | 1B             | 2A            |
-| WEB安全深度刨析Chapter 6  | Book Reading   | 🔲To-do    | 2A             | 2A            |
-| WEB安全深度刨析Chapter 7  | Book Reading   | 🔲To-do    | 2A             | 2A            |
-| WEB安全深度刨析Chapter 8  | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 9  | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 10 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 11 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 12 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 13 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 14 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 15 | Book Reading   | 🔲To-do    | In Backlog     |               |
-| WEB安全深度刨析Chapter 16 | Book Reading   | 🔲To-do    | 1B             |               |
-| Nmap                      | Tools learning | ☑️Learning | 1B             | 1B            |
-| Burp Suite Pro            | Tools learning | ☑️Learning | 2A             |               |
+| WEB安全深度刨析Chapter 5  | Book Reading   | ✅Done     | 1B             | 2A            |
+| WEB安全深度刨析Chapter 6  | Book Reading   | ✅Done     | 2A             | 2A            |
+| WEB安全深度刨析Chapter 7  | Book Reading   | ✅Done     | 2A             | 2A            |
+| WEB安全深度刨析Chapter 8  | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 9  | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 10 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 11 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 12 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 13 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 14 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 15 | Book Reading   | ☑️Learning | 3A             |               |
+| WEB安全深度刨析Chapter 16 | Book Reading   | ☑️Learning | 1B             |               |
+| Nmap                      | Tools learning | ✅Done     | 1B             | 2A            |
+| Burp Suite Pro            | Tools learning | ✅Done     | 2A             | 2B            |
 
 ## Sprint 1 Report 
 
-[English Version will be available soon]
+### Summary 
 
-### 小结
+During Sprint 1, I explored basic knowledge of web security and how to use `nmap`, a web scanning tool. Besides, I got to know how to use Brup Suite toolkits. As for the basic knowledge section, I reviewed various web protocols And I did a brief review of 'Computer network' roadmap, including each layers in modern networks. Among these topics, I mainly checked HTTP and HTTPS protocol, which are the most common ones in web security field, and some cases about how to attack via network using these two protocols. 
 
-在Sprint1，学习了Web安全基础和nmap的知识，并开始接触Burp Suite 工具。其中Web安全基础知识包括对各类网络通信协议的回顾，以及对计算机网络各层原理的复习，还有对现代网络通信认证方式的知识回顾。在这其中主要学习HTTP和HTTPS这两个web application最常用的通信协议，以及常见的能够基于这两个协议发起的网络攻击。Nmap是最经典的端口/网络扫描器，基于视频的讲解和书本上的知识补充，学习到了nmap在windows和Linux下的安装和基础使用，了解了nmap最常用的几种使用场景，知道nmap在搜索过程中的两大步骤（询问主机是否up，询问端口是否active），以及可以利用命令行参数配置对nmap的搜索方式进行进一步的调节，如选择使用TCP或者UDP进行搜索，只搜索IP不搜索端口，以及如何发起较为低调的搜索，防止服务器日志留下nmap的请求记录，另外，也学习了nmap对端口搜索的基础原理（利用最常见的1000个端口），以及如何查询指定端口是否开放。总的来说，nmap是一个简洁的的命令行工具，可以让我们快速了解一个网络中的主机以及各主机的服务开启状况。同时我们也可以利用更复杂的预制脚本来让nmap实现更复杂的功能，比如搜索web服务器中所有开放的静态资源，等等。Burp Suite工具可以理解为是一个网络通信断点调试器，在视频教程中，我们可以将本机互联网访问（request address: localhost:80 ）代理转发给localhost:8080，进而被BS截取。我们在BS中就可以查看https请求头，并可以决定是否修改，或者继续转发该请求到真正的请求目的地。当然，也可以利用多个代理，让局域网其他设备的请求转发到运行BS的机器上。BS的问题是转发后拿到的https response会默认带有BS的CA，我们需要去下载一份CA添加给浏览器，才能正常使用浏览器，否则浏览器会认为拿到的响应有异常CA。
+Like every learner, I learnt `nmap`, a powerful and classic IP/port scanner. Based on the videos and the book, I learnt the basic usage of `nmap`, and the most common cases using `nmap` like scanning devices in a public Wi-Fi or check what service port is open in a target server. Additionally, understood that two main steps of  `nmap` searching : IP scanning and Service scanning(Ports). Over these knowledge, I explored the different usage of `nmap` using different addon commands in terminal, through which we can make settings to decide if using TCP or UDP, or confirm the scope of ports, or sending probes that won't make server notice. I personally divide the knowledge of `nmap` into two sections: how it works and how to use it. Over this framework, there are still lots of scripts we can embed into `nmap` to accomplish more complex task, like scan all static files in a server path. (Yet we can use other special tools to do this more quickly)
 
-### 大纲
+Besides, I learnt the Brup Suite interrupter function, which we can make Brup Suite listening a specific port, and using local proxy (yes, LAN proxy is also available) to transfer packages from apps (like the browser) into Brup Suite. Brup Suite will catch them and print out the content, where you can edit, examine(which is to use action button to send a package to other function of Brup Suite like the comparer), and this package will not be sent until you manually forward it. Basically, such procedure construct a 3-rd party attack in your machine. The differences between Brup Suite and Wiresharks(another network listener ) is that the former will actually 'catch' the package, and if you send the package via Brup, it will also 'catch' the response to show you, rather than send to the origin app directly. Therefore, CA issue will appear when using HTTPS since the origin app will discover that the response is not sent by the server but a address from Brup via the CA info. Therefore , we have to download the Brup's CA and manually let the origin app know that this CA can be trusted for no reason. 
+
+### Outline
 
 ##### 计算机网络
 
