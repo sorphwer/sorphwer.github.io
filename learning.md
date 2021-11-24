@@ -81,39 +81,41 @@ axisFormat  %m-%d-W%W-%A(%w)
 section Sprints
 Sprint 1A          :done,    des1, 2021-10-25,1w
 Sprint 1B          :done,    des1, 2021-11-1,1w
-Sprint 2A          :active,    des1, 2021-11-8,1w
-Sprint 2B          :    des1, 2021-11-15,1w
-Sprint 3A          :    des1, 2021-11-22,1w
+Sprint 2A          :done,    des1, 2021-11-8,1w
+Sprint 2B          :done, 2021-11-15,1w
+Sprint 3A          :active, 2021-11-22,1w
 Sprint 3B          :    des1, 2021-11-29,1w
 section Review Points
-Sprint Report 1: active, 2021-11-8,1d
+Sprint Report 1: done, 2021-11-8,1d
 Sprint Report 2: active, 2021-11-22,1d
 Sprint Report 3: active, 2021-12-5,1d
 Assessment Day:active, 2021-12-7,1d
 section Online course
 i.Nmap         : done,   oc1, 2021-10-26,2021-11-02
-ii.Burp Suite Pro:active,    oc2, 2021-10-29,2021-11-15
-iii.WebApp Hacking: active,oc3, 2021-11-6,2021-12-7
-iv.App Pentesting:oc4, 2021-11-10,2021-12-7
-v. Pentesting Hacking:oc5, 2021-11-14,2021-12-7
-vi. iOS Pentesting: oc6, 2021-11-18,2021-12-7
-vii Android Pentesting:oc7, 2021-11-25,2021-12-7
+ii.Burp Suite Pro:done,    oc2, 2021-10-29,2021-11-15
+iii.WebApp Hacking: done,oc3, 2021-11-6,2021-11-23
+iv.App Pentesting:active, 2021-11-10,2021-12-7
+v. Pentesting Hacking:oc5, 2021-11-22,2021-12-7
+vi. iOS Pentesting: oc6, 2021-11-25,2021-12-7
+vii Android Pentesting:active, 2021-11-23,2021-12-7
 
 section Book reading
 WEB安全深度刨析Chapter 1-3 :done , des1,2021-10-29,1w
-WEB安全深度刨析Chapter 4 : active,2021-11-6,1w
-WEB安全深度刨析Chapter 5-6 : ,2021-11-13,1w
-WEB安全深度刨析Chapter 7-10 : 2021-11-20,1w
+WEB安全深度刨析Chapter 4 : done,2021-11-6,1w
+WEB安全深度刨析Chapter 5-6 :active ,2021-11-13,1w
+WEB安全深度刨析Chapter 7-10 :active 2021-11-20,1w
 WEB安全深度刨析Chapter 11-15 : ,2021-11-27,1w
 section Tools learning
 kali install: done,2021-10-30,2021-11-02
-Nmap: active,2021-11-1,2021-11-015
-Burp Suite Pro: active,2021-11-10,2021-11-20
-Exercises in '漏洞盒子、补天平台': 2021-11-11,2021-12-7
+Nmap: done,2021-11-1,2021-11-015
+Burp Suite Pro: done,2021-11-10,2021-11-20
+Jspstudy: active,2021-11-20,2021-12-7
+Exercises in '漏洞盒子、补天平台': 2021-11-24,2021-12-7
 
 section Project delivery DDL
 Delivery:done, 2021-10-28,2021-11-02
-Final Delivery : active, 2021-11-8,2021-11-12
+Final Delivery : done, 2021-11-8,2021-11-12
+Assessment: active, 2021-11-22,2021-11-30
 
 
 
