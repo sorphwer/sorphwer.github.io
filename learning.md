@@ -230,43 +230,7 @@ flowchart LR
   	Brup_Suite_Repeater --Request--o Server
   	Brup_Suite_Intercept --Send--> Brup_Suite_Sequencer
 ```
-
-```mermaid
-flowchart LR
-
-id(nmap 192.168.1.1\nnmap 192.168.1-254 \n nmap 192.168.1.1 riino.site)
-id --modifyIP?--> TS(Yes)
-id --SCAN NOTHING!-->sl{{-SL}}
-TS --Random 100--> -TS1(iR 100)
-TS --from file--> -TS2(iL list.txt)
-TS --exclude--> -TS3( --exclude)
-id --discover any?--> d(YES)
-id --discover any?--> dn(No)
-dn--No ping-->-Pn
-d --TCP SYN ping-->-PS
-d --TCP ACK ping-->-PA
-d --UDP ping-->-PU
-d --ARP ping-->-PR
-d --SCTP INIT ping-->-PY
-d --ICMP ping-->ICMP( -PE \n -PP \n -PM)
-d --IP P ping--> -P0
-id --scan port?--> ST(Yes)
-id --scan port?--> IPonly(No)
-IPonly -->-sn
-ST --is TCP?-->TCP(Yes)
-TCP--TCP-->-sT
-TCP --TCP SYN-->-sS
-TCP--TCP ACK-->-sA
-TCP--TCP Window-->-sW
-TCP--TCP maimon-->-sM
-ST --is UDP?-->-sU
-ST --> wp(which port?)
-wp --> p( -p 21 \n -p 21-100 \n -p U:53,T:21-25,80 \n -p http,https \n --top-ports 2000 \n -F  \n -p-65535 \n -p0- )
-ST --Check Service?-->CS(Yes)
-CS -->s( -sV \n -sV --version-all \n -A) 
-
-```
-
+Besides, I went more deeply into the practice of `nmap`, and made a simpler version of its cheat sheet inspired by https://www.stationx.net/nmap-cheat-sheet/
 
 
 ## Sprint 3 Report 
