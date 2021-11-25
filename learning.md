@@ -213,7 +213,7 @@ Burp Suite Target
 
 ### Summary 
 
-During sprint 2, I explored more about Brup Suite Pro, including its package interrupter, automation tools , and assistant tools.
+During sprint 2, I explored more details about Brup Suite Pro, including its package interrupter, automation tools , and assistant tools.
 
 ```mermaid
 flowchart LR
@@ -230,7 +230,15 @@ flowchart LR
   	Brup_Suite_Repeater --Request--o Server
   	Brup_Suite_Intercept --Send--> Brup_Suite_Sequencer
 ```
-Besides, I went more deeply into the practice of `nmap`, and made a simpler version of its cheat sheet inspired by https://www.stationx.net/nmap-cheat-sheet/
+Additionally, to archive a complete attack (like the most common case, injection , which is the 1st type in OY )
+
+
+
+Besides, I went more deeply into the practice of `nmap`, and made a simpler version of its cheat sheet inspired by https://www.stationx.net/nmap-cheat-sheet/, check https://riino.site/2021/11/25/nmp.html
+
+
+
+
 
 
 ## Sprint 3 Report 
