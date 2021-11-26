@@ -234,16 +234,101 @@ Additionally, to archive a complete attack (like the most common case, injection
 
 
 
-Besides, I went more deeply into the practice of `nmap`, and made a simpler version of its cheat sheet inspired by https://www.stationx.net/nmap-cheat-sheet/, check https://riino.site/2021/11/25/nmp.html
+Besides, I went more deeply into the practice of `nmap`, and made a simpler version of its cheat sheet, kindly check https://riino.site/2021/11/25/nmp.html
 
 
 
+### Outline
 
+#### Practice
+
+[nmap](https://riino.site/2021/11/25/nmp.html) practice
+
+brup practice
+
+google hacking practice
+
+firece & thehavester learning
+
+SQLmap learning
+
+netcat learning
+
+
+
+#### Vulnerability Knowledge
+
+#### Unsecure mechanism
+
+Login; Logout; CAPTCHA ; Directory; Local File Vulnerability; Remote file Vulnerability ; File Inclusion Vulnerability
+
+#### Session Management Testing
+
+HTTP Only scenario; Secure Cookies; Session Fixation; CSRF; Bypass anti-CSRF;
+
+#### Input Validation Testing
+
+CSS Attacks
+
+- Reflected
+- Stored
+- DOM-based
+
+SQL injection 
+
+- In-band SQL injection
+
+  - Error-based
+
+  - Union-based
+- Blind SQL injection
+
+  - Boolean-based
+
+  - Time-based
+- Out-of-band (OOB) SQL injection
+- Automation
+  - Commix
+  
+
+- Command Injection
+- XML/XPATH Injection
+- PHP Code Injection
+
+#### CVE/CWE Cases
+
+Druppal SQL injection CVE-2014-3704
+
+SQLite Manager File Inclusion CVE-2007-1232
+
+SQLite Manager XSS CVE-2012-5105
+
+Heartbleed CVE-2014-0160
+
+HTML5 Insecure local storage CWE-922
+
+ShellShock CVE-2014-6271
+
+### OWASP
+
+![](https://owasp.org/www-project-top-ten/assets/images/mapping.png)
+
+### MS-SDL
+
+https://www.microsoft.com/en-us/securityengineering/sdl/practices
 
 
 ## Sprint 3 Report 
 
-Available when sprint 3 ends.
+Full Content Available on 6/12/2021
+
+### Outline
+
+#### Practice
+
+[MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) learning/code reading
+
+Pithos
 
 
 
