@@ -89,16 +89,16 @@ Sprint 3A          :active, 2021-11-22,1w
 Sprint 3B          :    des1, 2021-11-29,1w
 section Review Points
 Sprint Report 1: done, 2021-11-8,1d
-Sprint Report 2: active, 2021-11-22,1d
+Sprint Report 2: done, 2021-11-22,1d
 Sprint Report 3: active, 2021-12-5,1d
 Assessment Day:active, 2021-12-7,1d
 section Online course
 i.Nmap         : done,   oc1, 2021-10-26,2021-11-02
 ii.Burp Suite Pro:done,    oc2, 2021-10-29,2021-11-15
 iii.WebApp Hacking: done,oc3, 2021-11-6,2021-11-23
-iv.App Pentesting:active, 2021-11-10,2021-12-7
-v. Pentesting Hacking:oc5, 2021-11-22,2021-12-7
-vi. iOS Pentesting: oc6, 2021-11-25,2021-12-7
+iv.App Pentesting:done, 2021-11-10,2021-11-26
+v. Pentesting Hacking:active, 2021-11-22,2021-12-7
+vi. iOS Pentesting: active, 2021-11-25,2021-12-7
 vii Android Pentesting:active, 2021-11-23,2021-12-7
 
 section Book reading
@@ -133,7 +133,7 @@ Before a sprint some task will be moved out of backlog.
 | ii.Burp Suite Pro         | Online Course  | ✅Done     | 1B             | 2A            |
 | iii.Web App Hacking       | Online Course  | ✅Done     | 1B             | 2A            |
 | iv.App pentesting         | Online Course  | ✅Done     | 2B             | 2B            |
-| v.Pentesting/Hacking      | Online Course  | ☑️Learning | 2B             | 3A            |
+| v.Pentesting/Hacking      | Online Course  | ✅Done     | 2B             | 3A            |
 | vi.iOS pentesting         | Online Course  | ☑️Learning | 3A             | 3A            |
 | vii.Android pentesting    | Online Course  | ☑️Learning | 3A             | 3A            |
 | WEB安全深度刨析Chapter 1  | Book Reading   | ✅Done     | 1A             | 1A            |
