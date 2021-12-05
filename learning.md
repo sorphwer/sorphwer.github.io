@@ -85,8 +85,8 @@ Sprint 1A          :done,    des1, 2021-10-25,1w
 Sprint 1B          :done,    des1, 2021-11-1,1w
 Sprint 2A          :done,    des1, 2021-11-8,1w
 Sprint 2B          :done, 2021-11-15,1w
-Sprint 3A          :active, 2021-11-22,1w
-Sprint 3B          :    des1, 2021-11-29,1w
+Sprint 3A          :done, 2021-11-22,1w
+Sprint 3B          :active, 2021-11-29,1w
 section Review Points
 Sprint Report 1: done, 2021-11-8,1d
 Sprint Report 2: done, 2021-11-22,1d
@@ -97,27 +97,27 @@ i.Nmap         : done,   oc1, 2021-10-26,2021-11-02
 ii.Burp Suite Pro:done,    oc2, 2021-10-29,2021-11-15
 iii.WebApp Hacking: done,oc3, 2021-11-6,2021-11-23
 iv.App Pentesting:done, 2021-11-10,2021-11-26
-v. Pentesting Hacking:active, 2021-11-22,2021-12-7
-vi. iOS Pentesting: active, 2021-11-25,2021-12-7
-vii Android Pentesting:active, 2021-11-23,2021-12-7
+v. Pentesting Hacking:done, 2021-11-22,2021-12-3
+vi. iOS Pentesting: done, 2021-11-25,2021-12-6
+vii Android Pentesting:done, 2021-11-23,2021-12-3
 
 section Book reading
 WEB安全深度刨析Chapter 1-3 :done , des1,2021-10-29,1w
 WEB安全深度刨析Chapter 4 : done,2021-11-6,1w
-WEB安全深度刨析Chapter 5-6 :active ,2021-11-13,1w
-WEB安全深度刨析Chapter 7-10 :active 2021-11-20,1w
-WEB安全深度刨析Chapter 11-15 : ,2021-11-27,1w
+WEB安全深度刨析Chapter 5-6 :done ,2021-11-13,1w
+WEB安全深度刨析Chapter 7-10 :done ,2021-11-20,1w
+WEB安全深度刨析Chapter 11-15 :done ,2021-11-27,1w
 section Tools learning
 kali install: done,2021-10-30,2021-11-02
 Nmap: done,2021-11-1,2021-11-015
 Burp Suite Pro: done,2021-11-10,2021-11-20
-Jspstudy: active,2021-11-20,2021-12-7
+Jspstudy: done,2021-11-20,2021-12-7
 Exercises in '漏洞盒子、补天平台': 2021-11-24,2021-12-7
 
 section Project delivery DDL
 Delivery:done, 2021-10-28,2021-11-02
 Final Delivery : done, 2021-11-8,2021-11-12
-Assessment: active, 2021-11-22,2021-11-30
+Assessment: active, 2021-11-22,2021-12-10
 
 
 
@@ -127,33 +127,33 @@ Assessment: active, 2021-11-22,2021-11-30
 
 Before a sprint some task will be moved out of backlog.
 
-| WBS Name                  | Type           | Status    | Planned Sprint | Actual Sprint |
-| ------------------------- | -------------- | --------- | -------------- | ------------- |
-| i.Nmap                    | Online Course  | ✅Done     | 1A,1B          |               |
-| ii.Burp Suite Pro         | Online Course  | ✅Done     | 1B             | 2A            |
-| iii.Web App Hacking       | Online Course  | ✅Done     | 1B             | 2A            |
-| iv.App pentesting         | Online Course  | ✅Done     | 2B             | 2B            |
-| v.Pentesting/Hacking      | Online Course  | ✅Done     | 2B             | 3A            |
-| vi.iOS pentesting         | Online Course  | ☑️Learning | 3A             | 3A            |
-| vii.Android pentesting    | Online Course  | ☑️Learning | 3A             | 3A            |
-| WEB安全深度刨析Chapter 1  | Book Reading   | ✅Done     | 1A             | 1A            |
-| WEB安全深度刨析Chapter 2  | Book Reading   | ✅Done     | 1A             | 1A            |
-| WEB安全深度刨析Chapter 3  | Book Reading   | ✅Done     | 1A             | 1B            |
-| WEB安全深度刨析Chapter 4  | Book Reading   | ✅Done     | 1B             | 1B            |
-| WEB安全深度刨析Chapter 5  | Book Reading   | ✅Done     | 1B             | 2A            |
-| WEB安全深度刨析Chapter 6  | Book Reading   | ✅Done     | 2A             | 2A            |
-| WEB安全深度刨析Chapter 7  | Book Reading   | ✅Done     | 2A             | 2A            |
-| WEB安全深度刨析Chapter 8  | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 9  | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 10 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 11 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 12 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 13 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 14 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 15 | Book Reading   | ☑️Learning | 3A             |               |
-| WEB安全深度刨析Chapter 16 | Book Reading   | ☑️Learning | 1B             |               |
-| Nmap                      | Tools learning | ✅Done     | 1B             | 2A            |
-| Burp Suite Pro            | Tools learning | ✅Done     | 2A             | 2B            |
+| WBS Name                  | Type           | Status | Planned Sprint | Actual Sprint |
+| ------------------------- | -------------- | ------ | -------------- | ------------- |
+| i.Nmap                    | Online Course  | ✅Done  | 1A,1B          |               |
+| ii.Burp Suite Pro         | Online Course  | ✅Done  | 1B             | 2A            |
+| iii.Web App Hacking       | Online Course  | ✅Done  | 1B             | 2A            |
+| iv.App pentesting         | Online Course  | ✅Done  | 2B             | 2B            |
+| v.Pentesting/Hacking      | Online Course  | ✅Done  | 2B             | 3A            |
+| vi.iOS pentesting         | Online Course  | ✅Done  | 3A             | 3B            |
+| vii.Android pentesting    | Online Course  | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 1  | Book Reading   | ✅Done  | 1A             | 1A            |
+| WEB安全深度刨析Chapter 2  | Book Reading   | ✅Done  | 1A             | 1A            |
+| WEB安全深度刨析Chapter 3  | Book Reading   | ✅Done  | 1A             | 1B            |
+| WEB安全深度刨析Chapter 4  | Book Reading   | ✅Done  | 1B             | 1B            |
+| WEB安全深度刨析Chapter 5  | Book Reading   | ✅Done  | 1B             | 2A            |
+| WEB安全深度刨析Chapter 6  | Book Reading   | ✅Done  | 2A             | 2A            |
+| WEB安全深度刨析Chapter 7  | Book Reading   | ✅Done  | 2A             | 2A            |
+| WEB安全深度刨析Chapter 8  | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 9  | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 10 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 11 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 12 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 13 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 14 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 15 | Book Reading   | ✅Done  | 3A             | 3B            |
+| WEB安全深度刨析Chapter 16 | Book Reading   | ✅Done  | 1B             | 3B            |
+| Nmap                      | Tools learning | ✅Done  | 1B             | 2A            |
+| Burp Suite Pro            | Tools learning | ✅Done  | 2A             | 2B            |
 
 ## Sprint 1 Report 
 
@@ -290,7 +290,6 @@ SQL injection
 - Automation
   - Commix
   
-
 - Command Injection
 - XML/XPATH Injection
 - PHP Code Injection
@@ -329,6 +328,8 @@ Full Content Available on 6/12/2021
 [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) learning/code reading
 
 Pithos
+
+
 
 
 
