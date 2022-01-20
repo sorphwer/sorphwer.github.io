@@ -1,0 +1,22 @@
+---
+layout: default
+title: Roadmap
+permalink: /roadmap/
+---
+<style>
+    img{
+        display: inline-block;
+
+    }
+    p img{
+        width: inherit !important;
+    }
+
+</style>
+<section style="height: 100px;"></section>
+<div class="en post-container" id="markdown-content">
+    {% capture roadmap_en %}{% include roadmap/en.md %}{% endcapture %}
+    {{ roadmap_en | markdownify }}
+</div>
+
+<!-- <section style="height: 50px;"> -->

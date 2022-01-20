@@ -51,6 +51,8 @@ navigation:
   layout: default
 - text: profile
   url: /about/
+- text : Roadmap
+  url: /roadmap/
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
