@@ -46,8 +46,8 @@ navigation:
 - text: Archive
   url: /archive
   layout: forarchive
-- text: Learn
-  url: /learning.html
+# - text: Learn
+#   url: /learning.html
   layout: default
 - text: profile
   url: /about/

@@ -427,7 +427,13 @@ SSDLC Framework
 
 #### Anti-Sql injection in development
 
+#### Anti-XSS 
 
+#### Anti-CSRF
 
+#### Anti-Code injection
 
+- XPath
+- Json
+- 
 
