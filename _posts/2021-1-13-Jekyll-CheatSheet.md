@@ -19,10 +19,13 @@ mermaid: false
 
 2. Install Ruby
 
+   via chocolatey:
+   
    ```bash
    choco install ruby -y
    ```
-
+   or download installer at https://rubyinstaller.org/downloads/
+   
 3. Install Jekyll and bundler
 
    ```bash
@@ -32,7 +35,7 @@ mermaid: false
 4. Get into RiinoSite root to install other gem plugins
 
    ```
-   gem install
+   bundle install
    ```
 
 5. Run Jekyll
