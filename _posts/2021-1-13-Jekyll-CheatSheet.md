@@ -26,6 +26,8 @@ mermaid: false
    ```
    or download installer at https://rubyinstaller.org/downloads/
    
+   notes: if install via choco, please install `MSYS2`, if download installer, please choose devkit edition.
+   
 3. Install Jekyll and bundler
 
    ```bash
