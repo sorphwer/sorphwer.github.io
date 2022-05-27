@@ -58,29 +58,29 @@ We can't get this far without everyone's help, and we want to say thanks to:<br>
 
 ## 2022 GS Goal
 
-In 2022, we will develop more backend services to support riinosite(RS), and optimize development procedure by pre-built component. Such projects will be launched via open-source libraries, remote servers, and more guidance. 
+In 2022, we will develop more backend services to support riinosite(RS), and optimize development procedure by pre-built components. Such projects will be launched via open-source libraries, remote servers, and more guidances. 
 
 ---
 
 ## Q&A
 
-- *What the next step of this website?*
+- *What is the next step of this website?*
 
-- Currently there is no plan to rewrite this website using modern framework, but it may happen in riinosite4.0 in the future. Currently we will send tiny update on component like TOC, and fix bug, maintain 3rd dependences. 
+- Currently there is no plan to rewrite this website using modern framework, but it may happen in riinosite4.0 in the future. Currently we will send tiny update on component like TOC, and to fix bug, maintain 3rd dependences. 
 
 
 
 - *Backend services?*
 
 
-- We are working on a project that initially owns high maturity architecture, security and IAM system with many experience of best practices. The basic idea is to use a simple flask core, driven by python asyc style redux manager which we are still working on in current step. And we also did a tech assessment to choose possible global storage and computing vendor. According to latest risk doc, we would like to use fully encryption whene using vendor's service, so this entire project will last 1-2 years at least to complete. Now we are still in infra development, once this is done, we can publish first prototype with a universal SSO system to support entire riinosite series resources, including NOE blog(this one) and low illu and any projects in future. 
+- We are working on a project that initially owns high maturity architecture, security and IAM system with many experience of best practices. The basic idea is to use a simple flask core, driven by python asyc style redux manager which we are still working on at current step. And we also did a tech assessment to choose possible global storage and computing vendor. According to latest risk doc, we would like to use fully encryption when using vendor's service, so this entire project will last 1-2 years at least to complete. Now we are still in infra development, once this is done, we can publish first prototype with a universal SSO system to support entire riinosite series resources, including NOE blog(this one) and low illu and any projects in future. 
 
 
 - *What about riinosite 4.0?*
 
-- Currently we do not have an actual plan to migrate riinosite to any other framework or cloud vendor, unless there is an important feature that we desire to archive. Nevertheless, there is a fancy 'riinosite 4.0' topic that to use modern framwork to rebuild this website. We may also consider dirty hybrid mode with techs like beautiful react hooks, but again, everything is just on paper.
+- Currently we do not have an actual plan to migrate riinosite to any other frameworks or cloud vendors, unless there is an important feature that we desire to archive. Nevertheless, there is a fancy 'riinosite 4.0' topic that to use modern framework to rebuild this website. We may also consider dirty hybrid mode with techs like beautiful react hooks, but again, everything is just on paper.
 
 - *Cyber security?*
 
-- We will release a series standard docs this year, by the our new pipeline for documentation and announcement 'NoEVoix'. Among these docs, the risk one will include cyber security guidance including the references from OWASP, NIST , etc.
-As for riinosite, we will do nothing at current risk level, since a) riinosite is a static website b)There is no confidential message since we havn't enable login method or 3rd comment method.
+- We will release a series standard docs this year, by the our new pipeline for documentation and announcement 'NoEVoix'. Among these docs, the risk one will include cyber security guidances including the references from OWASP, NIST , etc.
+As for riinosite, we will do nothing at current risk level, since:    a) riinosite is a static website b)There is no confidential message since we haven't enable login method or 3rd comment method.
