@@ -13,35 +13,52 @@ mermaid: false
 
 ## Install
 
-### Install via Chocolatey(recommended)
+### Download Ruby2.7+devkit(recommended)
 
-1. Install  [Chocolatey](https://chocolatey.org/packages/jekyll)
 
-2. Install Ruby
+1. Install Ruby
+
+   Download installer at https://rubyinstaller.org/downloads/
+
+   For RiinoSite‘s Gem, you'd better choose Ruby2.7.X + DevKit
+
+   During installation, you may need to instal `MSYS2` , if your os is Windows.
+
+
+
+2. Confirm Ruby and bundler is installed
 
    ```bash
-   choco install ruby -y
+   ruby -v
+   gem list
    ```
 
-3. Install Jekyll and bundler
+   if bundler is not installed, try:
 
-   ```bash
+    ```bash
    gem install jekyll bundler
    ```
 
-4. Get into RiinoSite root to install other gem plugins
+3. Get into RiinoSite root path, and:
 
    ```
-   gem install
+   bundle install
+   ```
+   if the install is slow, consider switch source by using this script:
+
+   ```bash
+   bundle config mirror.https://rubygems.org https://gems.ruby-china.com
    ```
 
-5. Run Jekyll
+
+
+4. Run Jekyll
 
    ```
    bundle exec jekyll serve
    ```
 
-6. http://localhost:4000/
+5. Visit http://localhost:4000/
 
 ### Official Install
 
