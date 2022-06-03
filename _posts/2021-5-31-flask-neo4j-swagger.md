@@ -6,7 +6,7 @@ author: "Riino"    #optional
 tags:           #optional
 - neo4j
 - swagger 
-- python
+- Python
 ---
 ## Main target
 

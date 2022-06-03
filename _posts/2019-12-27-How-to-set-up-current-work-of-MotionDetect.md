@@ -9,7 +9,7 @@ sticky: false
 tags:
 
   - Embedded System
-  - Raspberry Pi
+  - Raspberry-Pi
   - STM32
 
 ---

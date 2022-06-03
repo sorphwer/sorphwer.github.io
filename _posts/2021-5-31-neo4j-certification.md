@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Experience of Getting A Neo4j Certification"
-
+title:  "Certification Test Minutes: Neo4j Certified Professional"
+status: Minutes
 tags:           #optional
 - neo4j
 - certification
