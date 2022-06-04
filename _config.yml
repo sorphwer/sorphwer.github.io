@@ -51,6 +51,8 @@ navigation:
   layout: default
 - text: profile
   url: /about/
+- text: Theme
+  url: /jekyll-theme-panda/
 - text : 10-Year Roadmap
   url: /roadmap/
 
