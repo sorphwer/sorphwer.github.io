@@ -58,6 +58,8 @@ dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
 - text: low illu.
   url: https://li.riino.site/
+- text: Theme
+  url : https://riino.site/jekyll-theme-panda/
 
 footer_text:
 - Riino Zhang
