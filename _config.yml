@@ -23,8 +23,8 @@ repo_url: https://github.com/sorphwer/sorphwer.github.io
 
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+   syntax_highlighter_opts:
+      disable : true
 
 plugins:
 - jekyll-remote-theme
