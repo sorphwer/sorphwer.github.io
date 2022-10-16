@@ -47,7 +47,7 @@ The TMG shares same idea as to use graph database to store components involved i
 
 Compared with knowledge graph, the TMG contains less in demonstration the real access network but more isolated potential entry points as individual nodes in the graph. Besides, relationships (i.e. the connection between nodes) represent CVSS rating in certain attack direction via property feature. Based on the type of nodes linked, there could be bidirectional or unidirectional attack(s). We will explain this in **section** **2.4**.
 
-<img src="/img/in-post/2022-08-08-Threat-Modeling-using-neo4j/image-20220822210452511.png" alt="image-20220822210452511" style="zoom:40%;" />
+<img src="/img/in-post/2022-08-08-Threat-Modeling-using-neo4j/image-20220822210452511.png" alt="image-20220822210452511" style="zoom:100%;" />
 
 <center>Fig. 2: The basic concept of TMG with a simple C/S structure </center>
 
@@ -154,7 +154,7 @@ Based on the C/S model above, from the defender's view , the possible assets cou
 
 Take all facilities as the roots of tree we would like to create later, the final output of this step will be a collection of trees:
 
-<img src="/img/in-post/2022-08-08-Threat-Modeling-using-neo4j/image-20220815163121768.png" alt="image-20220815163121768" style="zoom:40%;" />
+<img src="/img/in-post/2022-08-08-Threat-Modeling-using-neo4j/image-20220815163121768.png" alt="image-20220815163121768" style="zoom:100%;" />
 
 
 <center>Fig. 3: Three-layer forest structure from asset list input </center>
