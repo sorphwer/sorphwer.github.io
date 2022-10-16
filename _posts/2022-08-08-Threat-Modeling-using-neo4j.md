@@ -12,7 +12,7 @@ tags:           #optional
 
 # Threat Modeling using Neo4j Graph Database[Draft]
 
-> THIS VERSION IS FOR INTERNAL USAGE ONLY
+> THIS VERSION IS FOR RIINOSITE USAGE
 
 Author : Riino Shiqi Zhang, Cyber White Hat Team
 
