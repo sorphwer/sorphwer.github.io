@@ -366,7 +366,7 @@ Therefore we can unify the rules of judging the directions for both scenario: **
 
 In this section, we are going to compute the risk rating score for any logical attack chain, defined by *equation 1*, where the final score $R$ can be calculated by **multi-step attacking rating** methods:
 $$
-P_\mathcal T=\prod p_i \times 10^{1-i}, where\;p_i\in \{{p_\mathcal T}_{r_i}|r\in S\},\;\mathcal T\in\{S,T,R,I,D,E\} \tag 3
+P_\mathcal T=\prod p_i \times 10^{1-i}, where\;p_i\in \{ \enspace  {p_\mathcal T}_{r_i}|r\in S\},\;\mathcal T\in\{S,T,R,I,D,E\} \tag 3
 $$
 
 <center>Eq. 3: Overall Risk Probability Calculation </center>
