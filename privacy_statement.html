@@ -1,0 +1,28 @@
+---
+layout: default
+title: NoE Perspective
+permalink: /privacy_statement/
+---
+<style>
+    div.en.post-container li{
+        text-transform : initial;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    div.en.post-container ol{
+        padding-left: 40px;
+    }
+    div.en.post-container{
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+</style>
+<section style="height: 50px;"></section>
+
+<!-- English Version -->
+<div class="en post-container">
+    {% capture en %}{% include privacy_statement.md %}{% endcapture %}
+    {{ en | markdownify }}
+</div>
+
+
+<section style="height: 50px;"></section>
+

@@ -56,10 +56,10 @@ navigation:
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
-- text: low illu.
-  url: https://li.riino.site/
 - text: Theme
   url : https://riino.site/jekyll-theme-panda/
+
+footer_html: <a href="/terms_of_use">Terms of Use |</a><span></span><a href="/privacy_statement/">Privacy Statement</a>
 
 footer_text:
 - Riino Zhang
