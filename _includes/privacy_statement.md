@@ -8,9 +8,9 @@
 
 **The Privacy Statement provides a simplified Chinese version and an English version, if there is any gap of understanding, please align to the content of Chinese version.**
 
-更新于：2022-10-21 ， 生效于：2022-10-21
+更新于：2023-2-12 ， 生效于：2023-2-12
 
-Updated at: 2022-10-21, takes effect at 2022-10-21
+Updated at: 2023-2-12, takes effect at 2023-2-12
 
 ### 隐私声明概述
 
@@ -57,6 +57,10 @@ Four types of information are **COLLECTED**, hereinafter referred to as  **Type 
 4. **网络访问记录**
 
    您在访问特定的应用程序（包括移动应用程序、Web应用程序，小程序等）时发起的网络请求的请求内容。包括请求时间和头信息。请注意，头信息中可能包含具备您使用的操作系统、IP地址以及浏览器类型信息。您可以使用代理访问来隐藏您的IP地址。
+   
+5. **网站互动记录（在启用了Google Analytics的情况下）**
+
+   您在访问特定的Web应用程序时发起的网络请求，设备型号，访问地址，浏览页面URL，页面互动记录。请注意，这些信息不会关联到任何其他网站、用于商业行为或者追踪您的个人行为。您可以使用代理访问来隐藏您的IP地址、使用匿名模式或者其他手段阻止这些数据收集。
 
 --
 
@@ -70,11 +74,16 @@ Four types of information are **COLLECTED**, hereinafter referred to as  **Type 
 
 3. **User Access Tracks**
 
-   The name of the series of actions you performed while accessing a specific application (including mobile applications, web applications, applets, etc.) and in what order. Please note that some social networking platforms collect this information by default (including records of your visits, clicks on "likes", "retweets", "comments", etc.). In addition, payment records also belong to this type of information. 4.
+   The name of the series of actions you performed while accessing a specific application (including mobile applications, web applications, applets, etc.) and in what order. Please note that some social networking platforms collect this information by default (including records of your visits, clicks on "likes", "retweets", "comments", etc.). In addition, payment records also belong to this type of information. 
 
 4. **Web Access History**
 
    The request content of the web request you initiated when accessing a specific application (including mobile applications, web applications, applets, etc.). This includes the request time and header information. Please note that the headers may contain information about the operating system, IP address, and browser type you are using. You can use proxy access to hide your IP address.
+   
+5. **Web interaction logs (with Google Analytics enabled)**
+
+   The web requests you initiate when accessing a specific web application, device model, access address, browsing page URL, page interaction history. Please note that this information is not associated with any other websites, used for commercial purposes or to track your personal behavior. You may use proxy access to hide your IP address, use anonymous mode or other means to prevent the collection of this data.
+
 
 其他**特定的信息收集**场景，对应的信息只会在该场景被收集，以下简称为**B**类信息：
 
@@ -160,20 +169,20 @@ For Machine Learning: Due to the potential risk of training set attacks and rela
 
 For **Type B Information**, please refer to the ***Personal Information Collection Standard Sheet*** (PICSS), which is the following table.
 
-| 是否收集 Whether to collect           | [A]个人可识别信息 PII | [A]个人非隐私信息 Non-PII | [A]用户访问轨迹 Access Tracks | [A]网络访问记录 Network Access History | [B]**面部信息** Facial Information | [B]特别个人信息 Special Personal Info | [B]企业信息 Enterprise Data |
-| ------------------------------------- | --------------------- | ------------------------- | ----------------------------- | -------------------------------------- | ---------------------------------- | ------------------------------------- | --------------------------- |
-| riino.site                            |                       |                           |                               |                                        |                                    |                                       |                             |
-| riino.site/jekyll-theme-panda         |                       |                           |                               |                                        |                                    |                                       |                             |
-| riino.site/api                        |                       | Y                         | Y                             | Y                                      |                                    |                                       |                             |
-| li.riino.site                         |                       |                           |                               |                                        |                                    |                                       |                             |
-| email@li.riino.site                   |                       | Y                         | Y                             | Y                                      |                                    |                                       |                             |
-| email@riino.site                      |                       | Y                         | Y                             | Y                                      |                                    |                                       |                             |
-| email@nestAI                          |                       | Y                         |                               |                                        |                                    |                                       |                             |
-| 私讯（SNS DM）                        | Y                     | Y                         |                               | Y                                      |                                    |                                       |                             |
-| 一般咨询服务 General Consulting       | Y                     | Y                         | Y                             |                                        |                                    | Y                                     |                             |
-| 影像/视觉服务 Visual Solutions        |                       | Y                         |                               |                                        | Y                                  |                                       |                             |
-| 企业内部通讯 Enterprise Communication | Y                     | Y                         |                               |                                        |                                    |                                       | Y                           |
-| 上海リル                              |                       | Y                         |                               |                                        |                                    |                                       |                             |
+| 是否收集 Whether to collect           | [A]个人可识别信息 PII | [A]个人非隐私信息 Non-PII | [A]用户访问轨迹 Access Tracks | [A]网络访问记录 Network Access History | [A]网站互动记录 Web interaction logs | [B]**面部信息** Facial Information | [B]特别个人信息 Special Personal Info | [B]企业信息 Enterprise Data |
+| ------------------------------------- | --------------------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------------------ | ---------------------------------- | ------------------------------------- | --------------------------- |
+| riino.site                            |                       |                           | Y                             | Y                                      | Y                                    |                                    |                                       |                             |
+| riino.site/jekyll-theme-panda         |                       |                           |                               |                                        |                                      |                                    |                                       |                             |
+| riino.site/api                        |                       | Y                         | Y                             | Y                                      |                                      |                                    |                                       |                             |
+| li.riino.site                         |                       |                           |                               |                                        |                                      |                                    |                                       |                             |
+| email@li.riino.site                   |                       | Y                         | Y                             | Y                                      |                                      |                                    |                                       |                             |
+| email@riino.site                      |                       | Y                         | Y                             | Y                                      |                                      |                                    |                                       |                             |
+| email@nestAI                          |                       | Y                         |                               |                                        |                                      |                                    |                                       |                             |
+| 私讯（SNS DM）                        | Y                     | Y                         |                               | Y                                      |                                      |                                    |                                       |                             |
+| 一般咨询服务 General Consulting       | Y                     | Y                         | Y                             |                                        |                                      |                                    | Y                                     |                             |
+| 影像/视觉服务 Visual Solutions        |                       | Y                         |                               |                                        |                                      | Y                                  |                                       |                             |
+| 企业内部通讯 Enterprise Communication | Y                     | Y                         |                               |                                        |                                      |                                    |                                       | Y                           |
+| 上海リル                              |                       | Y                         |                               |                                        |                                      |                                    |                                       |                             |
 
 
 
