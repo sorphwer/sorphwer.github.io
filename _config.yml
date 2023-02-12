@@ -59,7 +59,7 @@ dropdown:
 - text: Theme
   url : https://riino.site/jekyll-theme-panda/
 
-footer_html: <a href="/terms_of_use">Terms of Use |</a><span></span><a href="/privacy_statement/">Privacy Statement</a>
+footer_html: <a href="/terms_of_use">Terms of Use |</a><span></span><a href="/privacy_statement/">Privacy Statement</a><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVCHXDWWQX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ZVCHXDWWQX');</script>
 
 footer_text:
 - Designed, Developed,and Deployed by Riino
