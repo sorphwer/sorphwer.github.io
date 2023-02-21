@@ -30,6 +30,8 @@ kramdown:
 plugins:
 - jekyll-remote-theme
 - jekyll-paginate
+- jemoji 
+- jekyll-seo-tag
 
 paginate: 10
 gems: ["jemoji"]
