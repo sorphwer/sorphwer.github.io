@@ -22,13 +22,9 @@
 
 ### Projects
 
-[jekyll-theme-panda](https://github.com/sorphwer/jekyll-theme-panda) ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
-
-[jekyll-search-bar](https://github.com/sorphwer/jekyll-search-bar)
+[**Development Projects(Notion)**](https://nestof.notion.site/cee7a2484fec49499b4095fbd08c0e24?v=52da712ff5fb4987b84e8cea7a01e76c)
 
 ### Organizations 
-
-[low illuminance](https://li.riino.site/), hoster
 
 [The Ancient Stone Art Team](https://weibo.com/TASArt), member
 

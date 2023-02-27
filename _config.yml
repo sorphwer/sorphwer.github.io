@@ -49,6 +49,8 @@ navigation:
 - text: Archive
   url: /archive
   layout: forarchive
+- text: Albums
+  url: /albums
 # - text: Learn
 #   url: /learning.html
   layout: default
