@@ -51,13 +51,13 @@ navigation:
   layout: forarchive
 - text: Albums
   url: /albums
-# - text: Learn
-#   url: /learning.html
-  layout: default
+  layout: albumlist
 - text: profile
-  url: /about/
+  url: /about
+  layout: about
 - text : 10-Year Roadmap
-  url: /roadmap/
+  url: /roadmap
+  layout: default
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
