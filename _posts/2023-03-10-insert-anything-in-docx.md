@@ -1,16 +1,18 @@
 ---
 layout: post # must be 'post'
-title:  "Insert Anything in MS Word using Python docx"
-subtitle: "using docx and xml editing"
+title:  "Edit Anything in MS Word using Python docx"
+subtitle: "You can edit revision element w:ins w:del and much more."
 tags:           #optional
 - Python
 - xml
 toc: true       #default: true
 hide: false     #default: false (hide from home page only)(old)
-mathjax: false   #default: true
+mathjax: true  #default: true
 mermaid: true   #default: true
 auto-convert-img: true
 ---
+
+> Inspired by https://github.com/python-openxml/python-docx/issues/566
 
 ## Python docx
 
@@ -144,7 +146,7 @@ Docx actually will ignore elements it does not know, for example, if we have a w
 
 The xml structure under `<w:d>` or `<w:body>` should be :
 
-```
+```xml
 <w:p>
 	some <w:r>
 	<w:del>
