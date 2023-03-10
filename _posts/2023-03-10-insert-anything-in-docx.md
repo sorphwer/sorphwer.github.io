@@ -167,7 +167,7 @@ You will notice that only` <w:r>` is got. The first  paragraph has 3 runs, the s
 
 But, why is our ins and del nodes gone? We can call '_element' to bypass the proxy and use 'getchildren()' to get nodes, for example, we can get 3 runs from the first paragraph:
 
-```
+```python
 doc._element.getchildren()[0].getchildren()[0].getchildren()
 #>>[<CT_R '<w:r>' at 0x1e9c95a7090>,
 #>> <CT_R '<w:r>' at 0x1e9cb3f4130>,
